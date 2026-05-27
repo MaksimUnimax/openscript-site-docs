@@ -1,0 +1,112 @@
+status: initial
+project: openscript-site-docs
+title: "OpenScript / AI Starter Community"
+source_of_truth_root: docs/codex_source
+
+entrypoint:
+  path: docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md
+  status: initial
+
+project_docs:
+  - path: docs/codex_source/project/PROJECT_OVERVIEW.md
+    status: initial
+  - path: docs/codex_source/project/TZ.md
+    status: initial
+  - path: docs/codex_source/project/ROADMAP.md
+    status: initial
+  - path: docs/codex_source/project/CURRENT_STATUS.md
+    status: initial
+  - path: docs/codex_source/project/CONTEXT.md
+    status: initial
+  - path: docs/codex_source/project/DECISIONS.md
+    status: initial
+  - path: docs/codex_source/project/OPEN_QUESTIONS.md
+    status: initial
+
+app_docs:
+  - path: docs/codex_source/app/MODULE_MAP.md
+    status: initial
+  - path: docs/codex_source/app/ARCHITECTURE.md
+    status: initial
+  - path: docs/codex_source/app/ROUTES.md
+    status: initial
+  - path: docs/codex_source/app/USER_FLOWS.md
+    status: initial
+  - path: docs/codex_source/app/ADMIN_FLOWS.md
+    status: initial
+  - path: docs/codex_source/app/AUTH_EMAIL_FLOW.md
+    status: initial
+  - path: docs/codex_source/app/MATERIALS_FLOW.md
+    status: initial
+  - path: docs/codex_source/app/TARIFFS_OPTIONS_FLOW.md
+    status: initial
+  - path: docs/codex_source/app/PAYMENTS_PLAN.md
+    status: initial
+  - path: docs/codex_source/app/AI_SALES_AGENT_PLAN.md
+    status: initial
+
+landing_docs:
+  - path: docs/codex_source/landing/HOMEPAGE_SPEC.md
+    status: initial
+  - path: docs/codex_source/landing/POSITIONING.md
+    status: initial
+  - path: docs/codex_source/landing/HOMEPAGE_DESIGN_CONTEXT.md
+    status: initial
+  - path: docs/codex_source/landing/COPYWRITING_RULES.md
+    status: initial
+
+materials_docs:
+  - path: docs/codex_source/materials/MATERIALS_SPEC.md
+    status: initial
+  - path: docs/codex_source/materials/COURSE_METHOD_SPEC.md
+    status: initial
+  - path: docs/codex_source/materials/COURSE_LESSON_MAP.md
+    status: initial
+  - path: docs/codex_source/materials/COURSE_VISUAL_SYSTEM.md
+    status: initial
+  - path: docs/codex_source/materials/COURSE_REFERENCES.md
+    status: initial
+
+workflow_docs:
+  - path: docs/codex_source/workflow/RULES.md
+    status: initial
+  - path: docs/codex_source/workflow/CHATGPT_CODEX_WORKFLOW.md
+    status: initial
+  - path: docs/codex_source/workflow/CODEX_RUN_RULES.md
+    status: initial
+  - path: docs/codex_source/workflow/DOCUMENTATION_UPDATE_RULES.md
+    status: initial
+  - path: docs/codex_source/workflow/CONTINUE_AFTER_BREAK.md
+    status: initial
+
+tool_docs:
+  - path: docs/codex_source/tools/TOOLS_INDEX.md
+    status: initial
+  - path: docs/codex_source/tools/dair_lesson_generator/
+    status: external_reference
+  - path: docs/codex_source/tools/classbuild/
+    status: external_reference
+  - path: docs/codex_source/tools/hyperframes/
+    status: external_reference
+  - path: docs/codex_source/tools/codex_skills/
+    status: external_reference
+  - path: docs/codex_source/tools/skill_anything/
+    status: optional_reference
+  - path: docs/codex_source/tools/liascript/
+    status: optional_reference
+
+server_docs:
+  - path: docs/codex_source/server/SERVER_INVENTORY.md
+    status: initial
+  - path: docs/codex_source/server/LOCAL_GIT_SNAPSHOT.md
+    status: initial
+  - path: docs/codex_source/server/RUNTIME_SERVICES.md
+    status: initial
+
+rules:
+  one_run_one_task: true
+  exact_docs_to_read_required: true
+  no_secrets: true
+  no_runtime_changes_from_docs_repo: true
+  no_broad_repo_reading_by_default: true
+
