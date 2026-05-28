@@ -1,16 +1,26 @@
 # DAIR lesson-generator
 
-Source URLs:
-- upstream repo: https://github.com/dair-ai/dair-academy-plugins
-- raw skill: https://raw.githubusercontent.com/dair-ai/dair-academy-plugins/main/plugins/lesson-generator/skills/lesson-generator/SKILL.md
+This folder contains the full local raw copy of the DAIR lesson-generator skill.
+
+Working local path:
+- `/opt/openscript-site-docs/docs/codex_source/tools/dair_lesson_generator/SKILL.md`
 
 Date checked:
 - 2026-05-28
+
+Purpose:
+- create compact standalone lesson and mini-course artifacts
+- keep the artifact browser-ready and self-contained
 
 What it does:
 - builds compact standalone multi-lesson course artifacts
 - organizes lessons with navigation, objectives, flashcards, quizzes, and source links
 - expects a self-contained browser artifact rather than a backend app
+
+Output files:
+- `index.html`
+- `styles.css`
+- `script.js`
 
 Why it matters for OpenScript:
 - this is the primary reference for the first course draft inside "Работа с ИИ"
@@ -18,14 +28,14 @@ Why it matters for OpenScript:
 
 Setup/install notes:
 - not performed in this docs run
-- the upstream skill writes a browser artifact in `index.html`, `styles.css`, and `script.js`
 - no project install was attempted here
+- this skill is a local docs copy used as a working reference
 
 Required secret categories:
 - none documented in the imported skill
 
 Current status:
-- `imported_reference`
+- `full_local_raw_copy`
 
 Workflow fit:
 - first course draft path

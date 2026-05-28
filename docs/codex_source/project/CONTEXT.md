@@ -21,6 +21,8 @@ Docs context:
 - docs repair/import runs are allowed to create or import missing docs
 - the frontend/design skill reference import exists and is tracked in docs at commit `5be436c03ea1e2da35e5165810d1bbfd63a54018`
 - full local frontend/design skill files are now imported and stored under the docs repo local server paths
+- the DAIR lesson-generator docs entry is now the full raw local copy, not the earlier summary copy
+- the app repo DAIR active skill is being synchronized from that same local raw source
 
 Workflow context:
 - do not jump into app implementation yet

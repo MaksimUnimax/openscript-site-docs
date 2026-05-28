@@ -49,9 +49,9 @@ sections:
       - path: docs/codex_source/tools/COURSE_TOOLING_PLAN.md
         status: active
       - path: docs/codex_source/tools/dair_lesson_generator/README.md
-        status: imported_reference
+        status: full_local_raw_copy
       - path: docs/codex_source/tools/dair_lesson_generator/SKILL.md
-        status: imported_reference
+        status: full_local_raw_copy
       - path: docs/codex_source/tools/classbuild/README.md
         status: imported_reference
       - path: docs/codex_source/tools/hyperframes/README.md

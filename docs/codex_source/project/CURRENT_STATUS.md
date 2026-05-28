@@ -22,6 +22,8 @@ Docs work status:
 - missing core docs are being created now
 - frontend/design skill candidates were imported and pushed at `5be436c03ea1e2da35e5165810d1bbfd63a54018`
 - full local frontend/design skill files have now been imported for the current candidates under `docs/codex_source/tools/frontend_design_skills/**`
+- the DAIR lesson-generator entry is now the full raw local copy, not the earlier summary copy
+- the app repo DAIR active skill is being synchronized to the same raw source
 
 Next recommended step:
 - course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`
