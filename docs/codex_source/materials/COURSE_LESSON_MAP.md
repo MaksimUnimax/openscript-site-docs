@@ -136,3 +136,45 @@ User -> GPT -> Codex -> report -> GPT -> visual check -> docs update.
 
 Focus:
 GPT explains the report; user does not need deep technical parsing.
+
+## Lesson map update 2026-05-28 — Current course status
+
+The lesson map is currently the first structure of the course, not the final student-ready curriculum.
+
+Confirmed course title:
+
+**Как разрабатывать с помощью ChatGPT и Codex**
+
+Confirmed course placement:
+
+inside “Работа с ИИ” after payment.
+
+Confirmed lesson principles:
+
+- no free-writing homework;
+- tests with ready answers only;
+- no requirement that the user writes Codex prompts manually;
+- GPT prepares Codex prompts;
+- Codex executes;
+- user returns report to GPT;
+- GPT explains;
+- user checks result visually.
+
+Confirmed Git lesson addition:
+
+Lesson 7 includes deploy-key explanation:
+- Codex creates a key on the server;
+- Codex prints only the public key;
+- user adds public key to GitHub Deploy keys;
+- user enables Allow write access if push is needed;
+- private key must never be copied into chat;
+- Codex tests access and pushes.
+
+Next required refinement:
+For each lesson, add:
+- goal;
+- simple explanation;
+- visual idea;
+- 3–5 test questions;
+- correct answers;
+- “Главное запомнить”.
