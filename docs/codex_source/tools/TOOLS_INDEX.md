@@ -16,6 +16,13 @@ Status key:
 | LiaScript | `docs/codex_source/tools/liascript/README.md` | imported_reference | Markdown-first interactive course fallback/reference |
 | Codex Skills | `docs/codex_source/tools/codex_skills/README.md` | imported_reference | Reusable local Codex skills for repeatable course workflows |
 
+Frontend/design skill references are tracked separately from course-writing skills:
+
+- `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_INDEX.md`
+- `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_EVALUATION_PLAN.md`
+
+These are candidate references for future lesson UI and interaction testing. Figma is excluded because no Figma design exists for this task.
+
 How to use this index:
 - start with the tool that matches the course artifact you need
 - treat these docs as references, not installed dependencies

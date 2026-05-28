@@ -62,6 +62,45 @@ sections:
         status: imported_reference
       - path: docs/codex_source/tools/codex_skills/README.md
         status: imported_reference
+  frontend_design_skills:
+    status: imported_reference
+    docs:
+      - path: docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_INDEX.md
+        status: active
+      - path: docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_EVALUATION_PLAN.md
+        status: active
+      - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SKILL.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/taste_skill/README.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/taste_skill/SKILL.md
+        status: imported_reference
   vendor_docs:
     status: imported_reference
     docs:
@@ -87,4 +126,6 @@ sections:
 notes:
   - This index is for the OpenScript / AI Starter Community website docs only.
   - Legacy imported references may remain in the repo for history, but the canonical active project docs are the OpenScript site docs listed above.
+  - Frontend/design skill references are candidate docs for future lesson UI testing and are separate from course-writing skills.
+  - Figma was excluded from this import because no Figma design exists for the task.
   - Do not use this index to infer runtime behavior; always read exact task docs and source-of-truth files.
