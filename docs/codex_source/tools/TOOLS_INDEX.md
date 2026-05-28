@@ -22,6 +22,7 @@ Frontend/design skill references are tracked separately from course-writing skil
 - `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_EVALUATION_PLAN.md`
 
 These are candidate references for future lesson UI and interaction testing. Figma is excluded because no Figma design exists for this task.
+They are reference docs only; active Codex skills still live in `/opt/ai-starter-community/.agents/skills/**`.
 
 How to use this index:
 - start with the tool that matches the course artifact you need

@@ -31,3 +31,4 @@ Current first candidates for future testing:
 | Leonxlnx/taste-skill | `docs/codex_source/tools/frontend_design_skills/taste_skill/` | <https://github.com/Leonxlnx/taste-skill> | skill repo | yes | anti-slop frontend taste framework with strong layout and motion instincts | best for landings/portfolios; lesson UI needs careful adaptation | candidate_secondary |
 
 Use this index only as a reference list. It is not an installation manifest and it is not a final design decision.
+Active Codex skills must live in `/opt/ai-starter-community/.agents/skills/**`; these candidates stay in the docs repo until a future app-side skill is created.

@@ -20,6 +20,7 @@ Known product state:
 Docs work status:
 - this repository is being repaired for course tooling documentation
 - missing core docs are being created now
+- frontend/design skill candidates were imported and pushed at `5be436c03ea1e2da35e5165810d1bbfd63a54018`
 
 Next recommended step:
 - course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`
