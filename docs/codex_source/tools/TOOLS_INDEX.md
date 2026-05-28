@@ -24,13 +24,14 @@ Clean active app skills are installed separately as exact local copies:
 - `/opt/ai-starter-community/.agents/skills/anthropic-frontend-design`
 - `/opt/ai-starter-community/.agents/skills/taste-skill`
 - `/opt/ai-starter-community/.agents/skills/microsoft-frontend-design-review`
-- `/opt/ai-starter-community/.agents/skills/vercel-web-design-guidelines`
 - `/opt/ai-starter-community/.agents/skills/ilm-alan-frontend-design`
 - `/opt/ai-starter-community/.agents/skills/mblode-agent-skills`
 
 Refresh rule:
 - app active copies must be refreshed only from the matching docs-repo local copy
 - do not use external upstream URLs as the working source
+- `vercel-web-design-guidelines` remains docs-reference-only and is not an active app skill until a local-safe package exists
+- `mblode-agent-skills` is active only when the companion files are copied alongside `SKILL.md`
 
 Frontend/design skill references remain tracked separately from the clean active app skills:
 

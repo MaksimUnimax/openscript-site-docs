@@ -44,6 +44,8 @@ Compare the candidate against:
 - Do not import Figma skill artifacts here because no Figma design exists for this project.
 - The app-side skill must be refreshed from the local docs copy; do not depend on external URLs in the implementation prompt.
 - Do not keep custom retellings or adapters once a clean exact-copy skill exists.
+- Do not treat `vercel_web_design_guidelines` as an active app skill until a local-safe package exists; keep it as docs-reference-only for review purposes.
+- `mblode-agent-skills` is a valid active candidate only when the companion files are included with `SKILL.md`.
 
 ## Recommended order
 

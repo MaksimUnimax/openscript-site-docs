@@ -75,20 +75,15 @@ Active exact-copy skills:
 - App path: `/opt/ai-starter-community/.agents/skills/microsoft-frontend-design-review/SKILL.md`
 - Purpose: accessibility and design-system review lens.
 
-7. `vercel-web-design-guidelines`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/vercel-web-design-guidelines/SKILL.md`
-- Purpose: UI and accessibility review guidance.
-
-8. `ilm-alan-frontend-design`
+7. `ilm-alan-frontend-design`
 - Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SKILL.md`
 - App path: `/opt/ai-starter-community/.agents/skills/ilm-alan-frontend-design/SKILL.md`
 - Purpose: explicit aesthetic anchor and design direction reference.
 
-9. `mblode-agent-skills`
+8. `mblode-agent-skills`
 - Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SKILL.md`
 - App path: `/opt/ai-starter-community/.agents/skills/mblode-agent-skills/SKILL.md`
-- Purpose: broader UI craft and quality reference.
+- Purpose: broader UI craft and quality reference, with companion files copied alongside `SKILL.md`.
 
 How ChatGPT should activate a clean active skill:
 ```text
@@ -113,6 +108,7 @@ Vendor/reference frontend design skills
 - These remain local docs-repo reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
 - They are source material for the active exact-copy skills above, not the active skills themselves.
 - Do not tell Codex to read external upstream docs when a local copy exists. Use the local server path.
+- `vercel_web_design_guidelines` remains docs-reference-only because the clean upstream guidance depends on external WebFetch; do not treat it as an active app skill until a local-safe package exists.
 
 Prompt rule for future skill use
 - When a future task needs a skill, ChatGPT should explicitly include:
