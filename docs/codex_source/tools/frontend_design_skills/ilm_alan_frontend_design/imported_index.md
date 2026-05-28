@@ -1,15 +1,19 @@
-# Imported Index
+# Imported index
 
-Imported docs for this candidate:
-
-- upstream README: <https://github.com/Ilm-Alan/frontend-design>
-- upstream skill: <https://raw.githubusercontent.com/Ilm-Alan/frontend-design/main/SKILL.md>
-
-Local docs:
-
-- `README.md`
-- `SKILL.md`
+- local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/
+- local_files:
+  - README.md
+  - SUMMARY.md
+  - imported_index.md
+- full_skill_imported: no
+- active_codex_skill: no
+- docs_reference_only: yes
+- can_be_used_directly_as_$skill: no
+- can_be_used_as_basis_for_app_skill: yes
+- status: local_reference_summary
 
 Notes:
-- explicit Codex support
+- local docs repo reference copy only
+- explicit Codex support in the origin project
 - eight aesthetic anchors
+- do not send Codex to an external source link when this local copy exists

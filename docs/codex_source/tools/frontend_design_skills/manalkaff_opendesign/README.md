@@ -1,22 +1,23 @@
-# manalkaff/opendesign
+# OpenDesign reference copy
 
-- upstream: <https://github.com/manalkaff/opendesign>
-- date checked: 2026-05-28
-- what it is: portable markdown skills for agent-driven design work, centered on structured intake, specialist roles, local filesystem output, and a verifier loop.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: strong candidate for a disciplined design workflow and a reusable front door for lesson-page treatment.
-- risks: design-first workflow may be broader than the immediate needs of lesson rendering; could encourage overproduction if not scoped tightly.
-- recommendation status: candidate_primary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `README.md`
-- `skills/frontend-design/SKILL.md`
-
-## Notes
-
-This is a candidate reference, not a decision to standardize on OpenDesign for the site.
+candidate_name: manalkaff/opendesign
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for OpenScript lesson UI work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: manalkaff/opendesign
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments

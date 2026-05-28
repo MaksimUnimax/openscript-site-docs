@@ -1,22 +1,23 @@
-# vercel web-design-guidelines
+# Vercel web-design-guidelines reference copy
 
-- upstream: <https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/web-design-guidelines/SKILL.md> and <https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md>
-- date checked: 2026-05-28
-- what it is: review-oriented UI/accessibility guideline reference for frontend code.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: unknown
-- why it may help OpenScript lesson UI: useful for QA and accessibility checks after a candidate design is applied.
-- risks: review-only; it does not replace a creative design skill.
-- recommendation status: review_only / candidate_secondary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `SKILL.md`
-- `command.md`
-
-## Notes
-
-Use this as a QA companion after a stronger creative candidate is chosen.
+candidate_name: vercel web-design-guidelines
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_review_reference
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo review/reference copy for lesson UI audits and accessibility checks.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: vercel-labs/agent-skills
+origin_import_note: imported into the docs repo as a local review/reference copy for future UI experiments

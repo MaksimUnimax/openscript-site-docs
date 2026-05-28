@@ -36,7 +36,7 @@ Canonical doc areas:
 - `docs/codex_source/tools/**`
 - `docs/codex_source/index.yaml`
 
-Skills and tool references for Codex prompts:
+Skills and tool references for Codex prompts
 
 Active app repo skills
 - These are real repo-scoped Codex skills that become available only when Codex works from `/opt/ai-starter-community`.
@@ -59,10 +59,19 @@ Active app repo skills
 
 Vendor/reference frontend design skills
 - These are NOT active Codex skills automatically.
-- They live in the docs repo as references under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
-- Candidates: `manalkaff_opendesign`, `nexu_open_design`, `anthropic_frontend_design`, `vercel_web_design_guidelines`, `microsoft_frontend_design_review`, `ilm_alan_frontend_design`, `mblode_agent_skills`, `taste_skill`
+- They live in the docs repo as local reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
+- Local server paths:
+  - `manalkaff_opendesign` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/`
+  - `nexu_open_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/nexu_open_design/`
+  - `anthropic_frontend_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/`
+  - `vercel_web_design_guidelines` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/`
+  - `microsoft_frontend_design_review` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/`
+  - `ilm_alan_frontend_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/`
+  - `mblode_agent_skills` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/`
+  - `taste_skill` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/taste_skill/`
 - Purpose: choose/test UI and design approaches later, and inform a future OpenScript-specific lesson UI skill.
-- Distinction: docs repo vendor/reference skills are reference documents; app repo `.agents/skills/**` are the active Codex skills.
+- Distinction: docs repo vendor/reference skills are local reference copies; app repo `.agents/skills/**` are the active Codex skills.
+- Do not tell Codex to read external upstream docs when a local copy exists. Use the local server path.
 
 Prompt rule for future skill use
 - When a future task needs a skill, ChatGPT should explicitly include:
@@ -92,5 +101,7 @@ Include SKILL_USAGE_PROOF with:
 - skill_read
 - rules_applied
 ```
+
+For local frontend/design reference copies, use the local server path from the docs repo, not an external URL.
 
 If the task prompt conflicts with this entrypoint, follow the task prompt and report the conflict.

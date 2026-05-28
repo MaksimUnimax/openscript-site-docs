@@ -1,22 +1,23 @@
-# Ilm-Alan/frontend-design
+# Ilm-Alan frontend-design reference copy
 
-- upstream: <https://github.com/Ilm-Alan/frontend-design>
-- date checked: 2026-05-28
-- what it is: a skill repo with explicit Codex support and eight aesthetic anchors for frontend work.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: clear anchor system for choosing a distinctive look without drifting into defaults.
-- risks: anchor system is opinionated and may need adaptation for a course UI rather than a landing page.
-- recommendation status: candidate_secondary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `README.md`
-- `SKILL.md`
-
-## Notes
-
-Useful when we want a sharp visual language with an explicit aesthetic anchor.
+candidate_name: Ilm-Alan/frontend-design
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for OpenScript lesson UI work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: Ilm-Alan/frontend-design
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments

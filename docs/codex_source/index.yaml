@@ -71,35 +71,51 @@ sections:
         status: active
       - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/nexu_open_design/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/imported_index.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/taste_skill/README.md
         status: imported_reference
-      - path: docs/codex_source/tools/frontend_design_skills/taste_skill/SKILL.md
+      - path: docs/codex_source/tools/frontend_design_skills/taste_skill/SUMMARY.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/taste_skill/imported_index.md
         status: imported_reference
   vendor_docs:
     status: imported_reference

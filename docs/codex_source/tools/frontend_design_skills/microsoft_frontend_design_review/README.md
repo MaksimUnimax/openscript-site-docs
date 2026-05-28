@@ -1,21 +1,23 @@
-# microsoft/frontend-design-review
+# Microsoft frontend-design-review reference copy
 
-- upstream: <https://raw.githubusercontent.com/microsoft/skills/main/.github/skills/frontend-design-review/SKILL.md>
-- date checked: 2026-05-28
-- what it is: design-review framework that evaluates UI against quality pillars and accessibility, with a mode for creating distinctive frontend interfaces.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: unknown
-- why it may help OpenScript lesson UI: good QA lens for accessibility, trust, and design-system discipline.
-- risks: review-forward, so it should complement rather than replace a creative design candidate.
-- recommendation status: review_only
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `SKILL.md`
-
-## Notes
-
-Use as a review companion for lesson UI experiments and accessibility checks.
+candidate_name: microsoft/frontend-design-review
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_review_reference
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo review/reference copy for design-system and accessibility review work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: microsoft/skills
+origin_import_note: imported into the docs repo as a local review/reference copy for future UI experiments

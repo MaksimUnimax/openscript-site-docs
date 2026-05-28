@@ -1,22 +1,23 @@
-# mblode/agent-skills
+# mblode/agent-skills reference copy
 
-- upstream: <https://github.com/mblode/agent-skills>
-- date checked: 2026-05-28
-- what it is: a broader agent-skills collection with UI design, animation, typography audit, UI audit, and related shipping skills.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: good for combining visual design, motion, typography, and QA in one reference family.
-- risks: broad repo; the relevant skill needs to be selected carefully so we do not over-import unrelated advice.
-- recommendation status: candidate_secondary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `README.md`
-- `skills/ui-design/SKILL.md`
-
-## Notes
-
-Helpful as a broader quality and UI craft reference rather than a single-purpose design front door.
+candidate_name: mblode/agent-skills
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for UI design and hierarchy work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: mblode/agent-skills
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments

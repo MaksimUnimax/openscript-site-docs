@@ -1,21 +1,23 @@
-# anthropics/frontend-design
+# Anthropic frontend-design reference copy
 
-- upstream: <https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md>
-- date checked: 2026-05-28
-- what it is: a high-quality frontend design skill that pushes for distinctive, production-grade UI instead of generic AI output.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: strong baseline for choosing a bold but coherent visual direction for lesson pages and course surfaces.
-- risks: can stay high-level unless paired with a QA/review skill and project-specific constraints.
-- recommendation status: candidate_primary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `SKILL.md`
-
-## Notes
-
-This is one of the strongest first-pass candidates for future OpenScript lesson UI testing.
+candidate_name: anthropic/frontend-design
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for OpenScript lesson UI work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: anthropic/skills
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments

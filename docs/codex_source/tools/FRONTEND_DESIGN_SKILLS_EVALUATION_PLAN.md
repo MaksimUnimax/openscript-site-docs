@@ -1,10 +1,10 @@
 # Frontend Design Skills Evaluation Plan
 
-This plan is for the future comparison of imported UI/design/frontend reference skills.
+This plan is for future comparison of the imported local UI/design/frontend reference copies.
 
 ## Goal
 
-Pick one candidate, apply it to a temporary OpenScript lesson UI skill in the app repo, and evaluate whether it improves lesson presentation without breaking the course contract.
+Pick one candidate from the local docs repo copies, create or update a temporary OpenScript lesson UI skill in the app repo using the local docs copy as input, and evaluate whether it improves lesson presentation without breaking the course contract.
 
 ## What to compare
 
@@ -20,9 +20,10 @@ Compare the candidate against:
 ## Future evaluation loop
 
 1. Pick one candidate from `FRONTEND_DESIGN_SKILLS_INDEX.md`.
-2. Create or apply a temporary OpenScript lesson UI skill in the app repo.
-3. Apply it to Lesson 1 only.
-4. Check the rendered result for:
+2. Use the local server path from the docs repo copy in the prompt.
+3. Create or apply a temporary OpenScript lesson UI skill in the app repo using that local docs copy as input.
+4. Apply it to Lesson 1 only.
+5. Check the rendered result for:
    - no raw markdown leakage
    - no broken `.md` answer links as the primary path
    - quiz / check blocks working
@@ -32,19 +33,21 @@ Compare the candidate against:
    - accessibility basics
    - tests passing
    - manual browser review
-5. If the result is weak, test the next candidate.
+6. If the result is weak, test the next candidate.
 
 ## Rules
 
 - Do not install packages without explicit approval.
 - Do not call model/provider APIs for this comparison.
 - Keep these frontend/design references separate from the course-authoring skill docs.
+- Use the local server path, not external source links, when describing the candidate in a future prompt.
 - Do not import Figma skill artifacts here because no Figma design exists for this project.
+- The app-side skill must be created or updated from the local docs copy; do not depend on external URLs in the implementation prompt.
 
 ## Recommended order
 
 1. manalkaff/opendesign
-2. anthropics/frontend-design
+2. anthropic/frontend-design
 3. nexu-io/open-design
 4. Vercel web-design-guidelines as QA/review
 5. Microsoft frontend-design-review as QA/review

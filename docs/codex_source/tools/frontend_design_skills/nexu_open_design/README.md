@@ -1,22 +1,23 @@
-# nexu-io/open-design
+# Open Design reference copy
 
-- upstream: <https://github.com/nexu-io/open-design>
-- date checked: 2026-05-28
-- what it is: open-source, local-first design engine that wires many coding-agent CLIs into a design workflow with skills, design systems, and a review loop.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: useful as a heavier reference for agent-driven design systems and structured UI generation.
-- risks: large and fast-moving project, broad surface area, more complex than the first OpenScript lesson UI experiment needs.
-- recommendation status: candidate_primary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `README.md`
-- `skills/frontend-design/SKILL.md`
-
-## Notes
-
-This is a reference candidate, not a decision to adopt the entire Open Design stack.
+candidate_name: nexu-io/open-design
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/nexu_open_design/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for OpenScript lesson UI work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: nexu-io/open-design
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments

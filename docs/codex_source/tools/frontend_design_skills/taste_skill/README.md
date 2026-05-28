@@ -1,22 +1,23 @@
-# Leonxlnx/taste-skill
+# Taste Skill reference copy
 
-- upstream: <https://github.com/Leonxlnx/taste-skill>
-- date checked: 2026-05-28
-- what it is: anti-slop frontend skill set aimed at layout, typography, motion, and spacing for premium-looking interfaces.
-- Codex compatibility: yes
-- has SKILL.md: yes
-- install required: yes
-- why it may help OpenScript lesson UI: good for making lesson pages feel less templated and more intentionally designed.
-- risks: strongest for landing pages / portfolios / redesigns, so course content may need adaptation.
-- recommendation status: candidate_secondary
-- install performed: no
-- model/provider call performed: no
-
-## Source docs imported
-
-- `README.md`
-- `skills/taste-skill/SKILL.md`
-
-## Notes
-
-Useful for anti-slop frontends and taste calibration.
+candidate_name: Leonxlnx/taste-skill
+local_server_path: /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/taste_skill/
+local_files:
+- README.md
+- SUMMARY.md
+- imported_index.md
+local_skill_file: SUMMARY.md
+full_skill_imported: no
+active_codex_skill: no
+docs_reference_only: yes
+can_be_used_directly_as_$skill: no
+can_be_used_as_basis_for_app_skill: yes
+status: local_reference_summary
+install_performed: no
+model_or_provider_call_performed: no
+notes:
+- Local docs repo reference copy for OpenScript lesson UI work.
+- Use the local server path in future prompts; do not tell Codex to read external upstream docs when this copy exists.
+- This folder is reference-only, not an active Codex skill.
+origin_project_name: Leonxlnx/taste-skill
+origin_import_note: imported into the docs repo as a local reference copy for future UI experiments
