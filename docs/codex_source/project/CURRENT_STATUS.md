@@ -26,8 +26,8 @@ Docs work status:
 - the app repo DAIR active skill is being synchronized to the same raw source
 - the custom `openscript-course-authoring` and `openscript-lesson-ui-opendesign` adapters were removed from the app repo during the clean-skill pass
 - the app repo now uses clean exact-copy active skills copied from the local docs repo sources
-- the mblode UI-design package is now complete locally with companion files
-- `vercel_web_design_guidelines` remains docs-reference-only until a local-safe package exists
+- the mblode UI-design package is now complete locally with companion files and the active app copy is complete
+- `vercel_web_design_guidelines` remains docs-reference-only and is not in the active app skill set
 
 Next recommended step:
 - course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`
