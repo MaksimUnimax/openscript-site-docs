@@ -38,39 +38,80 @@ Canonical doc areas:
 
 Skills and tool references for Codex prompts
 
-Active app repo skills
-- These are real repo-scoped Codex skills that become available only when Codex works from `/opt/ai-starter-community`.
+Clean active app skills
+- These are exact local copies of full `SKILL.md` files from the docs repo.
+- They live in `/opt/ai-starter-community/.agents/skills/**`.
+- No custom retellings or adapters are active now.
+- Do not use `openscript-course-authoring` or `openscript-lesson-ui-opendesign`; they were removed from the active set.
 
-1. `openscript-course-authoring`
-- Path: `/opt/ai-starter-community/.agents/skills/openscript-course-authoring/SKILL.md`
-- Purpose: writing course lessons for "Работа с ИИ"; requires ready answers, checkable tasks, and explicit proof; ChatGPT designs, Codex executes, user returns report.
-- How ChatGPT should activate it:
-  - write: `Use this repo-scoped skill: $openscript-course-authoring`
-  - and include: `Read and follow: /opt/ai-starter-community/.agents/skills/openscript-course-authoring/SKILL.md`
-- Status: active app repo skill exists.
+Active exact-copy skills:
+1. `dair-lesson-generator`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/dair_lesson_generator/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md`
+- Purpose: standalone multi-lesson browser artifacts with navigation, objectives, flashcards, quizzes, and source links.
 
-2. `openscript-lesson-ui`
-- Status: not active yet unless created later in the app repo.
-- Expected future path: `/opt/ai-starter-community/.agents/skills/openscript-lesson-ui/SKILL.md`
-- Purpose: lesson UI / верстка quality, raw markdown cleanup, quiz UI, clickable checklist, answer reveal, and visual/browser proof.
-- How to activate after creation:
-  - write: `$openscript-lesson-ui`
-  - then include the exact skill path and ask Codex to follow it.
+2. `opendesign-manalkaff`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/opendesign-manalkaff/SKILL.md`
+- Purpose: OpenDesign-style frontend direction for lesson UIs.
+
+3. `opendesign-nexu`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/nexu_open_design/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/opendesign-nexu/SKILL.md`
+- Purpose: Open Design engine / Codex-friendly design reference.
+
+4. `anthropic-frontend-design`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/anthropic-frontend-design/SKILL.md`
+- Purpose: strong frontend design baseline for lesson presentation.
+
+5. `taste-skill`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/taste_skill/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/taste-skill/SKILL.md`
+- Purpose: anti-slop taste, layout, typography, and motion discipline.
+
+6. `microsoft-frontend-design-review`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/microsoft-frontend-design-review/SKILL.md`
+- Purpose: accessibility and design-system review lens.
+
+7. `vercel-web-design-guidelines`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/vercel-web-design-guidelines/SKILL.md`
+- Purpose: UI and accessibility review guidance.
+
+8. `ilm-alan-frontend-design`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/ilm-alan-frontend-design/SKILL.md`
+- Purpose: explicit aesthetic anchor and design direction reference.
+
+9. `mblode-agent-skills`
+- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SKILL.md`
+- App path: `/opt/ai-starter-community/.agents/skills/mblode-agent-skills/SKILL.md`
+- Purpose: broader UI craft and quality reference.
+
+How ChatGPT should activate a clean active skill:
+```text
+Use this repo-scoped skill explicitly:
+$<skill-name>
+
+Read and follow:
+- /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
+
+STOP_SKILL_NOT_FOUND:
+If the skill file is missing, stop and report before making changes.
+
+REPORT:
+Include SKILL_USAGE_PROOF with:
+- skill_name
+- skill_path
+- skill_read
+- rules_applied
+```
 
 Vendor/reference frontend design skills
-- These are NOT active Codex skills automatically.
-- They live in the docs repo as local reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
-- Local server paths:
-  - `manalkaff_opendesign` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/`
-  - `nexu_open_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/nexu_open_design/`
-  - `anthropic_frontend_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/`
-  - `vercel_web_design_guidelines` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/vercel_web_design_guidelines/`
-  - `microsoft_frontend_design_review` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/`
-  - `ilm_alan_frontend_design` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/`
-  - `mblode_agent_skills` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/`
-  - `taste_skill` → `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/taste_skill/`
-- Purpose: choose/test UI and design approaches later, and inform a future OpenScript-specific lesson UI skill.
-- Distinction: docs repo vendor/reference skills are local reference copies; app repo `.agents/skills/**` are the active Codex skills.
+- These remain local docs-repo reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
+- They are source material for the active exact-copy skills above, not the active skills themselves.
 - Do not tell Codex to read external upstream docs when a local copy exists. Use the local server path.
 
 Prompt rule for future skill use
@@ -86,10 +127,10 @@ Prompt snippet example:
 
 ```text
 Use this repo-scoped skill explicitly:
-$openscript-course-authoring
+$<skill-name>
 
 Read and follow:
-- /opt/ai-starter-community/.agents/skills/openscript-course-authoring/SKILL.md
+- /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
 
 STOP_SKILL_NOT_FOUND:
 If the skill file is missing, stop and report before making changes.

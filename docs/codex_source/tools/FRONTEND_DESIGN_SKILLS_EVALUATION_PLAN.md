@@ -1,10 +1,10 @@
 # Frontend Design Skills Evaluation Plan
 
-This plan is for future comparison of the imported local UI/design/frontend reference copies.
+This plan is for future comparison of the imported local UI/design/frontend reference copies and their matching exact-copy active app skills.
 
 ## Goal
 
-Pick one candidate from the local docs repo copies, create or update a temporary OpenScript lesson UI skill in the app repo using the local docs copy as input, and evaluate whether it improves lesson presentation without breaking the course contract.
+Pick one candidate from the local docs repo copies, refresh or adapt the matching exact-copy active app skill in the app repo using the local docs copy as input, and evaluate whether it improves lesson presentation without breaking the course contract.
 
 ## What to compare
 
@@ -21,8 +21,8 @@ Compare the candidate against:
 
 1. Pick one candidate from `FRONTEND_DESIGN_SKILLS_INDEX.md`.
 2. Use the local server path from the docs repo copy in the prompt.
-3. Create or apply a temporary OpenScript lesson UI skill in the app repo using that local docs copy as input.
-4. Apply it to Lesson 1 only.
+3. Refresh or apply the matching exact-copy active app skill in the app repo from that local docs copy.
+4. Apply it to Lesson 1 only in a separate run.
 5. Check the rendered result for:
    - no raw markdown leakage
    - no broken `.md` answer links as the primary path
@@ -42,7 +42,8 @@ Compare the candidate against:
 - Keep these frontend/design references separate from the course-authoring skill docs.
 - Use the local server path, not external source links, when describing the candidate in a future prompt.
 - Do not import Figma skill artifacts here because no Figma design exists for this project.
-- The app-side skill must be created or updated from the local docs copy; do not depend on external URLs in the implementation prompt.
+- The app-side skill must be refreshed from the local docs copy; do not depend on external URLs in the implementation prompt.
+- Do not keep custom retellings or adapters once a clean exact-copy skill exists.
 
 ## Recommended order
 

@@ -23,6 +23,8 @@ Docs context:
 - full local frontend/design skill files are now imported and stored under the docs repo local server paths
 - the DAIR lesson-generator docs entry is now the full raw local copy, not the earlier summary copy
 - the app repo DAIR active skill is being synchronized from that same local raw source
+- the app repo active skills are now clean exact copies from local docs repo sources
+- the custom `openscript-course-authoring` and `openscript-lesson-ui-opendesign` adapters were removed from the app repo
 
 Workflow context:
 - do not jump into app implementation yet

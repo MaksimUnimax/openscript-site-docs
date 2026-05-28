@@ -24,6 +24,8 @@ Docs work status:
 - full local frontend/design skill files have now been imported for the current candidates under `docs/codex_source/tools/frontend_design_skills/**`
 - the DAIR lesson-generator entry is now the full raw local copy, not the earlier summary copy
 - the app repo DAIR active skill is being synchronized to the same raw source
+- the custom `openscript-course-authoring` and `openscript-lesson-ui-opendesign` adapters were removed from the app repo during the clean-skill pass
+- the app repo now uses clean exact-copy active skills copied from the local docs repo sources
 
 Next recommended step:
 - course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`

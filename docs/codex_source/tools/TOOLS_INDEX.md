@@ -16,12 +16,28 @@ Status key:
 | LiaScript | `docs/codex_source/tools/liascript/README.md` | imported_reference | Markdown-first interactive course fallback/reference |
 | Codex Skills | `docs/codex_source/tools/codex_skills/README.md` | imported_reference | Reusable local Codex skills for repeatable course workflows |
 
-Frontend/design skill references are tracked separately from course-writing skills:
+Clean active app skills are installed separately as exact local copies:
+
+- `/opt/ai-starter-community/.agents/skills/dair-lesson-generator`
+- `/opt/ai-starter-community/.agents/skills/opendesign-manalkaff`
+- `/opt/ai-starter-community/.agents/skills/opendesign-nexu`
+- `/opt/ai-starter-community/.agents/skills/anthropic-frontend-design`
+- `/opt/ai-starter-community/.agents/skills/taste-skill`
+- `/opt/ai-starter-community/.agents/skills/microsoft-frontend-design-review`
+- `/opt/ai-starter-community/.agents/skills/vercel-web-design-guidelines`
+- `/opt/ai-starter-community/.agents/skills/ilm-alan-frontend-design`
+- `/opt/ai-starter-community/.agents/skills/mblode-agent-skills`
+
+Refresh rule:
+- app active copies must be refreshed only from the matching docs-repo local copy
+- do not use external upstream URLs as the working source
+
+Frontend/design skill references remain tracked separately from the clean active app skills:
 
 - `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_INDEX.md`
 - `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_EVALUATION_PLAN.md`
 
-These are local reference copies only; active Codex skills still live in `/opt/ai-starter-community/.agents/skills/**`.
+These are local reference copies only; the clean active app skills are exact copies installed under `/opt/ai-starter-community/.agents/skills/**`.
 The local reference copies live under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/**`.
 Full local skill files have been imported for all current frontend/design candidates.
 Do not tell Codex to read external upstream docs when a local copy exists.
