@@ -21,9 +21,9 @@ Frontend/design skill references are tracked separately from course-writing skil
 - `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_INDEX.md`
 - `docs/codex_source/tools/FRONTEND_DESIGN_SKILLS_EVALUATION_PLAN.md`
 
-These are candidate references for future lesson UI and interaction testing. Figma is excluded because no Figma design exists for this task.
-They are local reference copies only; active Codex skills still live in `/opt/ai-starter-community/.agents/skills/**`.
+These are local reference copies only; active Codex skills still live in `/opt/ai-starter-community/.agents/skills/**`.
 The local reference copies live under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/**`.
+Full local skill files have been imported for all current frontend/design candidates.
 Do not tell Codex to read external upstream docs when a local copy exists.
 
 How to use this index:

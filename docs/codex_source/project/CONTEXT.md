@@ -20,7 +20,7 @@ Docs context:
 - exact docs must be read before future Codex runs
 - docs repair/import runs are allowed to create or import missing docs
 - the frontend/design skill reference import exists and is tracked in docs at commit `5be436c03ea1e2da35e5165810d1bbfd63a54018`
-- frontend/design candidates are stored as local-first reference copies, not as active app skills
+- full local frontend/design skill files are now imported and stored under the docs repo local server paths
 
 Workflow context:
 - do not jump into app implementation yet

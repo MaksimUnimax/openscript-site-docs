@@ -21,7 +21,7 @@ Docs work status:
 - this repository is being repaired for course tooling documentation
 - missing core docs are being created now
 - frontend/design skill candidates were imported and pushed at `5be436c03ea1e2da35e5165810d1bbfd63a54018`
-- those frontend/design candidates are now stored as local-first reference copies under `docs/codex_source/tools/frontend_design_skills/**`
+- full local frontend/design skill files have now been imported for the current candidates under `docs/codex_source/tools/frontend_design_skills/**`
 
 Next recommended step:
 - course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`
