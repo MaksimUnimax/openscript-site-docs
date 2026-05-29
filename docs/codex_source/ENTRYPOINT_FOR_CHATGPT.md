@@ -42,7 +42,7 @@ Clean active app skills
 - These are exact local copies of full `SKILL.md` files from the docs repo.
 - They live in `/opt/ai-starter-community/.agents/skills/**`.
 - No custom retellings or adapters are active now.
-- Do not use `openscript-course-authoring` or `openscript-lesson-ui-opendesign`; they were removed from the active set.
+- Removed/not active: `openscript-course-authoring`, `openscript-lesson-ui-opendesign`.
 
 Active exact-copy skills:
 1. `dair-lesson-generator`
@@ -108,7 +108,7 @@ Vendor/reference frontend design skills
 - These remain local docs-repo reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
 - They are source material for the active exact-copy skills above, not the active skills themselves.
 - Do not tell Codex to read external upstream docs when a local copy exists. Use the local server path.
-- `vercel_web_design_guidelines` remains docs-reference-only because the clean upstream guidance depends on external WebFetch; do not treat it as an active app skill until a local-safe package exists.
+- `vercel-web-design-guidelines` remains docs-reference-only and is not active until a local-safe package exists.
 
 Prompt rule for future skill use
 - When a future task needs a skill, ChatGPT should explicitly include:
@@ -130,6 +130,26 @@ Read and follow:
 
 STOP_SKILL_NOT_FOUND:
 If the skill file is missing, stop and report before making changes.
+
+REPORT:
+Include SKILL_USAGE_PROOF with:
+- skill_name
+- skill_path
+- skill_read
+- rules_applied
+```
+
+Example for DAIR:
+
+```text
+Use this repo-scoped skill explicitly:
+$dair-lesson-generator
+
+Read and follow:
+- /opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md
+
+STOP_SKILL_NOT_FOUND:
+If the skill file is missing, stop before making changes.
 
 REPORT:
 Include SKILL_USAGE_PROOF with:

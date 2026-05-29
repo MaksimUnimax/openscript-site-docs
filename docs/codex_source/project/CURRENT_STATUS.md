@@ -18,17 +18,9 @@ Known product state:
 - login still accepts email or login
 
 Docs work status:
-- this repository is being repaired for course tooling documentation
-- missing core docs are being created now
-- frontend/design skill candidates were imported and pushed at `5be436c03ea1e2da35e5165810d1bbfd63a54018`
-- full local frontend/design skill files have now been imported for the current candidates under `docs/codex_source/tools/frontend_design_skills/**`
-- the DAIR lesson-generator entry is now the full raw local copy, not the earlier summary copy
-- the app repo DAIR active skill is being synchronized to the same raw source
-- the custom `openscript-course-authoring` and `openscript-lesson-ui-opendesign` adapters were removed from the app repo during the clean-skill pass
-- the app repo now uses clean exact-copy active skills copied from the local docs repo sources
-- the mblode UI-design package is now complete locally with companion files and the active app copy is complete
-- `vercel_web_design_guidelines` remains docs-reference-only and is not in the active app skill set
+- ENTRYPOINT skill activation placeholders fixed.
+- Active skill examples now use `<skill-name>` placeholder or a real active skill name.
+- No app repo changes.
 
 Next recommended step:
-- course content pipeline DESIGN_ONLY for `/materials` and `/cabinet`
-- not app implementation yet
+- keep future changes docs-only unless the task explicitly widens scope
