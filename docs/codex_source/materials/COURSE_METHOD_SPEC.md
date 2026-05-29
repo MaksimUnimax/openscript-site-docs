@@ -2,9 +2,15 @@
 
 This course is for non-programmers who want to learn by following a guided workflow, not by writing free-form Codex prompts from scratch.
 
+Current skill/tooling situation:
+- `dair-lesson-generator` is the true active exact-copy skill for standalone multi-lesson browser artifacts
+- frontend/design exact-copy skills are available for controlled experiments
+- removed custom course-authoring adapters must not be used
+- `vercel-web-design-guidelines` is docs-reference-only
+
 Method:
 - GPT prepares the prompt
-- the user copies and runs it
+- The user copies and runs it.
 - the user brings back the report or output
 - the next step is chosen from proof, not guesswork
 
@@ -30,3 +36,4 @@ Course behavior:
 - the user should learn how ChatGPT, Codex, repo docs, and proof runs work together
 - the course should prepare the user to run safe documentation/design/fix/report cycles
 - the course should not require the user to invent the entire prompt workflow alone
+- the next course step must be a controlled experiment, not blind lesson writing

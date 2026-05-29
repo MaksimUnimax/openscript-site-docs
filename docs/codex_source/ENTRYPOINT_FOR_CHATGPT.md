@@ -24,6 +24,7 @@ Course context:
 - the main product is the OpenScript / AI Starter Community website
 - courses live inside the "Работа с ИИ" materials area in the main cabinet
 - courses are not a separate root product
+- current project-memory focus is OpenScript site and cabinet course tooling, not Agent Lab, APM, or OpenDesign Lab
 
 Docs repair/import rule:
 - normal implementation runs: if required docs are missing, stop and report it

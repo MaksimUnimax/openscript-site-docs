@@ -5,6 +5,7 @@ Draft map for the first course inside "Работа с ИИ".
 Lesson 1 - What we build and how ChatGPT + Codex work together
 - goal: understand the full workflow
 - outcome: user can explain the role of docs, prompts, proof, and the app repo
+- status note: this lesson content already exists in earlier work, but it must be re-evaluated after the skill workflow correction
 
 Lesson 2 - Server and project structure in simple words
 - goal: understand where the website, docs, and runtime fit
@@ -29,6 +30,7 @@ Lesson 6 - Tests and acceptance
 Lesson 7 - Git deploy key and GitHub push, explained simply
 - goal: understand the release path at a high level
 - outcome: user knows why tracked source is the accepted output
+- note: this explanation belongs in the course Git lesson for students, not in workflow rules unless a future explicit decision says otherwise
 
 Lesson 8 - First real mini-feature
 - goal: apply the workflow to a tiny feature
@@ -36,4 +38,4 @@ Lesson 8 - First real mini-feature
 
 Status:
 - draft
-- can be revised after tooling and pipeline design are finalized
+- do not extend to Lesson 2 until the course generation/rendering workflow is selected and proven

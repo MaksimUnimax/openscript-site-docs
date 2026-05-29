@@ -5,7 +5,7 @@ project:
   root: docs/codex_source
   purpose: canonical source-of-truth for project memory, materials specs, workflow rules, and imported tool references
 read_order:
-  - docs/codex_source/AGENTS.md
+  - AGENTS.md
   - docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md
   - docs/codex_source/index.yaml
   - exact docs named by the task prompt
@@ -13,6 +13,8 @@ sections:
   project_docs:
     status: active
     docs:
+      - path: docs/codex_source/project/PROJECT_OVERVIEW.md
+        status: active
       - path: docs/codex_source/project/TZ.md
         status: active
       - path: docs/codex_source/project/ROADMAP.md
@@ -22,6 +24,13 @@ sections:
       - path: docs/codex_source/project/CURRENT_STATUS.md
         status: active
       - path: docs/codex_source/project/DECISIONS.md
+        status: active
+      - path: docs/codex_source/project/OPEN_QUESTIONS.md
+        status: active
+  app_docs:
+    status: active
+    docs:
+      - path: docs/codex_source/app/MODULE_MAP.md
         status: active
   materials_docs:
     status: active
@@ -40,6 +49,8 @@ sections:
       - path: docs/codex_source/workflow/RULES.md
         status: active
       - path: docs/codex_source/workflow/CODEX_RUN_RULES.md
+        status: active
+      - path: docs/codex_source/workflow/CONTINUE_AFTER_BREAK.md
         status: active
   tools_docs:
     status: active
@@ -139,6 +150,20 @@ sections:
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/imported_index.md
         status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/product-ui.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/marketing-ui.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/aesthetic-direction.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/design-in-code.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/references/cro.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/references/testing.md
+        status: imported_reference
+      - path: docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/references/modern.md
+        status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/taste_skill/README.md
         status: imported_reference
       - path: docs/codex_source/tools/frontend_design_skills/taste_skill/SKILL.md
@@ -174,6 +199,8 @@ sections:
 notes:
   - This index is for the OpenScript / AI Starter Community website docs only.
   - Legacy imported references may remain in the repo for history, but the canonical active project docs are the OpenScript site docs listed above.
+  - Legacy Agent Lab / YouTube Research imports remain historical reference only and must not override the current OpenScript site memory.
+  - Agent Lab, APM, Telegram/VK, and OpenDesign Lab are out of scope for this OpenScript site snapshot.
   - Frontend/design skill references are candidate docs for future lesson UI testing and are separate from course-writing skills.
   - Figma was excluded from this import because no Figma design exists for the task.
   - Do not use this index to infer runtime behavior; always read exact task docs and source-of-truth files.

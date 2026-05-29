@@ -1,27 +1,39 @@
 # CURRENT STATUS
 
-Latest known app commit:
-- `6547fee3eaa2941626283018d6f3e0e5b83477c6`
+Docs repo path:
+- `/opt/openscript-site-docs`
 
-Commit meaning:
-- `Prepare cabinet course shell`
+App repo path:
+- `/opt/ai-starter-community`
 
-Known public checks after the cabinet shell run:
-- public root response was OK
-- `/login` was OK
-- `/register` remained closed
+App branch:
+- `design/product-story-03`
 
-Known product state:
-- `/cabinet` is now a clean course shell
+Public site:
+- `https://openscript.ru`
+
+Latest verified app cleanup commit:
+- `24d518fdb3a09babb4a32492706975a3f6165a06`
+
+Historical product-state proof from prior work:
+- cabinet course shell prepared
 - `/materials` is a safe placeholder
-- registration remains temporarily closed
-- login still accepts email or login
+- login accepts email or login
+- registration is temporarily closed or controlled
+- password reset and email verification flows existed from earlier work
 
 Docs work status:
-- Entire ENTRYPOINT skills section replaced with the canonical clean format.
-- Old custom skills are not active.
+- clean exact-copy active skills inventory is documented in `ENTRYPOINT_FOR_CHATGPT.md`
+- DAIR is the true raw exact-copy active skill
+- `mblode-agent-skills` is active only with its companion files copied alongside `SKILL.md`
+- `vercel-web-design-guidelines` is docs-reference-only
 - Vercel is docs-reference-only.
-- No app repo changes.
+- old custom retellings/adapters are removed from active app skills
+- first lesson/content work exists but must be re-evaluated after skill workflow correction
+- no app repo changes in this docs sync
 
-Next recommended step:
-- keep future changes docs-only unless the task explicitly widens scope
+Current stop-point:
+- do not write more lessons until one active skill workflow is selected and tested
+
+Next safe step:
+- run a controlled proof/design experiment to choose one active skill path for the course/tooling workflow

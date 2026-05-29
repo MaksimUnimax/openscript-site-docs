@@ -1,48 +1,44 @@
 # ROADMAP
 
-Draft roadmap for the OpenScript / AI Starter Community docs and course workflow.
+Stage 0 - Docs repo bootstrap and GitHub setup: done.
+- docs repo exists
+- root AGENTS and entrypoint/index are in place
+- public GitHub docs repo exists
+- deploy key / push setup was handled earlier
 
-Stage 0 - docs repo repair and bootstrap
-- repair the canonical docs contract
-- create missing core docs
-- import the first tool/vendor reference docs
-- make the docs repo usable as source-of-truth for future Codex runs
+Stage 1 - Docs consolidation and project memory: in progress.
+- TZ, context, current status, decisions, module map, materials docs, and workflow docs must remain synchronized
+- the current run belongs here
 
-Stage 1 - course tooling docs and canonical memory
-- document the materials model
-- document the course method
-- document the visual system
-- document the local tooling candidates
-- keep the docs repo aligned with the current product state
+Stage 2 - Live app state proof: partially done / must be refreshed before app work.
+- app repo is `/opt/ai-starter-community`
+- app branch is `design/product-story-03`
+- future app work must start with read-only proof
 
-Stage 2 - course tooling evaluation and design
-- compare DAIR lesson-generator, ClassBuild, HyperFrames, Skill-Anything, LiaScript, and Codex Skills
-- choose the first course-generation path
-- define the content authoring workflow
-
-Stage 3 - course content pipeline design
-- define how a course draft is written
-- define how prompts, lessons, quizzes, and proof are produced
-- define how drafts are reviewed before app integration
-
-Stage 4 - first course draft generation
-- generate the first real course draft for "Работа с ИИ"
-- keep it compact, visual, and beginner-friendly
-- keep it inside the docs-informed workflow
-
-Stage 5 - app integration of lesson list and lesson page
-- integrate the approved lesson map into `/materials` and cabinet flows
-- keep course content in git-tracked app source, not runtime-only storage
-
-Later stages
-- payment and access model refinement
-- admin editor and content management
-- AI-sales agent work
-
-Current app facts carried into this roadmap:
-- cabinet course shell is prepared
+Stage 3 - Cabinet/materials foundation: in progress.
+- cabinet course shell exists
 - `/materials` is a safe placeholder
-- public registration is temporarily closed
+- future lesson list and lesson page work belong here after skill workflow proof
 
-Current docs facts:
-- this run is repairing and importing the docs/tooling layer before course generation work
+Stage 4 - Skill/tooling foundation for course/UI generation: current active focus.
+- clean exact-copy active skills are installed
+- old custom skills are removed
+- DAIR, OpenDesign, Taste, Microsoft, Ilm, and Mblode candidates are available as active skills
+- Vercel remains docs-reference-only
+- the next action is to choose and test one workflow, not generate full lessons blindly
+
+Stage 5 - Lesson/course implementation in cabinet: next after skill workflow proof.
+- show a list of lessons in cabinet/materials
+- create the first lesson page
+- use visual and interactive requirements
+- keep source in git-tracked app files
+
+Stage 6 - Payment/access activation: later.
+- first successful payment grants permanent materials access
+- paid options are separate from materials access
+
+Stage 7 - AI-sales agent: later.
+- not in current scope
+
+Roadmap stop-point:
+- do not generate more lessons until the active skill set is confirmed and a selected workflow is tested

@@ -2,29 +2,29 @@
 
 Current working context for the OpenScript site docs:
 
-- the site was recovered from a 502 upstream failure in the app repo
-- public registration is temporarily closed
-- login by email or login is preserved
-- the cabinet course shell is prepared
-- `/materials` is a safe placeholder
-- full app tests passed after the cabinet shell run
-- the next step is to prepare course tooling docs before generating course content
+- OpenScript / AI Starter Community is the main site product.
+- It is not a course-only repo.
+- Courses live inside the "Работа с ИИ" materials area in the personal cabinet.
+- The current active block is documentation and project-memory synchronization after skills cleanup.
+- `docs/codex_source/**` is the source-of-truth for docs, context, roadmap, decisions, materials specs, workflow rules, and local skill/tool references.
+- `/opt/openscript-site-docs` is the docs repo.
+- `/opt/ai-starter-community` is the app repo with the active `.agents/skills/**` copies.
+- Runtime/server state is not the source of truth.
 
-Product context:
-- OpenScript is one website product, not multiple products
-- courses live inside the "Работа с ИИ" materials area in the cabinet
-- the cabinet is the place where future course material will be organized
+Current skills state:
+- the clean exact-copy active skills are the eight listed in `ENTRYPOINT_FOR_CHATGPT.md`
+- `openscript-course-authoring` and `openscript-lesson-ui-opendesign` are not active
+- `vercel-web-design-guidelines` is docs-reference-only
+- `mblode-agent-skills` is active only with companion files copied alongside `SKILL.md`
 
-Docs context:
-- this repository is the source-of-truth for docs, memory, and tool references
-- exact docs must be read before future Codex runs
-- docs repair/import runs are allowed to create or import missing docs
-- Entire ENTRYPOINT skills section replaced with the canonical clean format.
-- Old custom skills are not active.
-- Vercel is docs-reference-only.
-- No app repo changes.
+Next project direction:
+- do not continue generating lessons immediately
+- first select one active skill workflow
+- run a controlled proof/design experiment
+- then adapt the lesson list and first lesson page in the cabinet only after design/proof
 
-Workflow context:
-- do not jump into app implementation yet
-- first finish the tooling and method docs
-- then do a DESIGN_ONLY course content pipeline run
+Out of scope for this docs update:
+- Agent Lab
+- APM
+- Telegram/VK
+- OpenDesign Lab
