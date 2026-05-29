@@ -4,7 +4,7 @@ status: youtube_ranked_batch_active_status_correction
 snapshot_kind: bounded_codex_repo_snapshot
 source_kind: bounded_codex_repo_snapshot
 last_snapshot_id: PROJECT_SNAPSHOT_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
-private_head_at_snapshot: 010ab7444c0e1deb34bcad69a1787cc5f93cfde0
+private_head_at_snapshot: bb826ca728bad3289fb18e87a924f8445ced3a84
 last_updated_utc: 2026-05-29T00:00:00Z
 scope: bounded inventory, no secrets
 needs_future_refresh: false
