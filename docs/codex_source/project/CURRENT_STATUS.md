@@ -20,6 +20,7 @@ Known product state:
 Docs work status:
 - ENTRYPOINT skill activation placeholders fixed.
 - Active skill examples now use `<skill-name>` placeholder or a real active skill name.
+- Previous entrypoint fix report was contradicted by GitHub/raw; the broken `$` and `skills//SKILL.md` examples are now fixed.
 - No app repo changes.
 
 Next recommended step:
