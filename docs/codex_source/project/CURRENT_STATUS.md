@@ -18,9 +18,9 @@ Known product state:
 - login still accepts email or login
 
 Docs work status:
-- ENTRYPOINT skill activation placeholders fixed.
-- Active skill examples now use `<skill-name>` placeholder or a real active skill name.
-- Previous entrypoint fix report was contradicted by GitHub/raw; the broken `$` and `skills//SKILL.md` examples are now fixed.
+- Entire ENTRYPOINT skills section replaced with the canonical clean format.
+- Old custom skills are not active.
+- Vercel is docs-reference-only.
 - No app repo changes.
 
 Next recommended step:

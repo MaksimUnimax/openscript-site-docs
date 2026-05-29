@@ -19,9 +19,9 @@ Docs context:
 - this repository is the source-of-truth for docs, memory, and tool references
 - exact docs must be read before future Codex runs
 - docs repair/import runs are allowed to create or import missing docs
-- ENTRYPOINT skill activation placeholders fixed.
-- Active skill examples now use `<skill-name>` placeholder or a real active skill name.
-- Previous entrypoint fix report was contradicted by GitHub/raw; the broken `$` and `skills//SKILL.md` examples are now fixed.
+- Entire ENTRYPOINT skills section replaced with the canonical clean format.
+- Old custom skills are not active.
+- Vercel is docs-reference-only.
 - No app repo changes.
 
 Workflow context:

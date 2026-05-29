@@ -36,129 +36,103 @@ Canonical doc areas:
 - `docs/codex_source/tools/**`
 - `docs/codex_source/index.yaml`
 
-Skills and tool references for Codex prompts
+## Skills and tool references for Codex prompts
 
-Clean active app skills
-- These are exact local copies of full `SKILL.md` files from the docs repo.
-- They live in `/opt/ai-starter-community/.agents/skills/**`.
-- No custom retellings or adapters are active now.
-- Removed/not active: `openscript-course-authoring`, `openscript-lesson-ui-opendesign`.
+This section is the current source of truth for ChatGPT when preparing Codex prompts that use repo-scoped skills.
 
-Active exact-copy skills:
-1. `dair-lesson-generator`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/dair_lesson_generator/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md`
-- Purpose: standalone multi-lesson browser artifacts with navigation, objectives, flashcards, quizzes, and source links.
+### Active app repo skills
 
-2. `opendesign-manalkaff`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/manalkaff_opendesign/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/opendesign-manalkaff/SKILL.md`
-- Purpose: OpenDesign-style frontend direction for lesson UIs.
+Active Codex skills are stored only in the app repo:
 
-3. `opendesign-nexu`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/nexu_open_design/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/opendesign-nexu/SKILL.md`
-- Purpose: Open Design engine / Codex-friendly design reference.
+    /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
 
-4. `anthropic-frontend-design`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/anthropic_frontend_design/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/anthropic-frontend-design/SKILL.md`
-- Purpose: strong frontend design baseline for lesson presentation.
+Current active clean exact-copy skills:
 
-5. `taste-skill`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/taste_skill/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/taste-skill/SKILL.md`
-- Purpose: anti-slop taste, layout, typography, and motion discipline.
+    $dair-lesson-generator
+    $opendesign-manalkaff
+    $opendesign-nexu
+    $anthropic-frontend-design
+    $taste-skill
+    $microsoft-frontend-design-review
+    $ilm-alan-frontend-design
+    $mblode-agent-skills
 
-6. `microsoft-frontend-design-review`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/microsoft_frontend_design_review/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/microsoft-frontend-design-review/SKILL.md`
-- Purpose: accessibility and design-system review lens.
+These are active app skills. They are clean local copies from the local docs repo sources.
 
-7. `ilm-alan-frontend-design`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/ilm_alan_frontend_design/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/ilm-alan-frontend-design/SKILL.md`
-- Purpose: explicit aesthetic anchor and design direction reference.
+### Not active
 
-8. `mblode-agent-skills`
-- Docs source: `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/mblode_agent_skills/SKILL.md`
-- App path: `/opt/ai-starter-community/.agents/skills/mblode-agent-skills/SKILL.md`
-- Purpose: broader UI craft and quality reference, with companion files copied alongside `SKILL.md`.
+These must not be used as active skills:
 
-How ChatGPT should activate a clean active skill:
-```text
-Use this repo-scoped skill explicitly:
-$<skill-name>
+    openscript-course-authoring
+    openscript-lesson-ui-opendesign
+    vercel-web-design-guidelines
 
-Read and follow:
-- /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
+openscript-course-authoring and openscript-lesson-ui-opendesign were removed because they were custom retellings/adapters, not clean copied skills.
 
-STOP_SKILL_NOT_FOUND:
-If the skill file is missing, stop and report before making changes.
+vercel-web-design-guidelines is docs-reference-only because the clean upstream skill depends on external WebFetch / Fetch latest guidelines. Do not activate it unless a future task creates a local-safe package.
 
-REPORT:
-Include SKILL_USAGE_PROOF with:
-- skill_name
-- skill_path
-- skill_read
-- rules_applied
-```
+### How ChatGPT must activate a skill in Codex prompts
 
-Vendor/reference frontend design skills
-- These remain local docs-repo reference copies under `/opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/`.
-- They are source material for the active exact-copy skills above, not the active skills themselves.
-- Do not tell Codex to read external upstream docs when a local copy exists. Use the local server path.
-- `vercel-web-design-guidelines` remains docs-reference-only and is not active until a local-safe package exists.
+Use this generic pattern:
 
-Prompt rule for future skill use
-- When a future task needs a skill, ChatGPT should explicitly include:
-  - skill name
-  - exact path
-  - why it is needed
-  - `STOP_SKILL_NOT_FOUND` condition
-  - `SKILL_USAGE_PROOF` report section
-  - tests that prove the skill rules were applied
+    Use this repo-scoped skill explicitly:
+    $<skill-name>
 
-Prompt snippet example:
+    Read and follow:
+    - /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
 
-```text
-Use this repo-scoped skill explicitly:
-$<skill-name>
+    STOP_SKILL_NOT_FOUND:
+    If the skill file is missing, stop before making changes.
 
-Read and follow:
-- /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
-
-STOP_SKILL_NOT_FOUND:
-If the skill file is missing, stop and report before making changes.
-
-REPORT:
-Include SKILL_USAGE_PROOF with:
-- skill_name
-- skill_path
-- skill_read
-- rules_applied
-```
+    REPORT:
+    Include SKILL_USAGE_PROOF with:
+    - skill_name
+    - skill_path
+    - skill_read
+    - rules_applied
 
 Example for DAIR:
 
-```text
-Use this repo-scoped skill explicitly:
-$dair-lesson-generator
+    Use this repo-scoped skill explicitly:
+    $dair-lesson-generator
 
-Read and follow:
-- /opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md
+    Read and follow:
+    - /opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md
 
-STOP_SKILL_NOT_FOUND:
-If the skill file is missing, stop before making changes.
+    STOP_SKILL_NOT_FOUND:
+    If the skill file is missing, stop before making changes.
 
-REPORT:
-Include SKILL_USAGE_PROOF with:
-- skill_name
-- skill_path
-- skill_read
-- rules_applied
-```
+### Local docs repo references
 
-For local frontend/design reference copies, use the local server path from the docs repo, not an external URL.
+The docs repo stores local reference/source copies for skills and tools. These are not automatically active Codex skills.
 
-If the task prompt conflicts with this entrypoint, follow the task prompt and report the conflict.
+Main local docs paths:
+
+    /opt/openscript-site-docs/docs/codex_source/tools/dair_lesson_generator/SKILL.md
+    /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/**
+
+Working rule:
+
+    Docs repo files are source/reference copies.
+    App repo .agents/skills/** files are active Codex skills.
+    Future prompts must use local server paths, not external upstream URLs, when a local copy exists.
+
+### Skill selection rule
+
+Use only one primary skill per controlled Codex run unless the task explicitly requires a second review skill.
+
+For course artifact generation:
+
+    $dair-lesson-generator
+
+For frontend/design experiments, choose one candidate at a time:
+
+    $opendesign-manalkaff
+    $opendesign-nexu
+    $anthropic-frontend-design
+    $taste-skill
+    $microsoft-frontend-design-review
+    $ilm-alan-frontend-design
+    $mblode-agent-skills
+
+Do not mix course generation, app integration, UI implementation, auth, DB, and runtime changes in one uncontrolled run.
