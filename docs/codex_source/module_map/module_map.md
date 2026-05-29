@@ -927,4 +927,120 @@ Out of scope for ranked batch lifecycle fixes:
 Key boundary rule:
 Telegram inline next stack is a UI/control surface for requesting the next configured slice from the same ranked batch. It must not own ranking, DB state, search, or Curator selection logic.
 <!-- MODULE_MAP_APPEND_END id=MM_20260528_YOUTUBE_RANKED_BATCH_LIFECYCLE_MODULE_BOUNDARY -->
+
+<!-- MODULE_MAP_APPEND_BEGIN id=MM_20260528_RECEIPT_FULL_EXTRACTION_BOUNDARY source=chatgpt_dialogue_and_codex_reports -->
+## MM_20260528_RECEIPT_FULL_EXTRACTION_BOUNDARY
+
+### Boundary update
+
+Receipt full extraction belongs to deterministic business layer.
+
+It is not owned by Telegram routing, Hermes auth, Telegram send delivery, or the agent personality layer.
+
+### Business-layer owner boundary
+
+Future receipt extraction work should inspect the deterministic receipt business/tool path first.
+
+Likely source areas:
+
+- `agent_lab/fin_instrument/**`;
+- `vendor/hermes-agent/tools/fin_receipt_tool.py`;
+- `tools/hermes_vendor_overlay/hermes-agent/tools/fin_receipt_tool.py`;
+- receipt OCR/parser tests under `tests/`.
+
+Responsibilities:
+
+- image preprocessing;
+- OCR invocation;
+- OCR candidate normalization;
+- merchant extraction;
+- date/time extraction;
+- total extraction;
+- item row extraction;
+- quantity/unit-price/line-total extraction;
+- payment/tax facts if visible;
+- `missing_fields` reporting;
+- returning factual draft data to the agent.
+
+### Agent/Hermes boundary
+
+Hermes/agent responsibilities:
+
+- receive compact factual tool result;
+- ask user for confirmation or missing details;
+- explain the result in character/style;
+- never invent receipt facts.
+
+Hermes/agent non-responsibilities:
+
+- no direct SQL;
+- no uncontrolled DB mutation;
+- no invented totals/dates/items;
+- no OCR correction by imagination;
+- no replacing deterministic parser output with guessed data.
+
+### Telegram boundary
+
+Telegram routing and send path should be inspected only if fresh proof shows:
+
+- receipt photo does not reach selected agent;
+- `receipt_photo_draft` is not called;
+- tool result is produced but not delivered;
+- Telegram send fails after deterministic extraction succeeded.
+
+Current proof does not make Telegram the first broken layer.
+
+### Future technical boundary
+
+The next technical run should target OCR/preprocessing/parser extraction.
+
+It must not start by changing:
+
+- Telegram Router;
+- Hermes auth/provider;
+- Telegram delivery/send;
+- agent source package;
+- unrelated YouTube pipeline;
+- unrelated UI tabs.
+
+### Acceptance boundary
+
+A receipt extraction fix is incomplete if it only returns a final total.
+
+The business layer must attempt full useful extraction and return `missing_fields` for fields it cannot honestly recover.
+<!-- MODULE_MAP_APPEND_END id=MM_20260528_RECEIPT_FULL_EXTRACTION_BOUNDARY -->
+
+<!-- MODULE_MAP_APPEND_BEGIN id=MM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION source=chatgpt_dialogue_and_codex_reports -->
+## MM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
+
+### Boundary update
+
+The current active block belongs to the YouTube research pipeline and its selection/moderation modules, not the Fin/receipt modules.
+
+### Ownership
+
+Owned by YouTube research pipeline / selection / moderation modules:
+
+- candidate storage and ranking selection lifecycle;
+- durable ranked batch state;
+- current stack / next stack slicing;
+- moderation-state transitions;
+- structured no-eligible / empty-selection handling.
+
+Telegram boundary:
+
+- Telegram `Следующий стек` is an inline moderation control over an already-ranked batch;
+- it must not own search, ranking, database state, or Curator selection logic;
+- it is not a Telegram command in this correction state.
+
+Not current active block from this correction:
+
+- receipt / Fin Instrument module ownership;
+- Telegram router/auth recovery;
+- callback debugging.
+
+### Acceptance boundary
+
+The active/current module-map pointer must now describe the YouTube ranked batch lifecycle stop-point and leave the earlier receipt block as historical context only.
+<!-- MODULE_MAP_APPEND_END id=MM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION -->
 END_MODULE_MAP_APPEND_TEXT

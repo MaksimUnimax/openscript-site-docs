@@ -351,3 +351,8 @@ items:
     reason: "Current dialogue raised whether a separate Telegram bot command should exist for start ranking/selection run. Existing ТЗ proves UI/backend start ranking action, Telegram continue moderation command, and inline next stack, but not a dedicated Telegram ranking command."
     source_kind: chatgpt_dialogue
     created_utc: 2026-05-28
+  - id: receipt_full_extraction_context_imported
+    status: imported
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: receipt full extraction active block imported from current ChatGPT dialogue; no external missing source is required for this docs-only update
+    must_not_invent: true

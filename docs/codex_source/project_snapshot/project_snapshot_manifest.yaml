@@ -1,11 +1,11 @@
 snapshot_file: docs/codex_source/project_snapshot/PROJECT_SNAPSHOT.md
 append_only: false
-status: youtube_ranked_batch_lifecycle_fixed_docs_gap_pending
+status: youtube_ranked_batch_active_status_correction
 snapshot_kind: bounded_codex_repo_snapshot
 source_kind: bounded_codex_repo_snapshot
-last_snapshot_id: PROJECT_SNAPSHOT_20260528_YOUTUBE_RANKED_BATCH_LIFECYCLE
-private_head_at_snapshot: e21a6874ee864a79ad4f2221b6ee4a8a3d723753
-last_updated_utc: 2026-05-28T00:00:00Z
+last_snapshot_id: PROJECT_SNAPSHOT_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
+private_head_at_snapshot: 010ab7444c0e1deb34bcad69a1787cc5f93cfde0
+last_updated_utc: 2026-05-29T00:00:00Z
 scope: bounded inventory, no secrets
 needs_future_refresh: false
 last_snapshot_file: docs/codex_source/project_snapshot/PROJECT_SNAPSHOT.md

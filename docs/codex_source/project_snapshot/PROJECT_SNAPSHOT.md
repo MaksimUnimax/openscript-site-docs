@@ -130,3 +130,50 @@ Current project state:
 - Telegram callback debugging should not be resumed automatically.
 - Current open product/documentation question:
   Should there be a separate Telegram bot command for manual start ranking/selection run, or should ranking launch remain UI/backend only while Telegram handles continue moderation and inline next stack?
+
+# Project Snapshot — 2026-05-28 — Receipt full extraction active block
+
+SNAPSHOT_ID: PROJECT_SNAPSHOT_20260528_RECEIPT_FULL_EXTRACTION_ACTIVE_BLOCK
+DATE_UTC: 2026-05-28T14:06:59Z
+
+## Current active block
+
+`receipt_full_extraction`
+
+## Current proven blocker
+
+- receipt OCR/parser extraction fails to produce full structured receipt data
+
+## Important facts
+
+- receipt photo reaches Telegram and the selected agent;
+- Hermes invokes `receipt_photo_draft`;
+- the failing step is OCR/parser, not Telegram/Hermes routing;
+- visible amount `1 189.63` was missed as a usable total;
+- tool output had `amount=null` and `item_count=0`;
+- the next work is full receipt extraction, not Telegram/Hermes/auth.
+
+## Next recommended run
+
+`OPENSCRIPT_AGENT_LAB_RECEIPT_FULL_EXTRACTION_PROOF_DESIGN_FIX`
+
+# Project Snapshot — 2026-05-29 — YouTube ranked batch active status correction
+
+SNAPSHOT_ID: PROJECT_SNAPSHOT_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
+DATE_UTC: 2026-05-29
+
+## Current active block
+
+`youtube_ranked_batch_moderation_lifecycle`
+
+## Current stop-point
+
+- YouTube ranked batch lifecycle / moderation stack is the current working stop-point.
+- `receipt_full_extraction` remains historical context only.
+- Inline `Следующий стек` is a UI/control action over the same ranked batch, not a Telegram command.
+- The open product/docs question is whether ranking start should be a separate Telegram command or remain a UI/backend operator action.
+
+## No code change required
+
+- This is a documentation pointer correction, not an application behavior change.
+- No Telegram API, Hermes/provider, DB, or service-runtime change is needed.

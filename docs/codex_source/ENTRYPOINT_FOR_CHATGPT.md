@@ -1,139 +1,71 @@
 # ENTRYPOINT FOR CHATGPT
 
-Status: canonical
+STATUS: initial
 
-Start here for ChatGPT/Codex work in this repository.
+Purpose:
+- This is the first file ChatGPT must read at the start of a new project dialogue.
+- It exists so ChatGPT and Codex use repo memory instead of guessing from prior chat state.
 
-What this repo is:
-- OpenScript / AI Starter Community site docs
-- source-of-truth for the docs layer under `docs/codex_source/**`
-- the place to keep project memory, materials specs, workflow rules, and imported tool references
+Do not rely on memory before reading this entrypoint.
 
-What this repo is not:
-- the application repo
-- runtime state
-- a place to change services, nginx, or systemd
-- a place to mix in unrelated projects
+Current known HEAD:
+- Private source repo:
+  - git@github.com:MaksimUnimax/openscript-agent-lab.git
+  - HEAD before this sync: `8f34733debfdf9ae38482618a9a9113f9995bcaa`
+- Public docs repo:
+  - https://github.com/MaksimUnimax/openscript-agent-lab-docs
+  - export HEAD before this sync: `027c34d6965ad5a54757ffad8045650e4ea72c5b`
+- Public docs repo visible to ChatGPT via web: yes
+- Main read path for ChatGPT: public docs repo -> `docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md`
+- Public docs repo contains only `docs/codex_source/**`: yes
+
+Note:
+- Do not rely on memory before reading this entrypoint.
+- This file reflects the pre-sync source state for the current docs import run; the current post-sync private HEAD is reported in the run output, not claimed here.
+
+Current active docs index:
+- docs/codex_source/index.yaml
+
+Manifests:
+- docs/codex_source/context/context_manifest.yaml
+- docs/codex_source/roadmap/roadmap_manifest.yaml
+- docs/codex_source/module_map/module_map_manifest.yaml
+- docs/codex_source/project_snapshot/project_snapshot_manifest.yaml
+
+Vendor docs index:
+- docs/codex_source/vendor/hermes/README.md
+- docs/codex_source/vendor/telegram/README.md
+- docs/codex_source/index.yaml
+
+Project docs:
+- docs/codex_source/project/README.md
+- docs/codex_source/project/current_status.md
+- docs/codex_source/project/project_snapshot.md
+- docs/codex_source/project/module_map.md
+- docs/codex_source/project/runtime_git_canon.md
+- docs/codex_source/project/assistant_codex_workflow_rules.md
+- docs/codex_source/project/safe_boundaries.md
+- docs/codex_source/project/source_vs_runtime.md
+- docs/codex_source/project/technical_spec.md
+- docs/codex_source/project/project_overview.md
+
+Instructions:
+- Vendor docs are under `docs/codex_source/vendor/**`.
+- Roadmap/context are historical/project memory, not vendor source-of-truth.
+- For technical tasks, read the active task card and exact required docs.
+- For append-only updates, Codex must read manifest + tail only, not the entire large context.
 
 Read order:
 1. `docs/codex_source/index.yaml`
-2. exact docs named by the task prompt
-3. only the smallest additional docs needed to prove the current state
+2. `docs/codex_source/project/current_status.md`
+3. `docs/codex_source/project/project_snapshot.md`
+4. `docs/codex_source/project/module_map.md`
+5. `docs/codex_source/context/context_manifest.yaml`
+6. `docs/codex_source/roadmap/roadmap_manifest.yaml`
+7. `docs/codex_source/module_map/module_map_manifest.yaml`
+8. `docs/codex_source/task_cards/<active_task>.yaml` if active_task exists
+9. Exact vendor/project docs required by the task card
 
-Course context:
-- the main product is the OpenScript / AI Starter Community website
-- courses live inside the "Работа с ИИ" materials area in the main cabinet
-- courses are not a separate root product
-- current project-memory focus is OpenScript site and cabinet course tooling, not Agent Lab, APM, or OpenDesign Lab
-
-Docs repair/import rule:
-- normal implementation runs: if required docs are missing, stop and report it
-- explicit docs repair/import runs: create or import the missing docs instead of stopping
-
-Canonical doc areas:
-- `docs/codex_source/project/**`
-- `docs/codex_source/materials/**`
-- `docs/codex_source/workflow/**`
-- `docs/codex_source/tools/**`
-- `docs/codex_source/index.yaml`
-
-## Skills and tool references for Codex prompts
-
-This section is the current source of truth for ChatGPT when preparing Codex prompts that use repo-scoped skills.
-
-### Active app repo skills
-
-Active Codex skills are stored only in the app repo:
-
-    /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
-
-Current active clean exact-copy skills:
-
-    $dair-lesson-generator
-    $opendesign-manalkaff
-    $opendesign-nexu
-    $anthropic-frontend-design
-    $taste-skill
-    $microsoft-frontend-design-review
-    $ilm-alan-frontend-design
-    $mblode-agent-skills
-
-These are active app skills. They are clean local copies from the local docs repo sources.
-
-### Not active
-
-These must not be used as active skills:
-
-    openscript-course-authoring
-    openscript-lesson-ui-opendesign
-    vercel-web-design-guidelines
-
-openscript-course-authoring and openscript-lesson-ui-opendesign were removed because they were custom retellings/adapters, not clean copied skills.
-
-vercel-web-design-guidelines is docs-reference-only because the clean upstream skill depends on external WebFetch / Fetch latest guidelines. Do not activate it unless a future task creates a local-safe package.
-
-### How ChatGPT must activate a skill in Codex prompts
-
-Use this generic pattern:
-
-    Use this repo-scoped skill explicitly:
-    $<skill-name>
-
-    Read and follow:
-    - /opt/ai-starter-community/.agents/skills/<skill-name>/SKILL.md
-
-    STOP_SKILL_NOT_FOUND:
-    If the skill file is missing, stop before making changes.
-
-    REPORT:
-    Include SKILL_USAGE_PROOF with:
-    - skill_name
-    - skill_path
-    - skill_read
-    - rules_applied
-
-Example for DAIR:
-
-    Use this repo-scoped skill explicitly:
-    $dair-lesson-generator
-
-    Read and follow:
-    - /opt/ai-starter-community/.agents/skills/dair-lesson-generator/SKILL.md
-
-    STOP_SKILL_NOT_FOUND:
-    If the skill file is missing, stop before making changes.
-
-### Local docs repo references
-
-The docs repo stores local reference/source copies for skills and tools. These are not automatically active Codex skills.
-
-Main local docs paths:
-
-    /opt/openscript-site-docs/docs/codex_source/tools/dair_lesson_generator/SKILL.md
-    /opt/openscript-site-docs/docs/codex_source/tools/frontend_design_skills/**
-
-Working rule:
-
-    Docs repo files are source/reference copies.
-    App repo .agents/skills/** files are active Codex skills.
-    Future prompts must use local server paths, not external upstream URLs, when a local copy exists.
-
-### Skill selection rule
-
-Use only one primary skill per controlled Codex run unless the task explicitly requires a second review skill.
-
-For course artifact generation:
-
-    $dair-lesson-generator
-
-For frontend/design experiments, choose one candidate at a time:
-
-    $opendesign-manalkaff
-    $opendesign-nexu
-    $anthropic-frontend-design
-    $taste-skill
-    $microsoft-frontend-design-review
-    $ilm-alan-frontend-design
-    $mblode-agent-skills
-
-Do not mix course generation, app integration, UI implementation, auth, DB, and runtime changes in one uncontrolled run.
+Notes:
+- If the task card is missing or a required doc is still `stub`/`needs_import`, future fix-runs must stop with `STOP_DOCS_MISSING`.
+- The project memory layer is separate from application code and separate from vendor docs.
