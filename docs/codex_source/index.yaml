@@ -19,7 +19,7 @@ rules:
   - Project ТЗ не заменяет vendor/runtime/API docs.
   - Codex должен читать exact paths из task cards, а не полагаться на память.
   - Если required doc имеет status: stub, future fix-run must stop with STOP_DOCS_MISSING.
-current_dialogue_state:
+legacy_current_dialogue_state:
   latest_context_append_id: CTX_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
   latest_roadmap_append_id: RM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
   latest_module_map_append_id: MM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
@@ -543,3 +543,41 @@ project_memory:
 gate_rule:
   future_fix_run_must_stop_if_any_required_doc_is_stub: true
   stop_reason: STOP_DOCS_MISSING
+
+current_project:
+  canonical_name: "OpenScript / AI Starter Community"
+  main_site: "https://openscript.ru"
+  main_app_repo_path: "/opt/ai-starter-community"
+  docs_repo_path: "/opt/openscript-site-docs"
+  public_docs_repo: "https://github.com/MaksimUnimax/openscript-site-docs"
+  active_scope: "main_site"
+  stale_legacy_scope_note: "Some existing docs may still mention OpenScript Agent Lab; current canonical project for this repo is the main OpenScript / AI Starter Community site."
+
+current_dialogue_state:
+  latest_context_update_id: "CONTEXT_UPDATE_20260529_AI_STARTER_COMMUNITY_SITE_CURRENT_STATE"
+  latest_roadmap_update_id: "ROADMAP_UPDATE_20260529_SITE_LEARNING_AND_DOCS_STATE"
+  latest_current_status_id: "CURRENT_STATUS_20260529_AI_STARTER_COMMUNITY"
+  latest_decisions_update_id: "DECISIONS_UPDATE_20260529_AI_STARTER_COMMUNITY"
+  current_active_block: "docs_refinement_for_openscript_ai_starter_community"
+  next_exact_run: "docs_refinement_or_user_selected_app_fix"
+  docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
+
+canonical_docs:
+  project_context: "docs/codex_source/project/CONTEXT.md"
+  project_roadmap: "docs/codex_source/project/ROADMAP.md"
+  project_current_status: "docs/codex_source/project/CURRENT_STATUS.md"
+  project_decisions: "docs/codex_source/project/DECISIONS.md"
+  project_open_questions: "docs/codex_source/project/OPEN_QUESTIONS.md"
+  app_module_map: "docs/codex_source/app/MODULE_MAP.md"
+  materials_spec: "docs/codex_source/materials/MATERIALS_SPEC.md"
+  course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
+  course_lesson_map: "docs/codex_source/materials/COURSE_LESSON_MAP.md"
+
+material_access_canon:
+  visible_ui_label: "Обучение"
+  conceptual_area: "Работа с ИИ / learning materials"
+  current_access_flag: "users.materials_access_granted_at"
+  admin_access: "always_open"
+  unpaid_access: "readable_locked_ui_no_hrefs_server_blocked"
+  paid_access: "materials_access_granted_at_unlocks"
+  future_payment_rule: "payment_success_must_set_existing_materials_access_flag_or_canonical_entitlement"
