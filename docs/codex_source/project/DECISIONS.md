@@ -89,3 +89,11 @@ The course must teach that ChatGPT is the professional technical specialist: arc
 
 Consequence:
 Do not tell the student that they must independently design architecture, stack, roadmap or Codex prompts before ChatGPT helps.
+
+### DECISION_20260529_09 — Canonical docs language and index identity
+
+Decision:
+Canonical user/product docs for OpenScript / AI Starter Community should use Russian for user-facing names, statuses and explanations. Technical names, paths, API names and code identifiers may remain English.
+
+Decision:
+`docs/codex_source/index.yaml` must identify OpenScript / AI Starter Community as the active project at the top level. Legacy Agent Lab context may remain only as explicitly marked legacy content.
