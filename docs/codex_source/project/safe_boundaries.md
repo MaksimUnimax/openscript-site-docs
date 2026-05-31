@@ -1,45 +1,38 @@
-# Safe boundaries
+# Safe boundaries — OpenScript / AI Starter Community
 
-STATUS: IMPORTED_FROM_CHATGPT_UPLOAD
+STATUS: INITIAL_SOURCE_DERIVED_BASELINE
+PROJECT: OpenScript / AI Starter Community
+RUN_ID: site-docs-initial-import-20260531
+DATE: 2026-05-31
 
-Do not modify without explicit scope:
-- `agent-packages/**`
-- application code under `agent_lab/**`
-- vendor source trees
-- auth files and secrets
-- runtime config and service files
-- generated caches
+## Source of truth
 
-Architectural safety rules:
-- the agent cannot own business logic;
-- the agent cannot write SQL;
-- the agent cannot read raw DB directly;
-- the agent cannot see secrets;
-- the agent cannot execute shell from user text;
-- the agent cannot confirm a receipt without user confirmation;
-- the system must not hardcode a fixed agent count;
-- provider selection must remain independent from agent identity;
-- Telegram Router must not be built before dependencies are ready;
-- Hermes Dashboard must not be exposed as the public product UI.
+- docs/codex_source/** in /opt/openscript-site-docs is the docs source of truth
+- source/app/** in /opt/ai-starter-community is the application source of truth
+- /opt/ai-starter-community/AGENTS.md is the app repo contract
 
-Current module map reference:
-- `docs/codex_source/module_map/imported/current_module_map_snapshot.md`
-- `docs/codex_source/module_map/imported/safe_boundaries_snapshot.md`
+## Not source of truth
 
-Current boundary summary:
-- `docs/codex_source/**` is the docs source-of-truth for ChatGPT and Codex.
-- public docs repo mirrors only `docs/codex_source/**`.
-- `agent_lab/**` is application/backend/UI code and stays out of docs-only runs.
-- `agent-packages/**` is agent package workspace and unrelated dirty state.
-- `vendor/hermes-agent/**` is a vendor checkout and should not be casually edited in docs runs.
-- `/var/lib/openscript-agent-lab/hermes/**` is runtime state, not source-of-truth.
-- runtime auth, secrets, memories, sessions and logs must not go to git or public docs.
-- if a boundary is unclear, stop and seek proof first.
+- runtime/ (app repo) — runtime state
+- state/ (app repo) — SQLite databases
+- logs/ (app repo) — application logs
+- backups/ (app repo) — manual backups
+- tmp/ (app repo) — temporary files
+- .env files — environment secrets
+- Production service files — nginx, systemd, Docker
 
-Docs-only runs:
-- may create or update files only under `docs/codex_source/**`
-- should keep vendor docs separate from project memory
-- should preserve append-only files
+## Boundary rules
 
-Why this exists:
-- to prevent accidental edits outside the requested documentation scope
+- Docs-only runs may edit only /opt/openscript-site-docs/docs/codex_source/**
+- Before any app source run, the following must be proven:
+  1. A staging/test environment exists
+  2. The run will not modify production runtime
+  3. The app branch and dirty/untracked state are known
+- Do not read or print .env, secrets, auth files, tokens, private keys
+- Do not delete untracked files in app repo unless explicitly requested
+- Do not modify /opt/openscript-agent-lab or /opt/openscript-agent-lab-docs
+
+## Staging requirement
+
+App fix-runs or feature-runs are blocked until a staging environment is proven.
+This file must be updated with staging paths once they exist.

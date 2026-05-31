@@ -1,26 +1,30 @@
-# Source vs runtime
+# Source vs runtime — OpenScript / AI Starter Community
 
-STATUS: IMPORTED_FROM_CHATGPT_UPLOAD
+STATUS: INITIAL_SOURCE_DERIVED_BASELINE
+PROJECT: OpenScript / AI Starter Community
+RUN_ID: site-docs-initial-import-20260531
+DATE: 2026-05-31
 
-Source-of-truth layers:
-- vendor docs under `docs/codex_source/vendor/**`
-- project docs under `docs/codex_source/project/**`
-- append-only memory under `docs/codex_source/context/**`, `docs/codex_source/roadmap/**`, `docs/codex_source/module_map/**`
+## Source of truth
 
-Source package:
-- stored in git under `/opt/openscript-agent-lab/agent-packages/<agent_slug>/`
-- contains `SOUL.md`, `rules.md`, `examples.md`, `provider.defaults.json`, `skills/`
-- is edited by UI and git-backed workflows
-- is source-of-truth for documents and defaults
+- /opt/ai-starter-community/source/ — application source code (git-tracked)
+- /opt/openscript-site-docs/docs/codex_source/ — documentation (git-tracked)
 
-Runtime profile:
-- stored under `/var/lib/openscript-agent-lab/hermes/profiles/<agent_slug>/`
-- contains `config.yaml`, `.env`, `auth.json`, memories, sessions, logs and other runtime state
-- is not source-of-truth
-- may contain secrets
+## Non-source layers
 
-Boundary rules:
-- UI edits source package, not runtime profile directly
-- `agentctl apply` syncs source package into runtime profile
-- no symlinks for `SOUL.md` or `config.yaml`
-- runtime state must not be confused with documentation state
+- /opt/ai-starter-community/state/ — SQLite database (not tracked in git)
+- /opt/ai-starter-community/runtime/ — runtime state (not tracked in git)
+- /opt/ai-starter-community/logs/ — application logs (not tracked in git)
+- /opt/ai-starter-community/backups/ — manual backups (not tracked in git)
+- /opt/ai-starter-community/tmp/ — temporary files (not tracked in git)
+- Production service config — nginx, systemd, Docker (NOT_YET_PROVEN)
+
+## Rules
+
+- Runtime data must never be confused with documentation state.
+- No production runtime changes without explicit staging proof and manual approval.
+- Staging environment must use separate:
+  - state/ directory
+  - runtime/ directory
+  - database file
+  - .env configuration

@@ -1,22 +1,11 @@
-roadmap_file: docs/codex_source/roadmap/roadmap.md
+roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 append_only: true
-last_append_id: RM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
-last_status: youtube_ranked_batch_active_status_correction
-active_phase: youtube_ranked_batch_moderation_lifecycle
-current_ui_surface_decision: current_telegram_tab_should_be_fin_instrument
-current_active_block: youtube_ranked_batch_moderation_lifecycle
-next_phase_after_allowlist: youtube_ranked_batch_moderation_lifecycle_product_docs_gap
-agent_farm_deferred_until_fin_instrument: true
-current_roadmap_version: v0.7
-current_roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_7_current.md
-historical_versions:
-  - v0.2
-  - v0.3
-  - v0.4
-  - v0.5
-  - v0.6
-supplemental_imported_files:
-  - path: docs/codex_source/roadmap/imported/roadmap_v0_8_youtube_hermes_tool_planned.md
-    status: imported
+last_append_id: RM_SITE_20260531_INITIAL
+current_phase: documentation_and_bootstrap
+next_phase: staging_test_design_contour
+later_phase_after_staging: kilo_design_workflow
+final_phase: production_handoff_after_manual_approval
+current_roadmap_version: v0.1
+current_roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 no_destructive_rewrite: true
-last_updated_utc: 2026-05-29T00:00:00Z
+last_updated_utc: 2026-05-31T04:01:00Z
