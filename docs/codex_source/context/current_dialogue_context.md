@@ -40,3 +40,40 @@ This run imported the first source-derived documentation baseline for the OpenSc
 
 Design and create a staging/test environment before any app source changes.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_INITIAL_SOURCE_BASELINE -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260531_STAGING_IMPLEMENTATION source=codex_sync -->
+## 2026-05-31 — Staging environment implemented
+
+### App repo changes
+
+- .gitignore — added staging/data/* and staging/runtime/* ignore rules
+- staging/start.sh — staging startup script (bash -n validated)
+- staging/env.staging.example — non-secret env var template
+- staging/README.md — staging usage and safety instructions
+- staging/data/.gitkeep — placeholder for isolated SQLite database
+- staging/runtime/.gitkeep — placeholder for isolated runtime files
+
+### Docs repo changes
+
+- project/staging_environment.md — staging environment description
+- project/staging_proof.md — staging isolation proof
+- project/safe_boundaries.md — updated with staging paths
+- project/source_vs_runtime.md — updated with staging layer
+- project/current_status.md — updated with staging status
+- project/import_queue/missing_sources.yaml — staging items marked done
+- context/context_manifest.yaml — updated append tracking
+- context/current_dialogue_context.md — this append block
+
+### Key facts
+
+- Staging created with zero core source code changes (env-driven config only).
+- Staging binds to 127.0.0.1:8090 with isolated SQLite database.
+- start.sh was NOT executed — staging is not running.
+- No production runtime touched.
+- Agent Lab repos untouched.
+
+### Current blocker
+
+Staging is created but has NOT been started or verified.
+Next safe step: start staging locally and verify /healthz endpoint.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_STAGING_IMPLEMENTATION -->

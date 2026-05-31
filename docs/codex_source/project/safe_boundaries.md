@@ -13,8 +13,10 @@ DATE: 2026-05-31
 
 ## Not source of truth
 
-- runtime/ (app repo) — runtime state
-- state/ (app repo) — SQLite databases
+- runtime/ (app repo) — production runtime state
+- state/ (app repo) — production SQLite databases
+- staging/data/ (app repo) — staging SQLite database (gitignored)
+- staging/runtime/ (app repo) — staging runtime state (gitignored)
 - logs/ (app repo) — application logs
 - backups/ (app repo) — manual backups
 - tmp/ (app repo) — temporary files
@@ -25,14 +27,18 @@ DATE: 2026-05-31
 
 - Docs-only runs may edit only /opt/openscript-site-docs/docs/codex_source/**
 - Before any app source run, the following must be proven:
-  1. A staging/test environment exists
+  1. A staging/test environment exists and is isolated
   2. The run will not modify production runtime
   3. The app branch and dirty/untracked state are known
 - Do not read or print .env, secrets, auth files, tokens, private keys
 - Do not delete untracked files in app repo unless explicitly requested
 - Do not modify /opt/openscript-agent-lab or /opt/openscript-agent-lab-docs
 
-## Staging requirement
+## Staging environment
 
-App fix-runs or feature-runs are blocked until a staging environment is proven.
-This file must be updated with staging paths once they exist.
+- Staging root: /opt/ai-starter-community/staging/
+- Bind: 127.0.0.1:8090
+- Database: staging/data/ai_starter_community.sqlite3
+- Startup: staging/start.sh
+- See staging_environment.md and staging_proof.md for details.
+- App source runs must use the staging environment, never production.

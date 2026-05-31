@@ -20,12 +20,14 @@ DATE: 2026-05-31
 - Status: 9 untracked files (backups, images, drafts on the feature branch)
 - Pre-existing AGENTS.md contract exists.
 
-## Completed docs runs
+## Completed runs
 
 - site-repo-separation-proof-20260531: repo layout proven, AGENTS.md missing detected
 - site-agents-bootstrap-20260531: AGENTS.md created in both repos
 - site-docs-currentization-repair-20260531: entrypoint/index.yaml currentized, legacy Agent Lab marked
-- site-docs-initial-import-20260531 (this run): source-derived baseline imported
+- site-docs-initial-import-20260531: source-derived baseline imported
+- site-staging-design-only-20260531: staging design proven (zero source code changes needed)
+- site-staging-implementation-20260531: staging support files created, docs updated
 
 ## Source-derived facts
 
@@ -33,19 +35,24 @@ DATE: 2026-05-31
 - Full user auth flow: registration (currently closed), email verification, login (cookie sessions), password reset.
 - Admin panel with tariff/paid-option CRUD, user management, CLI bootstrap.
 - Public landing page.
-- Educational materials module ( course module "Работа с ИИ" / "Work with AI", currently draft).
+- Educational materials module (course module "Работа с ИИ" / "Work with AI", currently draft).
 - User cabinet with settings and private file storage.
 - Email notification via outbox pattern + SMTP adapter.
 - Payments module structure exists but implementation state is NOT_YET_PROVEN.
 - AI Sales Agent module structure exists but implementation state is NOT_YET_PROVEN.
 
-## Current blocker
+## Staging environment
 
-No staging/test environment exists. App changes currently go directly to the design/product-story-03 branch without a controlled staging workflow.
+- Staging root: /opt/ai-starter-community/staging/
+- Bind: 127.0.0.1:8090
+- Database: staging/data/ai_starter_community.sqlite3
+- Startup: staging/start.sh
+- See staging_environment.md for details.
 
-## Next safe step
+## Current status
 
-Design and create a test/staging environment proof with separate runtime and test data before any app feature work.
+Staging support files are created and committed. Staging has NOT been started yet.
+Next step is to start staging locally and verify /healthz.
 
 ## Staging requirement
 

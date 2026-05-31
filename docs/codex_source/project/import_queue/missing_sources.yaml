@@ -17,14 +17,14 @@ items:
     notes: AI Sales Agent module exists as empty structure only
     must_not_invent: true
   - id: staging_environment_design
-    status: needed
+    status: done
     expected_target_path: docs/codex_source/project/staging_environment.md
-    notes: Staging/test environment must be designed and proven before any app changes
+    notes: Staging support files created; staging not yet started
     must_not_invent: true
   - id: staging_proof_docs
-    status: needed
+    status: done
     expected_target_path: docs/codex_source/project/staging_proof.md
-    notes: Staging proof of isolation, separate runtime, separate database
+    notes: Staging isolation proven by design; runtime start and health check still pending
     must_not_invent: true
   - id: material_access_behavior
     status: not_yet_proven
