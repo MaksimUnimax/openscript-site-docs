@@ -77,3 +77,33 @@ Design and create a staging/test environment before any app source changes.
 Staging is created but has NOT been started or verified.
 Next safe step: start staging locally and verify /healthz endpoint.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_STAGING_IMPLEMENTATION -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260531_HEALTH_PROOF source=codex_sync -->
+## 2026-05-31 — Staging health proof successful
+
+### Health check results
+
+- start.sh was fixed to use source/.venv/bin/python (project virtual environment)
+- Staging started on 127.0.0.1:8090
+- Listener confirmed on 127.0.0.1:8090 only
+- /healthz returned: {"ok":true,"service":"ai-starter-community"}
+- /readyz returned: {"ok":true,"ready":true}
+- Staging process stopped after health check
+- Port 8090 confirmed free after stop
+
+### Files changed
+
+- staging/start.sh — added virtual environment detection (committed and pushed)
+- project/staging_proof.md — updated PROVEN_RUNTIME
+- project/current_status.md — updated healthy status
+- context/current_dialogue_context.md — this append block
+- context/context_manifest.yaml — updated append tracking
+
+### Key facts
+
+- No source/app/** changed
+- No source/tests/** changed
+- No production state/runtime/logs/backups changed
+- Agent Lab repos untouched
+- Staging is ready for design/Kilo workflow runs
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_HEALTH_PROOF -->

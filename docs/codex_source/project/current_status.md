@@ -51,8 +51,13 @@ DATE: 2026-05-31
 
 ## Current status
 
-Staging support files are created and committed. Staging has NOT been started yet.
-Next step is to start staging locally and verify /healthz.
+Staging runtime has been proven healthy:
+- /healthz returned {"ok":true,"service":"ai-starter-community"}
+- /readyz returned {"ok":true,"ready":true}
+- Listener was on 127.0.0.1:8090 only
+- Staging was stopped after health check
+- Port 8090 is free
+- Staging is ready for design/Kilo workflow runs.
 
 ## Staging requirement
 

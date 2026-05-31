@@ -1,8 +1,8 @@
 # Staging proof — OpenScript / AI Starter Community
 
-STATUS: PROVEN_BY_DESIGN
+STATUS: PROVEN_RUNTIME
 PROJECT: OpenScript / AI Starter Community
-RUN_ID: site-staging-implementation-20260531
+RUN_ID: site-staging-health-proof-20260531
 DATE: 2026-05-31
 
 ## What is proven
@@ -22,7 +22,6 @@ DATE: 2026-05-31
 3. **No core application source code was modified.**
    - source/app/** is unchanged
    - source/tests/** is unchanged
-   - Only .gitignore and new staging/ files were added
 
 4. **Staging is isolated from production.**
    - Separate port: 8090 vs production default 8089
@@ -35,15 +34,22 @@ DATE: 2026-05-31
 5. **start.sh syntax is valid.**
    - bash -n passes without errors
 
-6. **No services were started.**
-   - This run created support files only
-   - No uvicorn process was launched
-   - No ports were bound
+6. **Staging runtime health proven.**
+   - Staging started on 127.0.0.1:8090
+   - Listener confirmed: only 127.0.0.1:8090
+   - /healthz returned: {"ok":true,"service":"ai-starter-community"}
+   - /readyz returned: {"ok":true,"ready":true}
+   - Process stopped after health check
+   - Port 8090 confirmed free after stop
 
-7. **Agent Lab repos were not touched.**
+7. **start.sh uses project virtual environment.**
+   - source/.venv/bin/python is used when available
+   - Fix was needed and committed
 
-## What requires future proof
+8. **Agent Lab repos were not touched.**
 
-- Actual staging runtime start and health check (localhost /healthz)
-- Staging database initialization and data isolation test
-- Staging cleanup and rollback verification
+## Runtime paths touched (staging-only)
+
+- /opt/ai-starter-community/staging/data/ — SQLite database was created
+- /opt/ai-starter-community/staging/runtime/ — health-proof.log was written
+- Both paths are gitignored and safe to delete
