@@ -107,3 +107,41 @@ Next safe step: start staging locally and verify /healthz endpoint.
 - Agent Lab repos untouched
 - Staging is ready for design/Kilo workflow runs
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_HEALTH_PROOF -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260531_SYNC source=codex_sync -->
+## 2026-05-31 — Docs synchronized after staging health proof
+
+### Files updated in this sync
+
+- project/current_status.md — updated HEAD to 6fae69f, added completed runs, added current active block, decisions, open questions
+- roadmap/roadmap_manifest.yaml — updated phases: Stage 2 completed, Stage 3 active (Design/Kilo)
+- roadmap/imported/roadmap_v0_1_initial_site_baseline.md — restructured to 6 stages, Stage 2 marked health-proven
+- project/source_vs_runtime.md — added staging support scripts as source of truth
+- project/import_queue/missing_sources.yaml — updated staging items to health-proven, added Kilo workflow config placeholder
+- context/context_manifest.yaml — updated append tracking
+- context/current_dialogue_context.md — this append block
+
+### Current active block
+
+Design/Kilo workflow for OpenScript / AI Starter Community through proven staging/test contour.
+
+### Roadmap stages
+
+- Stage 0 — Repo separation and AGENTS bootstrap: COMPLETED
+- Stage 1 — Site docs currentization and source-derived baseline: COMPLETED
+- Stage 2 — Isolated staging/test contour: COMPLETED and HEALTH-PROVEN (healthz/readyz on 127.0.0.1:8090)
+- Stage 3 — Design/Kilo workflow on staging: NEXT
+- Stage 4 — Manual review and screenshot proof: LATER
+- Stage 5 — Production handoff: LATER, separate approval required
+
+### Not next
+
+- Production deploy
+- Payment implementation
+- AI Sales Agent implementation
+- Agent Lab work
+- Docs cleanup of Agent Lab
+- App refactor
+- nginx/systemd
+- Public staging exposure
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_SYNC -->

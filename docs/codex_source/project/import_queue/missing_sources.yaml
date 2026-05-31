@@ -19,12 +19,17 @@ items:
   - id: staging_environment_design
     status: done
     expected_target_path: docs/codex_source/project/staging_environment.md
-    notes: Staging support files created; staging not yet started
+    notes: Staging support files created; health-proven on 127.0.0.1:8090
     must_not_invent: true
   - id: staging_proof_docs
     status: done
     expected_target_path: docs/codex_source/project/staging_proof.md
-    notes: Staging isolation proven by design; runtime start and health check still pending
+    notes: Staging isolation and runtime health proven; healthz/readyz verified, process stopped, port 8090 free
+    must_not_invent: true
+  - id: kilo_design_workflow_config
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/design_workflow.md
+    notes: Design/Kilo workflow configuration not yet defined; open question for next run
     must_not_invent: true
   - id: material_access_behavior
     status: not_yet_proven

@@ -8,6 +8,7 @@ DATE: 2026-05-31
 ## Source of truth
 
 - /opt/ai-starter-community/source/ — application source code (git-tracked)
+- /opt/ai-starter-community/staging/start.sh, env.staging.example, README.md — staging support scripts (git-tracked)
 - /opt/openscript-site-docs/docs/codex_source/ — documentation (git-tracked)
 
 ## Non-source layers

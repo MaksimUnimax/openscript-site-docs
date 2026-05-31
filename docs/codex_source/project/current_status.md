@@ -16,7 +16,7 @@ DATE: 2026-05-31
 ## App repo current state
 
 - Branch: design/product-story-03
-- HEAD: f85f5f7ab2ec6ccb4a9834f4797e1db0279c9d66
+- HEAD: 6fae69f6e3e8caab81f1273d34487f9432f2b7a0
 - Status: 9 untracked files (backups, images, drafts on the feature branch)
 - Pre-existing AGENTS.md contract exists.
 
@@ -28,6 +28,9 @@ DATE: 2026-05-31
 - site-docs-initial-import-20260531: source-derived baseline imported
 - site-staging-design-only-20260531: staging design proven (zero source code changes needed)
 - site-staging-implementation-20260531: staging support files created, docs updated
+- site-staging-policy-correction-20260531: corrected staging execution policy for bounded root proof
+- site-staging-health-proof-20260531: staging runtime health proven (healthz/readyz passed)
+- site-docs-sync-after-staging-health-20260531: docs synchronized to latest proven state (this run)
 
 ## Source-derived facts
 
@@ -59,9 +62,29 @@ Staging runtime has been proven healthy:
 - Port 8090 is free
 - Staging is ready for design/Kilo workflow runs.
 
+## Current active block
+
+Design/Kilo workflow for OpenScript / AI Starter Community using proven localhost-only staging.
+
 ## Staging requirement
 
 Before any Kilo/design-run or app fix-run that touches source, the run must:
 1. Prove the staging environment exists.
 2. Prove the staging environment is isolated from production.
 3. Prove the run will not modify production runtime.
+
+## Decisions
+
+1. Site workflow uses only /opt/openscript-site-docs and /opt/ai-starter-community.
+2. Agent Lab is separate and no-touch unless user explicitly approves a dedicated Agent Lab run.
+3. Staging is localhost-only: 127.0.0.1:8090, no nginx, no systemd, no daemon, no public exposure.
+4. Bounded root execution is allowed only for short local health proof with strict staging env and process stop.
+5. Design/Kilo work must target staging/test contour first.
+
+## Open questions
+
+- What exact Kilo/design workflow files/config should be used?
+- Whether Kilo config belongs in app repo, local dev config, or separate no-commit local path.
+- Whether screenshots will be produced via local browser/Playwright or user manual screenshots.
+- Design reference method: reference-folder, image-first, design-process-first, design-system/tokens-first, screenshot review loop.
+- Production handoff process after design approval.
