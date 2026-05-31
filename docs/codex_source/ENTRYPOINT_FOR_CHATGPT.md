@@ -8,20 +8,19 @@ Purpose:
 
 Do not rely on memory before reading this entrypoint.
 
-Current known HEAD:
-- Private source repo:
-  - git@github.com:MaksimUnimax/openscript-agent-lab.git
-  - HEAD before this sync: `8f34733debfdf9ae38482618a9a9113f9995bcaa`
-- Public docs repo:
-  - https://github.com/MaksimUnimax/openscript-agent-lab-docs
-  - export HEAD before this sync: `027c34d6965ad5a54757ffad8045650e4ea72c5b`
-- Public docs repo visible to ChatGPT via web: yes
+Current canonical project:
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
+- App repo (separate): /opt/ai-starter-community
+- Production site: https://openscript.ru
 - Main read path for ChatGPT: public docs repo -> `docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md`
 - Public docs repo contains only `docs/codex_source/**`: yes
 
-Note:
-- Do not rely on memory before reading this entrypoint.
-- This file reflects the pre-sync source state for the current docs import run; the current post-sync private HEAD is reported in the run output, not claimed here.
+This repo head: ceffeb25aef0d54d42efda1aa5394cd9b484ae6c
+
+Legacy imported history:
+This docs repo also contains legacy OpenScript Agent Lab documentation that was imported before the docs repo was currentized. Agent Lab is a separate project. Any file referencing `openscript-agent-lab`, `Hermes`, `Fin Instrument`, `Telegram Router`, `youtube_ranked_batch`, or agent-packages is legacy Agent Lab history unless the file header explicitly states otherwise. Do not mistake legacy Agent Lab docs for active site documentation.
 
 Current active docs index:
 - docs/codex_source/index.yaml

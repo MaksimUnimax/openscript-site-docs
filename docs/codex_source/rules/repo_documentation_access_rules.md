@@ -12,10 +12,10 @@ The previous working mode assumed that Codex did not reliably have access to Cha
 That assumption is no longer the normal workflow.
 
 Current workflow:
-- Project documentation is stored in the private source repo under `docs/codex_source/**`.
-- Codex works inside `/opt/openscript-agent-lab` and can read repo documentation from `/opt/openscript-agent-lab/docs/codex_source/**`.
-- A public docs-only repo mirrors the same documentation under `docs/codex_source/**`.
-- ChatGPT can read the public docs repo at `https://github.com/MaksimUnimax/openscript-agent-lab-docs`.
+- Project documentation is stored in the public docs repo under `docs/codex_source/**`.
+- Codex works inside `/opt/openscript-site-docs` and can read repo documentation from `/opt/openscript-site-docs/docs/codex_source/**`.
+- This public docs-only repo mirrors the documentation under `docs/codex_source/**` at `https://github.com/MaksimUnimax/openscript-site-docs`.
+- ChatGPT can read the public docs repo at `https://github.com/MaksimUnimax/openscript-site-docs`.
 - Therefore, future prompts do not need to inline every large document just because Codex lacks files.
 
 But this does not allow Codex to browse everything.
@@ -38,7 +38,7 @@ They are not usable sources for Codex unless their content has been imported int
 
 ## 3. `DOCS_TO_READ` is mandatory
 
-Every Codex prompt for OpenScript Agent Lab must include `DOCS_TO_READ`.
+Every Codex prompt for this project must include `DOCS_TO_READ`.
 
 Each entry must include:
 - path;

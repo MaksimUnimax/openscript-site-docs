@@ -82,20 +82,26 @@ hermes_pre_reply_auth_gate:
   status: active
   notes: Telegram reply path now fails closed with a safe auth/provider readiness reason instead of silently calling Hermes when readiness is degraded
 repo_visibility:
-  private_source_repo:
+  current_public_docs_repo:
+    url: https://github.com/MaksimUnimax/openscript-site-docs
+    contains_only_docs_codex_source: yes
+    note: "Active repo for OpenScript / AI Starter Community documentation"
+  legacy_agent_lab_private_source_repo:
     url: git@github.com:MaksimUnimax/openscript-agent-lab.git
     head_before_sync: 8f34733debfdf9ae38482618a9a9113f9995bcaa
-    status: pushed_and_verified
-  public_docs_repo:
+    status: legacy_import_source
+    note: "Legacy — original Agent Lab private source (separate project, not current)"
+  legacy_agent_lab_public_docs_repo:
     url: https://github.com/MaksimUnimax/openscript-agent-lab-docs
     export_head_before_sync: 027c34d6965ad5a54757ffad8045650e4ea72c5b
     web_visible_via_chatgpt: yes
     contains_only_docs_codex_source: yes
+    note: "Legacy — original Agent Lab public docs export (separate project, not current)"
 entrypoint:
   - path: docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md
     status: verified
     public_docs_visible: yes
-    public_repo_url: https://github.com/MaksimUnimax/openscript-agent-lab-docs
+    public_repo_url: https://github.com/MaksimUnimax/openscript-site-docs
 vendor_docs:
   overview:
     - path: docs/codex_source/vendor/hermes/README.md

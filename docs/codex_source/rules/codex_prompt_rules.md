@@ -8,7 +8,7 @@ Prompt contract:
 - every prompt must include the active task card when a task card exists
 - every prompt must include the minimal source set, not "read everything"
 - for append-only files, Codex reads manifest + tail only
-- `DOCS_TO_READ` is mandatory for OpenScript Agent Lab technical tasks
+- `DOCS_TO_READ` is mandatory for this project's technical tasks
 - each `DOCS_TO_READ` entry must include path, why, and required yes/no
 - `RUN_MODE` is mandatory for every technical prompt
 - allowed `RUN_MODE` values are `docs_only`, `proof_only`, `design_only`, `combined_proof_design_fix`, `fix_after_approved_design`, and `repeat_proof`

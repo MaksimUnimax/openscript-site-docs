@@ -1,6 +1,11 @@
-# Current status
+# Current status — OpenScript Agent Lab (Legacy)
 
 STATUS: IMPORTED_FROM_CHATGPT_UPLOAD
+PROJECT: OpenScript Agent Lab (legacy/imported history)
+NOTE: This file describes the Agent Lab project state at the time of import.
+It is NOT the current status of OpenScript / AI Starter Community.
+The current canonical project for this docs repo is OpenScript / AI Starter Community.
+See AGENTS.md and docs/codex_source/index.yaml for the active project identity.
 
 Confirmed facts:
 - repo path: `/opt/openscript-agent-lab`
