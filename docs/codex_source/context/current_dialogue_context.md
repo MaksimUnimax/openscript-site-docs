@@ -145,3 +145,55 @@ Design/Kilo workflow for OpenScript / AI Starter Community through proven stagin
 - nginx/systemd
 - Public staging exposure
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260531_SYNC -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_COURSE_LESSONS_20260603 source=codex_sync -->
+## 2026-06-03 — Course lessons 1–9 semantic blocks accepted
+
+This run currentized the site/course dialogue state after the accepted course lesson refinement work.
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+- App branch: design/product-story-03
+
+### Final accepted app state
+
+- Latest accepted app commit: a5a2f6ef40338959a659bc9feecf0a23c46a0c70
+- Commit title: Add semantic lesson blocks
+- Changed file: source/app/materials/course_content/drafts/dair_smoke_20260529/script.js
+- Public GitHub showed 1 file changed, 916 additions, 10 deletions
+- Previous accepted app commit immediately before the final block split: a7458df00e3b42b09cfcdffae1d14e90be43f028
+
+### Accepted course implementation facts
+
+- Lessons 1–9 are now split into semantic blocks/cards.
+- `renderLessonBlocks` supports `section.blocks` as `callout lesson-content-block` cards.
+- Fallback to old `contentHtml` remains for lessons without blocks.
+- Lesson 4 keeps the starter prompt controls:
+  - Перейти к стартовому prompt
+  - Смотреть prompt
+  - Скопировать prompt
+  - Скачать .md
+- Copy/download buttons remain visible.
+- Only the prompt textarea is hidden/collapsed by default.
+- Lesson 4 deploy-key wording was corrected so the private key stays on the server, the public key goes to GitHub Deploy keys, and the user returns with confirmation only.
+- `starterPromptMarkdown` formatting was intentionally not repaired in the accepted final app run.
+
+### Current stop-point
+
+Course lesson semantic-block UI/content pass is accepted by the user.
+Docs update is now required to bring the public docs repo current.
+
+### Next safe step
+
+Wait for the user-selected next task after this docs update.
+Do not resume the old Kilo/design workflow automatically.
+
+### Historical correction
+
+Any older Kilo/design workflow references are historical unless the user explicitly chooses Kilo.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_COURSE_LESSONS_20260603 -->

@@ -170,6 +170,28 @@ A task prompt should contain only task-specific information:
 - acceptance;
 - focused report fields if needed.
 
+## 6. Docs currentization rule
+
+When the user asks to update docs after a completed site/course refinement run, update the whole affected documentation surface, not one random file.
+
+For the current OpenScript / AI Starter Community course lesson work, that means synchronizing the current status, entrypoint, index, manifests, context append block, roadmap append block, module map append block, materials docs, and import queue notes that describe the current stop-point.
+
+Do not carry stale Kilo/design workflow into the current-active fields if the current docs prove a later course/site stop-point.
+
+Historical Kilo references may remain only as historical context unless the user explicitly selects Kilo for the next run.
+
+## 7. Current active block rule
+
+Do not call the current OpenScript / AI Starter Community site/course work "Kilo" unless the user explicitly selects a Kilo-related task.
+
+If current docs show a later course/site stop-point, use that as the current active block.
+
+## 8. Project docs vs Codex docs
+
+Project docs are for ChatGPT preflight and project memory.
+
+Codex should receive only the exact target docs and files needed for the selected run.
+
 The normal prompt shape is:
 
 ```text

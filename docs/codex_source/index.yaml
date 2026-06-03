@@ -31,12 +31,12 @@ current_project:
   stale_legacy_scope_note: "Some existing docs may still mention OpenScript Agent Lab; current canonical project for this docs repo is the main OpenScript / AI Starter Community site."
 
 current_dialogue_state:
-  latest_context_update_id: "CONTEXT_UPDATE_20260529_AI_STARTER_COMMUNITY_SITE_CURRENT_STATE"
-  latest_roadmap_update_id: "ROADMAP_UPDATE_20260529_SITE_LEARNING_AND_DOCS_STATE"
-  latest_current_status_id: "CURRENT_STATUS_20260529_AI_STARTER_COMMUNITY"
-  latest_decisions_update_id: "DECISIONS_UPDATE_20260529_AI_STARTER_COMMUNITY"
-  current_active_block: "docs_refinement_for_openscript_ai_starter_community"
-  next_exact_run: "docs_refinement_or_user_selected_app_fix"
+  latest_context_update_id: "CTX_SITE_COURSE_LESSONS_20260603"
+  latest_roadmap_update_id: "RM_SITE_COURSE_LESSONS_20260603"
+  latest_current_status_id: "CURRENT_STATUS_SITE_COURSE_LESSONS_20260603"
+  latest_decisions_update_id: "DECISIONS_SITE_COURSE_METHOD_20260603"
+  current_active_block: "course_lessons_semantic_blocks_completed"
+  next_exact_run: "user_selected_next_site_or_course_task"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
 canonical_docs:

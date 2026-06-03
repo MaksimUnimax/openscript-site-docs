@@ -46,3 +46,13 @@ items:
     expected_target_path: docs/codex_source/materials/COURSE_CURRICULUM.md
     notes: Full course curriculum beyond the single draft lesson is NOT_YET_PROVEN
     must_not_invent: true
+  - id: site_course_lessons_semantic_blocks_20260603
+    status: done
+    expected_target_path: docs/codex_source/materials/COURSE_LESSON_MAP.md
+    notes: course lessons 1–9 semantic blocks accepted; final app commit a5a2f6ef40338959a659bc9feecf0a23c46a0c70
+    must_not_invent: true
+  - id: stale_kilo_current_phase_correction_20260603
+    status: done
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: Kilo/design workflow is not the current active block for this dialogue; wait for user-selected next site/course task
+    must_not_invent: true

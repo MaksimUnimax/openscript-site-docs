@@ -61,3 +61,25 @@ Potential visual references:
 - DAIR lesson-generator;
 - ClassBuild;
 - HyperFrames.
+
+## COURSE_METHOD_SPEC_UPDATE_20260603_COURSE_LESSONS_SEMANTIC_BLOCKS
+
+### Current course rule set
+
+The current course section is the draft course “Работа с ИИ” in the app repo branch `design/product-story-03`.
+
+Use this method for the current lessons:
+
+- beginner-facing theory and click-based checks only;
+- simple Russian;
+- explain meanings and purpose, not deep internal architecture;
+- ChatGPT is the leading technical specialist in the method;
+- Codex is the technical executor of exact tasks;
+- user owns the goal and accepts/rejects by facts;
+- lessons 1–9 must be visually split into semantic blocks/cards;
+- key terms should be highlighted in the lesson body;
+- do not add finance, Telegram, receipt/photo, voice, or multi-agent product cases;
+- lesson 4 must preserve the starter prompt controls and the corrected deploy-key logic;
+- copied/downloaded markdown prompt files are backup copies for the user, not repo transfer;
+- the working repo documents are created by Codex from text embedded in ChatGPT-prepared Codex prompts;
+- Git must be taught as history/check/rollback safety at owner level, not as internals-only knowledge.

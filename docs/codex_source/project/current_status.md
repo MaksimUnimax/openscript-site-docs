@@ -1,90 +1,52 @@
 # Current status — OpenScript / AI Starter Community
 
-STATUS: INITIAL_SOURCE_DERIVED_BASELINE
+STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-RUN_ID: site-docs-initial-import-20260531
-DATE: 2026-05-31
+DATE: 2026-06-03
 
 ## Repository separation
 
-- Docs repo: /opt/openscript-site-docs (this repo)
+- Docs repo: /opt/openscript-site-docs
 - App repo: /opt/ai-starter-community
 - Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
-- App repo remote: github-ai-starter-community:MaksimUnimax/ai-starter-community.git
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - Production site: https://openscript.ru
-
-## App repo current state
-
-- Branch: design/product-story-03
-- HEAD: 6fae69f6e3e8caab81f1273d34487f9432f2b7a0
-- Status: 9 untracked files (backups, images, drafts on the feature branch)
-- Pre-existing AGENTS.md contract exists.
-
-## Completed runs
-
-- site-repo-separation-proof-20260531: repo layout proven, AGENTS.md missing detected
-- site-agents-bootstrap-20260531: AGENTS.md created in both repos
-- site-docs-currentization-repair-20260531: entrypoint/index.yaml currentized, legacy Agent Lab marked
-- site-docs-initial-import-20260531: source-derived baseline imported
-- site-staging-design-only-20260531: staging design proven (zero source code changes needed)
-- site-staging-implementation-20260531: staging support files created, docs updated
-- site-staging-policy-correction-20260531: corrected staging execution policy for bounded root proof
-- site-staging-health-proof-20260531: staging runtime health proven (healthz/readyz passed)
-- site-docs-sync-after-staging-health-20260531: docs synchronized to latest proven state (this run)
-
-## Source-derived facts
-
-- App is a FastAPI-based web application with Jinja2 HTML templates and SQLite persistence.
-- Full user auth flow: registration (currently closed), email verification, login (cookie sessions), password reset.
-- Admin panel with tariff/paid-option CRUD, user management, CLI bootstrap.
-- Public landing page.
-- Educational materials module (course module "Работа с ИИ" / "Work with AI", currently draft).
-- User cabinet with settings and private file storage.
-- Email notification via outbox pattern + SMTP adapter.
-- Payments module structure exists but implementation state is NOT_YET_PROVEN.
-- AI Sales Agent module structure exists but implementation state is NOT_YET_PROVEN.
-
-## Staging environment
-
-- Staging root: /opt/ai-starter-community/staging/
-- Bind: 127.0.0.1:8090
-- Database: staging/data/ai_starter_community.sqlite3
-- Startup: staging/start.sh
-- See staging_environment.md for details.
-
-## Current status
-
-Staging runtime has been proven healthy:
-- /healthz returned {"ok":true,"service":"ai-starter-community"}
-- /readyz returned {"ok":true,"ready":true}
-- Listener was on 127.0.0.1:8090 only
-- Staging was stopped after health check
-- Port 8090 is free
-- Staging is ready for design/Kilo workflow runs.
 
 ## Current active block
 
-Design/Kilo workflow for OpenScript / AI Starter Community using proven localhost-only staging.
+Course lesson refinement for “Работа с ИИ” course is completed and accepted.
 
-## Staging requirement
+## Current stop-point
 
-Before any Kilo/design-run or app fix-run that touches source, the run must:
-1. Prove the staging environment exists.
-2. Prove the staging environment is isolated from production.
-3. Prove the run will not modify production runtime.
+App branch `design/product-story-03` contains accepted course lesson updates through commit `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`.
 
-## Decisions
+## Current proven / accepted facts
 
-1. Site workflow uses only /opt/openscript-site-docs and /opt/ai-starter-community.
-2. Agent Lab is separate and no-touch unless user explicitly approves a dedicated Agent Lab run.
-3. Staging is localhost-only: 127.0.0.1:8090, no nginx, no systemd, no daemon, no public exposure.
-4. Bounded root execution is allowed only for short local health proof with strict staging env and process stop.
-5. Design/Kilo work must target staging/test contour first.
+- Lessons 1–9 exist in the course draft.
+- Lessons 1–9 use semantic blocks/cards through `section.blocks` / `renderLessonBlocks`.
+- Lesson 4 contains the starter prompt section and corrected deploy-key workflow.
+- Copy/download controls remain visible.
+- The prompt textarea is collapsed by default.
+- The lesson 4 prompt can be opened and navigated to with the visible controls.
+- The final accepted app change was pushed to public GitHub.
+- Only `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js` changed in the final semantic-block run.
 
-## Open questions
+## Current blocker
 
-- What exact Kilo/design workflow files/config should be used?
-- Whether Kilo config belongs in app repo, local dev config, or separate no-commit local path.
-- Whether screenshots will be produced via local browser/Playwright or user manual screenshots.
-- Design reference method: reference-folder, image-first, design-process-first, design-system/tokens-first, screenshot review loop.
-- Production handoff process after design approval.
+None for the completed lesson-block task.
+
+## Next safe step
+
+Wait for the user-selected next task.
+
+If a new dialogue starts, read the docs current state first and do not resume the old Kilo/design workflow automatically.
+
+## Not current
+
+- Kilo/design workflow
+- production deployment
+- payments implementation
+- AI Sales Agent implementation
+- Agent Lab work
+- APM/autopostmanager work
+- OpenDesign Lab work

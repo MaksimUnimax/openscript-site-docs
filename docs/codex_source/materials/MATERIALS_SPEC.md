@@ -53,3 +53,13 @@ Do not use:
 The student project file source is public GitHub, but the application must store and serve a protected private copy.
 
 Visible HTML must not contain the GitHub raw URL.
+
+## MATERIALS_SPEC_UPDATE_20260603_COURSE_LESSONS_CURRENT
+
+### Current course/materials state
+
+- Visible area: “Обучение” / “Работа с ИИ”.
+- Current draft path: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- Current state: 9 lessons are implemented as semantic blocks/cards; lesson 4 keeps prompt controls and the corrected deploy-key flow.
+- Course checks are theory + tests only for this current draft area.
+- Access rules remain unchanged.

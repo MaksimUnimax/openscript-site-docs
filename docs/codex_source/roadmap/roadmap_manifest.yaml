@@ -1,11 +1,11 @@
 roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 append_only: true
-last_append_id: RM_SITE_20260531_SYNC
-current_phase: kilo_design_workflow
-next_phase: manual_review_and_screenshots
-later_phase_after_screenshots: production_handoff_after_manual_approval
+last_append_id: RM_SITE_COURSE_LESSONS_20260603
+current_phase: course_lessons_semantic_blocks_completed
+next_phase: user_selected_next_site_or_course_task
+later_phase_after_screenshots: manual_review_if_requested
 final_phase: production_deployment_separate_approval
 current_roadmap_version: v0.2
 current_roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 no_destructive_rewrite: true
-last_updated_utc: 2026-05-31T10:00:00Z
+last_updated_utc: 2026-06-03T13:17:18Z

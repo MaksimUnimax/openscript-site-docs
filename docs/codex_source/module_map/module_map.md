@@ -66,3 +66,28 @@ Based on tracked source files in /opt/ai-starter-community/source/app/:
 ## Detailed snapshot
 
 See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the full source-derived detailed map.
+
+## 2026-06-03 — Course lessons 1–9 semantic blocks accepted
+
+### Append id
+
+- MM_SITE_COURSE_LESSONS_20260603
+
+### Current module-state note
+
+- App module affected: `app/materials` / course content draft
+- Target file: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- Final accepted implementation:
+  - course has lessons 1–9;
+  - each lesson has semantic blocks in data;
+  - renderer supports `section.blocks` through `renderLessonBlocks`;
+  - old `contentHtml` fallback remains;
+  - lesson 4 starter prompt controls remain;
+  - copy/download buttons remain visible;
+  - prompt textarea is hidden by default;
+  - deploy-key logic is visible and corrected.
+- Boundaries:
+  - no production runtime changes;
+  - no Agent Lab changes;
+  - no app runtime/state changes recorded in this docs update;
+  - this docs update does not modify the app repo.

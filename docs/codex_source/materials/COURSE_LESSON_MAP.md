@@ -45,3 +45,46 @@
 - В курсе не должно быть старого примера “Сделай мне ИИ-агента”, если он явно не возвращён отдельным решением.
 - Не должно быть видимого текста “Тестовая версия курса”.
 - Не должно быть textarea-практики.
+
+## COURSE_LESSON_MAP_20260603_SEMANTIC_BLOCKS_ACCEPTED
+
+### Current visible lesson map
+
+1. **Как устроена работа с ИИ-разработкой**
+   ChatGPT, Codex, roles, overall workflow, beginner-level meaning framing.
+
+2. **Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст**
+   Minimum document set for the project, why docs preserve context and control work.
+
+3. **Git: история, commit, push и откат**
+   Git/GitHub at owner level, commit, push, diff, rollback, proof-by-facts.
+
+4. **Старт проекта: сначала документация, потом разработка**
+   Start project through ChatGPT documentation, optional starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
+
+5. **PowerShell, Terminal и подключение к серверу**
+   PowerShell/Terminal, server, SSH, safe commands, secrets.
+
+6. **Codex, AGENTS.md и Skills**
+   Technical task boundaries, AGENTS.md, Skills, exact task execution.
+
+7. **Старт работы и рабочие run’ы Codex**
+   One Codex run = one task; checks, report, SUCCESS/STOP/FAIL.
+
+8. **Обновление документации и новый диалог**
+   Docs update, stop-point, current context, start new dialogue safely.
+
+9. **Частые ошибки и правила безопасной работы**
+   Common mistakes, proof, docs, Git, secrets, and safe workflow rules.
+
+### Current implementation facts
+
+- Lessons 1–9 are split into semantic blocks/cards in `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`.
+- The lesson renderer supports `section.blocks` with fallback to old `contentHtml`.
+- Lesson 4 keeps the starter prompt controls:
+  - Перейти к стартовому prompt
+  - Смотреть prompt
+  - Скопировать prompt
+  - Скачать .md
+- Lesson 4 deploy-key logic is corrected: private key stays on the server and is used locally by Codex; user adds only the public key to GitHub Deploy keys and returns confirmation only.
+- The latest accepted app commit for this course work is `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`.

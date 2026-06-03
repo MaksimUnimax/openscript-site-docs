@@ -52,3 +52,28 @@ DATE: 2026-05-31
 - Design/Kilo workflow configuration not yet defined
 - Screenshot/review method not yet decided
 - Payments and AI Sales Agent modules have structure but implementation NOT_YET_PROVEN
+
+## 2026-06-03 — Course lessons 1–9 semantic blocks accepted
+
+### Append id
+
+- RM_SITE_COURSE_LESSONS_20260603
+
+### Current completed stage
+
+- Course “Работа с ИИ” lesson content and UI-structure refinement on branch `design/product-story-03`
+- Lessons 1–9 were converted into semantic blocks/cards
+- Lesson 4 keeps the starter prompt controls and the corrected deploy-key flow
+- The final accepted app commit is `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`
+- Public GitHub showed 1 file changed, 916 additions, 10 deletions
+
+### Next
+
+- Docs currentization is being completed now
+- Then wait for the user-selected next site/course task
+
+### Not current
+
+- Kilo/design workflow is historical unless the user explicitly selects Kilo
+- Production deployment remains a separate later concern
+- Payments and AI Sales Agent remain not yet proven
