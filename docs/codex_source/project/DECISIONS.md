@@ -97,3 +97,20 @@ Canonical user/product docs for OpenScript / AI Starter Community should use Rus
 
 Decision:
 `docs/codex_source/index.yaml` must identify OpenScript / AI Starter Community as the active project at the top level. Legacy Agent Lab context may remain only as explicitly marked legacy content.
+
+### DECISION_20260604_10 — Accepted app course baseline after lesson swap
+
+Decision:
+The latest accepted app commit for the course lesson update is `daaa8fcd84d448b94c0f16b5302c90086251b9ac`.
+
+Consequence:
+Docs current-state files must treat this commit as the latest accepted app baseline for the course lessons.
+
+### DECISION_20260604_11 — Canonical lesson 5 and 6 order
+
+Decision:
+Lesson 5 is `Codex, AGENTS.md, Skills, токены и роль модели`.
+Lesson 6 is `PowerShell, Terminal и подключение к серверу`.
+
+Consequence:
+The canonical docs course map and any current pointers must reflect this order; the previous 5/6 order is historical only.

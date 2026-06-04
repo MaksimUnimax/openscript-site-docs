@@ -88,3 +88,74 @@
   - Скачать .md
 - Lesson 4 deploy-key logic is corrected: private key stays on the server and is used locally by Codex; user adds only the public key to GitHub Deploy keys and returns confirmation only.
 - The latest accepted app commit for this course work is `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`.
+
+## COURSE_LESSON_MAP_20260604_LESSON_5_6_SWAP_ACCEPTED
+
+### Current visible lesson map
+
+1. **Как устроена работа с ИИ-разработкой**
+   ChatGPT, Codex, roles, overall workflow, beginner-level meaning framing.
+
+2. **Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст**
+   Minimum document set for the project, why docs preserve context and control work.
+
+3. **Git: история, commit, push и откат**
+   Git/GitHub at owner level, commit, push, diff, rollback, proof-by-facts.
+
+4. **Старт проекта: сначала документация, потом разработка**
+   Start project through ChatGPT documentation, optional starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
+
+5. **Codex, AGENTS.md, Skills, токены и роль модели**
+   Codex as technical executor; ChatGPT manages development; Codex executes instructions; AGENTS.md; Skills; tokens; model choice; mini-model default for ordinary Codex runs; permissions; slash commands; server/workdir context; installation context; good vs bad Codex task examples; practice; quiz/check; pass criteria; common mistakes.
+
+6. **PowerShell, Terminal и подключение к серверу**
+   Terminal, PowerShell, commands, server, SSH, safe commands, dangerous commands, secrets, practice, quiz/check, pass criteria, common mistakes.
+
+7. **Старт работы и рабочие run’ы Codex**
+   One Codex run = one task; checks, report, SUCCESS/STOP/FAIL.
+
+8. **Обновление документации и новый диалог**
+   Docs update, stop-point, current context, start new dialogue safely.
+
+9. **Частые ошибки и правила безопасной работы**
+   Common mistakes, proof, docs, Git, secrets, and safe workflow rules.
+
+### Accepted app course commit
+
+- `daaa8fcd84d448b94c0f16b5302c90086251b9ac` — latest accepted app course commit after swapping lessons 5 and 6 and rewriting the Codex lesson.
+
+### Current lesson 5 scope
+
+`Codex, AGENTS.md, Skills, токены и роль модели` now teaches:
+- what Codex is;
+- ChatGPT manages development, Codex executes instructions;
+- where Codex works;
+- AGENTS.md;
+- Skills;
+- tokens;
+- why not to chat freely with Codex;
+- model choice and mini-model default for ordinary Codex runs;
+- permissions;
+- slash commands;
+- installation/server context;
+- good vs bad Codex task examples;
+- practice;
+- quiz/check;
+- pass criteria;
+- common mistakes.
+
+### Current lesson 6 scope
+
+`PowerShell, Terminal и подключение к серверу` now teaches:
+- Terminal;
+- PowerShell;
+- commands;
+- server;
+- SSH;
+- safe commands;
+- dangerous commands;
+- secrets;
+- practice;
+- quiz/check;
+- pass criteria;
+- common mistakes.

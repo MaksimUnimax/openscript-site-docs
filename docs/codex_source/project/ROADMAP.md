@@ -99,3 +99,32 @@ After this docs update, if app work resumes, the next app task must be chosen fr
 - final visual polish of learning block buttons/text alignment if not already accepted;
 - full proof of admin/paid/unpaid learning access in live-equivalent tests;
 - future payment success integration to set permanent materials access.
+
+## ROADMAP_UPDATE_20260604_COURSE_LESSON_SWAP_ACCEPTED
+
+### Completed / accepted stages
+
+#### Stage 4.1 — course lesson 5/6 swap accepted
+Status: completed.
+
+Accepted app commit:
+`daaa8fcd84d448b94c0f16b5302c90086251b9ac`
+
+Current accepted course lesson map:
+1. Как устроена работа с ИИ-разработкой
+2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
+3. Git: история, commit, push и откат
+4. Старт проекта: сначала документация, потом разработка
+5. Codex, AGENTS.md, Skills, токены и роль модели
+6. PowerShell, Terminal и подключение к серверу
+7. Старт работы и рабочие run’ы Codex
+8. Обновление документации и новый диалог
+9. Частые ошибки и правила безопасной работы
+
+Current stop-point:
+The course lesson content change is accepted in the app repo. Docs repo now records that accepted state.
+Next safe step is either visual review of lessons 5 and 6 on the course page or the next docs/app task from the current product stop-point.
+
+### Not next
+
+Do not start payment, production, Agent Lab, or broad app work automatically.

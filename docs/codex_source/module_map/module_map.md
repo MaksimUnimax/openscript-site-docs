@@ -91,3 +91,27 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
   - no Agent Lab changes;
   - no app runtime/state changes recorded in this docs update;
   - this docs update does not modify the app repo.
+
+## 2026-06-04 — Course lessons 5 and 6 swap accepted
+
+### Append id
+
+- MM_SITE_COURSE_LESSONS_20260604_SWAP
+
+### Current module-state note
+
+- App module affected: `app/materials` / course content draft
+- Target file: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- Accepted app commit: `daaa8fcd84d448b94c0f16b5302c90086251b9ac`
+- Final accepted implementation:
+  - course lesson order remains 1–9;
+  - lesson 5 is now `Codex, AGENTS.md, Skills, токены и роль модели`;
+  - lesson 6 is now `PowerShell, Terminal и подключение к серверу`;
+  - lesson 5 content is fully rewritten for the Codex lesson;
+  - lesson 6 content is the terminal/server lesson with updated navigation and checks;
+  - the current app docs and course map must reflect this accepted state.
+- Boundaries:
+  - no production runtime changes;
+  - no Agent Lab changes;
+  - no app runtime/state changes recorded in this docs update;
+  - this docs update does not modify the app repo.

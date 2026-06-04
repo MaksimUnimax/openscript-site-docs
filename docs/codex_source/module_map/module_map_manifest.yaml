@@ -1,12 +1,12 @@
 module_map_file: docs/codex_source/module_map/module_map.md
 append_only: true
-current_snapshot_id: MODULE_MAP_SNAPSHOT_SITE_COURSE_LESSONS_20260603
+current_snapshot_id: MODULE_MAP_SNAPSHOT_SITE_COURSE_LESSONS_20260604
 current_snapshot_file: docs/codex_source/module_map/imported/current_module_map_snapshot.md
 source_kind: source_derived_app_repo_inventory
 status: site_course_lessons_semantic_blocks_current
-current_active_block: course_lessons_semantic_blocks_completed
+current_active_block: course_lessons_lesson_5_6_swap_accepted
 current_ui_surface_decision: course_work_with_ai_lessons_1_9
 task_card_not_reevaluated: true
-last_updated_utc: 2026-06-03T13:17:18Z
+last_updated_utc: 2026-06-04T00:00:00Z
 no_destructive_rewrite: true
 tail_lines_for_codex: 60

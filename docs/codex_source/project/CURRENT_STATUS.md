@@ -92,3 +92,43 @@ Course requirements:
 ### Current stop-point
 
 Docs repo must be refined before broad future app work. The next Codex run should remain docs-only unless the user explicitly switches back to app implementation.
+
+## CURRENT_STATUS_20260604_COURSE_LESSON_SWAP_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted app course lesson swap and Codex lesson rewrite.
+
+### Accepted app course commit
+
+- `daaa8fcd84d448b94c0f16b5302c90086251b9ac` — Swap course lessons 5 and 6.
+
+### Current course state
+
+Course has 9 lessons:
+1. Как устроена работа с ИИ-разработкой
+2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
+3. Git: история, commit, push и откат
+4. Старт проекта: сначала документация, потом разработка
+5. Codex, AGENTS.md, Skills, токены и роль модели
+6. PowerShell, Terminal и подключение к серверу
+7. Старт работы и рабочие run’ы Codex
+8. Обновление документации и новый диалог
+9. Частые ошибки и правила безопасной работы
+
+### Current accepted scope
+
+- Lesson 5 is now the Codex lesson.
+- Lesson 5 scope: Codex as technical executor; ChatGPT manages development; Codex executes instructions; AGENTS.md; Skills; tokens; model choice; mini-model default for ordinary Codex runs; permissions; slash commands; server/workdir context; installation context; good vs bad Codex task; practice; quiz/check; pass criteria; common mistakes.
+- Lesson 6 is now the Terminal/server lesson.
+- Lesson 6 scope: Terminal; PowerShell; commands; server; SSH; safe commands; dangerous commands; secrets; practice; quiz/check; pass criteria; common mistakes.
+
+### Current stop-point
+
+Course lesson content change is accepted in the app repo.
+Docs repo now records that accepted state.
+Next safe step is either:
+1. user visual review of lessons 5 and 6 on the course page; or
+2. if visual review is accepted, choose the next docs/app task from the current product stop-point.
+
+Do not start payment, production, Agent Lab, or broad app work automatically.

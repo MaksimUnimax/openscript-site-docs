@@ -67,3 +67,26 @@ Download student project file only for admin/materials-access users.
 
 Rule:
 Never serve the protected project file from public static and never expose GitHub raw URL in HTML.
+
+## 2026-06-04 — Course lessons 5 and 6 swap accepted
+
+### Append id
+
+- MM_SITE_COURSE_LESSONS_20260604_APP_SYNC
+
+### Current module-state note
+
+- App module affected: `app/materials` / course content draft
+- Target file: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- Accepted app commit: `daaa8fcd84d448b94c0f16b5302c90086251b9ac`
+- Final accepted implementation:
+  - lesson 5 is `Codex, AGENTS.md, Skills, токены и роль модели`;
+  - lesson 6 is `PowerShell, Terminal и подключение к серверу`;
+  - lesson 5 now teaches Codex as technical executor and the ChatGPT/Codex split;
+  - lesson 6 now teaches terminal/server basics and safe command handling;
+  - the app course lesson map and current docs must reflect this accepted state.
+- Boundaries:
+  - no production runtime changes;
+  - no Agent Lab changes;
+  - no app runtime/state changes recorded in this docs update;
+  - this docs update does not modify the app repo.

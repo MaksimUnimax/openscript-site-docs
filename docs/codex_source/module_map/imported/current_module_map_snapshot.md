@@ -53,3 +53,10 @@ Static files mounted at /static.
 - runtime/, state/, logs/, backups/, tmp/ are NOT source of truth
 - .env files and secrets are gitignored
 - .agents/ contains AI skill defintions (read-only during docs runs)
+
+## 2026-06-04 — Course lessons 5 and 6 swap accepted
+
+- Accepted app commit: `daaa8fcd84d448b94c0f16b5302c90086251b9ac`
+- Lesson 5 is now `Codex, AGENTS.md, Skills, токены и роль модели`.
+- Lesson 6 is now `PowerShell, Terminal и подключение к серверу`.
+- The current accepted lesson map is still the 9-lesson course map; only lessons 5 and 6 were swapped and the Codex lesson was rewritten.
