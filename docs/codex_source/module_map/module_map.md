@@ -92,24 +92,6 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
   - no app runtime/state changes recorded in this docs update;
   - this docs update does not modify the app repo.
 
-## 2026-06-05 — Course lesson 7 rewrite accepted; design preflight ready
-
-### Append id
-
-- MODULE_MAP_SITE_20260605_STAGING_AND_COURSE_STATE_SYNC
-
-### Current module-state note
-
-- `source/app/materials/course_content/drafts/dair_smoke_20260529/` is the current course draft area for "Работа с ИИ".
-- Lesson 7 current title is `Процесс работы`.
-- `staging/` remains the app repo support directory for local design/test runtime.
-- `staging/start.sh` starts localhost-only staging.
-- `staging/env.staging.example` contains non-secret local env defaults.
-- `staging/data/**` and `staging/runtime/**` are runtime/generated/ignored except `.gitkeep`.
-- `source/app/**` remains app source; `source/tests/**` remains test source.
-- Agent Lab repos are not part of the site module map for current site workflow.
-- The next run is proof-only design workflow preflight; no UI patch yet.
-
 ## 2026-06-04 — Course lessons 5 and 6 swap accepted
 
 ### Append id
@@ -133,3 +115,21 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
   - no Agent Lab changes;
   - no app runtime/state changes recorded in this docs update;
   - this docs update does not modify the app repo.
+
+## 2026-06-05 — Course lesson 7 rewrite accepted; design preflight ready
+
+### Append id
+
+- MODULE_MAP_SITE_20260605_STAGING_AND_COURSE_STATE_SYNC
+
+### Current module-state note
+
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/` is the current course draft area for "Работа с ИИ".
+- Lesson 7 current title is `Процесс работы`.
+- `staging/` remains the app repo support directory for local design/test runtime.
+- `staging/start.sh` starts localhost-only staging.
+- `staging/env.staging.example` contains non-secret local env defaults.
+- `staging/data/**` and `staging/runtime/**` are runtime/generated/ignored except `.gitkeep`.
+- `source/app/**` remains app source; `source/tests/**` remains test source.
+- Agent Lab repos are not part of the site module map for current site workflow.
+- The next run is proof-only design workflow preflight; no UI patch yet.
