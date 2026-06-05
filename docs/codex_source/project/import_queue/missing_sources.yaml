@@ -49,7 +49,7 @@ items:
   - id: site_course_lessons_semantic_blocks_20260603
     status: done
     expected_target_path: docs/codex_source/materials/COURSE_LESSON_MAP.md
-    notes: course lessons 1–9 semantic blocks accepted; final app commit a5a2f6ef40338959a659bc9feecf0a23c46a0c70
+    notes: course lessons 1–9 semantic blocks accepted; later lesson 7 rewrite accepted in f6f5c2b100296efd69c67fa7387550cf2595340d; current docs sync now reflects the later stop-point
     must_not_invent: true
   - id: stale_kilo_current_phase_correction_20260603
     status: done

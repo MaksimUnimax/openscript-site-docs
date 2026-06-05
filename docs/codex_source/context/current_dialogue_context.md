@@ -197,3 +197,17 @@ Do not resume the old Kilo/design workflow automatically.
 
 Any older Kilo/design workflow references are historical unless the user explicitly chooses Kilo.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_COURSE_LESSONS_20260603 -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY source=codex_sync -->
+## CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY
+
+- Public docs were stale relative to accepted app course work.
+- Course lesson refinement is accepted through app commit f6f5c2b100296efd69c67fa7387550cf2595340d.
+- Lesson 7 was renamed to "Процесс работы" and now covers run types, control of Codex, context window, and prefix-extension practice.
+- Staging/test contour remains proven and localhost-only.
+- Next user-selected technical direction is Design/Kilo workflow preparation.
+- The next run must be proof-only preflight and must not patch UI yet.
+- Agent Lab remains no-touch.
+- Production remains no-touch.
+- No secrets may be read.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY -->

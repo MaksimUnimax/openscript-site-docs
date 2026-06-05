@@ -2,51 +2,99 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-DATE: 2026-06-03
+UPDATED: 2026-06-05
+CURRENT_STATUS_ID: CURRENT_STATUS_20260605_COURSE_ACCEPTED_DESIGN_PREFLIGHT_READY
 
 ## Repository separation
 
 - Docs repo: /opt/openscript-site-docs
-- App repo: /opt/ai-starter-community
 - Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
+- App repo: /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+- App branch: design/product-story-03
 - Production site: https://openscript.ru
 
 ## Current active block
 
-Course lesson refinement for “Работа с ИИ” course is completed and accepted.
+Design/Kilo workflow preparation for OpenScript / AI Starter Community using proven localhost-only staging.
 
-## Current stop-point
+This does not mean a UI patch is approved.
 
-App branch `design/product-story-03` contains accepted course lesson updates through commit `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`.
+The next run must be proof-only preflight:
+site-design-workflow-preflight-20260605
 
-## Current proven / accepted facts
+## Current proven state
 
-- Lessons 1–9 exist in the course draft.
-- Lessons 1–9 use semantic blocks/cards through `section.blocks` / `renderLessonBlocks`.
-- Lesson 4 contains the starter prompt section and corrected deploy-key workflow.
-- Copy/download controls remain visible.
-- The prompt textarea is collapsed by default.
-- The lesson 4 prompt can be opened and navigated to with the visible controls.
-- The final accepted app change was pushed to public GitHub.
-- Only `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js` changed in the final semantic-block run.
+- Staging/test contour exists.
+- Staging path: /opt/ai-starter-community/staging/
+- Staging listener was proven on 127.0.0.1:8090 only.
+- /healthz returned {"ok":true,"service":"ai-starter-community"}.
+- /readyz returned {"ok":true,"ready":true}.
+- Staging process was stopped after proof.
+- Port 8090 was free after proof.
+- Production runtime was not touched.
+- Agent Lab repos were not touched.
+- Secrets were not read.
+- app commit 6fae69f was a narrow staging wrapper fix during proof and is classified as minor process deviation.
+
+## Accepted course lesson work after previous docs state
+
+The previous docs state was stale and still pointed to an older course app commit.
+
+The latest accepted course app state includes commit:
+
+f6f5c2b100296efd69c67fa7387550cf2595340d — Rewrite lesson 7 process workflow
+
+This commit changed:
+
+- source/app/materials/course_content/drafts/dair_smoke_20260529/index.html
+- source/app/materials/course_content/drafts/dair_smoke_20260529/script.js
+- source/tests/test_course_rendering.py
+
+Accepted lesson state:
+
+- Lesson 7 is now "Процесс работы".
+- Lesson 7 explains run, Design run, Fix run, Proof run.
+- Lesson 7 explains one-run/one-task control logic.
+- Lesson 7 explains context, context window and prefix-extension practice.
+- Lesson 7 includes student-kit reference.
+- Lesson 7 quiz was updated.
+- Lesson 6 next link points to Lesson 7 "Процесс работы".
 
 ## Current blocker
 
-None for the completed lesson-block task.
+Need to design and run a controlled Kilo/design workflow preflight against staging.
 
-## Next safe step
+This preflight must decide the exact design workflow method before any UI patch.
 
-Wait for the user-selected next task.
+## Next safe technical run
 
-If a new dialogue starts, read the docs current state first and do not resume the old Kilo/design workflow automatically.
+site-design-workflow-preflight-20260605
 
-## Not current
+Run mode:
 
-- Kilo/design workflow
+design-workflow-proof / no app UI changes yet
+
+Goal:
+
+- inspect staging availability;
+- inspect current UI/materials state as inventory only;
+- inspect Kilo local config state if needed;
+- decide exact design workflow method;
+- produce design/Kilo implementation plan;
+- no UI patch;
+- no production changes;
+- no Agent Lab changes.
+
+## Not current / not approved
+
 - production deployment
-- payments implementation
+- payment implementation
 - AI Sales Agent implementation
 - Agent Lab work
 - APM/autopostmanager work
 - OpenDesign Lab work
+- public staging exposure
+- nginx/systemd changes
+- direct UI patch without design preflight
+- app source refactor without separate proof/design

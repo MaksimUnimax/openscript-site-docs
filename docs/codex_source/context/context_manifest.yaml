@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_COURSE_LESSONS_20260603
-last_append_title: "Course lessons 1–9 semantic blocks accepted"
-last_updated_utc: 2026-06-03T13:17:18Z
+last_append_id: CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY
+last_append_title: "Course lesson work accepted; design workflow preflight ready"
+last_updated_utc: 2026-06-05T07:19:57Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks

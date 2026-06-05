@@ -77,3 +77,59 @@ DATE: 2026-05-31
 - Kilo/design workflow is historical unless the user explicitly selects Kilo
 - Production deployment remains a separate later concern
 - Payments and AI Sales Agent remain not yet proven
+
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-05 — Course lesson 7 rewrite accepted; design preflight is next
+
+### Source
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- App branch: design/product-story-03
+
+### Current accepted app state
+
+- Latest accepted course app commit: f6f5c2b100296efd69c67fa7387550cf2595340d
+- Commit title: Rewrite lesson 7 process workflow
+- Changed files:
+  - source/app/materials/course_content/drafts/dair_smoke_20260529/index.html
+  - source/app/materials/course_content/drafts/dair_smoke_20260529/script.js
+  - source/tests/test_course_rendering.py
+
+### Accepted course state
+
+- Lesson 7 is now "Процесс работы".
+- Lesson 7 covers run definition, one run usually solving one task for control, Design run, Fix run, Proof run, context and context window, prefix-extension / Project Prefixer practice, student-kit link, and an updated quiz.
+- Lesson 6 next link now points to Lesson 7 "Процесс работы".
+
+### Current stage summary
+
+- Stage 0 — Repo separation and AGENTS bootstrap: COMPLETED
+- Stage 1 — Site docs currentization and source-derived baseline: COMPLETED
+- Stage 2 — Isolated staging/test contour: COMPLETED and HEALTH-PROVEN
+- Stage 2.5 — Course lesson refinement on design/product-story-03: COMPLETED through f6f5c2b100296efd69c67fa7387550cf2595340d
+- Stage 3 — Design/Kilo workflow preflight on staging: NEXT
+- Stage 4 — Manual review and screenshot proof: LATER
+- Stage 5 — Production handoff: LATER, separate approval required
+
+### Current stop-point
+
+- Course lesson refinement is accepted through app commit f6f5c2b100296efd69c67fa7387550cf2595340d.
+- Staging/test contour is already health-proven.
+- Next safe technical run is site-design-workflow-preflight-20260605.
+- Run mode: design-workflow-proof / no app UI changes yet
+
+### Not next
+
+- production deploy
+- payment implementation
+- AI Sales Agent implementation
+- Agent Lab work
+- app refactor
+- nginx/systemd
+- public staging exposure
+- direct UI patch without design workflow preflight
+
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY -->

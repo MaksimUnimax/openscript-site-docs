@@ -1,11 +1,11 @@
 roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 append_only: true
-last_append_id: RM_SITE_COURSE_LESSONS_20260603
-current_phase: course_lessons_semantic_blocks_completed
-next_phase: user_selected_next_site_or_course_task
-later_phase_after_screenshots: manual_review_if_requested
+last_append_id: RM_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY
+current_phase: design_workflow_preflight
+next_phase: manual_review_and_screenshots_after_design_patch
+later_phase_after_screenshots: production_handoff_after_manual_approval
 final_phase: production_deployment_separate_approval
 current_roadmap_version: v0.2
 current_roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 no_destructive_rewrite: true
-last_updated_utc: 2026-06-03T13:17:18Z
+last_updated_utc: 2026-06-05T07:19:57Z

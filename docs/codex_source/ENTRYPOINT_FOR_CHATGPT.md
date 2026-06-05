@@ -16,10 +16,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch for current course/staging work: `design/product-story-03`
-- Current accepted app commit for the course work: `a5a2f6ef40338959a659bc9feecf0a23c46a0c70`
-- Current stop-point: course lessons 1–9 semantic visual blocks/cards accepted by user
-- Next safe step: wait for the user-selected next task after this docs update
-- Historical Kilo/design workflow references are legacy context only unless the user explicitly asks for Kilo
+- Current accepted app commit for the course work: `f6f5c2b100296efd69c67fa7387550cf2595340d`
+- Current stop-point: course lesson refinement accepted through the lesson 7 process-workflow rewrite
+- Next safe step: `site-design-workflow-preflight-20260605` proof-only preflight
+- Kilo/design workflow references are current only for the active design preflight and any later user-approved design runs
 
 Main read path for ChatGPT:
 - public docs repo -> `docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md`

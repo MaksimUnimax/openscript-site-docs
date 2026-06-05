@@ -1,26 +1,23 @@
 # Source vs runtime — OpenScript / AI Starter Community
 
-STATUS: INITIAL_SOURCE_DERIVED_BASELINE
+STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-RUN_ID: site-docs-initial-import-20260531
-DATE: 2026-05-31
 
 ## Source of truth
 
-- /opt/ai-starter-community/source/ — application source code (git-tracked)
-- /opt/ai-starter-community/staging/start.sh, env.staging.example, README.md — staging support scripts (git-tracked)
-- /opt/openscript-site-docs/docs/codex_source/ — documentation (git-tracked)
+- App source: /opt/ai-starter-community/source/**
+- App staging support: /opt/ai-starter-community/staging/start.sh, /opt/ai-starter-community/staging/env.staging.example, /opt/ai-starter-community/staging/README.md
+- Docs source: /opt/openscript-site-docs/docs/codex_source/**
 
-## Non-source layers
+## Runtime / not source of truth
 
-- /opt/ai-starter-community/state/ — production SQLite database (not tracked in git)
-- /opt/ai-starter-community/runtime/ — production runtime state (not tracked in git)
-- /opt/ai-starter-community/staging/data/ — staging SQLite database (gitignored)
-- /opt/ai-starter-community/staging/runtime/ — staging runtime state (gitignored)
-- /opt/ai-starter-community/logs/ — application logs (not tracked in git)
-- /opt/ai-starter-community/backups/ — manual backups (not tracked in git)
-- /opt/ai-starter-community/tmp/ — temporary files (not tracked in git)
-- Production service config — nginx, systemd, Docker (NOT_YET_PROVEN)
+- /opt/ai-starter-community/staging/data/**
+- /opt/ai-starter-community/staging/runtime/**
+- /opt/ai-starter-community/state/**
+- /opt/ai-starter-community/runtime/**
+- /opt/ai-starter-community/logs/**
+- /opt/ai-starter-community/backups/**
+- /opt/ai-starter-community/tmp/**
 
 ## Rules
 
