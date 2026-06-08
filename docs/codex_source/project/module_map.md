@@ -1,8 +1,11 @@
 # Module map
 
-STATUS: IMPORTED_FROM_CURRENT_REPO_INVENTORY
+STATUS: LEGACY_IMPORTED_NOT_CURRENT
 
-This is the short human-readable module map summary.
+This is historical imported module-map material from the older Agent Lab / YouTube Research state.
+It is not the current OpenScript / AI Starter Community site module map.
+Current site module map:
+- `docs/codex_source/module_map/module_map.md`
 
 Current detailed snapshot:
 - `docs/codex_source/module_map/imported/current_module_map_snapshot.md`

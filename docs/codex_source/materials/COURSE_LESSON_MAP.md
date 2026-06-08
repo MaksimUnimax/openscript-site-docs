@@ -159,3 +159,46 @@
 - quiz/check;
 - pass criteria;
 - common mistakes.
+
+## COURSE_LESSON_MAP_20260608_CURRENT_9_LESSONS_AND_PROMPT_PANELS_VERIFIED
+
+### Current visible lesson map
+
+1. **Как устроена работа с ИИ-разработкой**
+   ChatGPT, Codex, roles, overall workflow, beginner-level meaning framing.
+
+2. **Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст**
+   Minimum document set for the project, why docs preserve context and control work.
+
+3. **Git: история, commit, push и откат**
+   Git/GitHub at owner level, commit, push, diff, rollback, proof-by-facts.
+
+4. **Старт проекта: сначала документация, потом разработка**
+   Start project through ChatGPT documentation, starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
+
+5. **Codex, AGENTS.md, Skills, токены и роль модели**
+   Codex as technical executor; ChatGPT manages development; Codex executes instructions; AGENTS.md; Skills; tokens; model choice; mini-model default for ordinary Codex runs; permissions; slash commands; server/workdir context; installation context; good vs bad Codex task examples; practice; quiz/check; pass criteria; common mistakes.
+
+6. **PowerShell, Terminal и подключение к серверу**
+   Terminal, PowerShell, commands, server, SSH, safe commands, dangerous commands, secrets, practice, quiz/check, pass criteria, common mistakes.
+
+7. **Процесс работы**
+   One run per task, run types, context window, prefix-extension practice, starter prompt panel with read-only prompt preview and actions.
+
+8. **Обновление документации и новый диалог**
+   Docs update, stop-point, current context, start new dialogue safely.
+
+9. **Частые ошибки, лайфхаки и правила работы**
+   Common mistakes, proof, docs, Git, secrets, and safe workflow rules.
+
+### Current source facts
+
+- The rendered course navigation still shows 9 lessons.
+- There is no visible lesson 10 in the current source.
+- Lesson 7 title is `Процесс работы`.
+- Lesson 7 includes a starter prompt panel with `Смотреть prompt`, `Скопировать prompt`, `Скачать .md`, and a readonly textarea preview.
+- Current prompt panels found in the source:
+  - lesson 6 starter prompt for project documentation start;
+  - lesson 7 starter prompt for prefix-extension practice;
+  - lesson 8 starter prompt for docs update;
+  - lesson 8 starter prompt for new dialogue.

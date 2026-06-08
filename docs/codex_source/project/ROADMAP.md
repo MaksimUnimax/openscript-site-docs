@@ -128,3 +128,41 @@ Next safe step is either visual review of lessons 5 and 6 on the course page or 
 ### Not next
 
 Do not start payment, production, Agent Lab, or broad app work automatically.
+
+## ROADMAP_UPDATE_20260608_COURSE_LESSON_7_REWRITE_VERIFIED
+
+### Verified current state
+
+The current app course baseline was re-verified locally against:
+
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/index.html`
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- `source/tests/test_course_rendering.py`
+
+Accepted app course commit:
+`f6f5c2b100296efd69c67fa7387550cf2595340d`
+
+Current lesson 7 title:
+`Процесс работы`
+
+Current course lessons:
+1. Как устроена работа с ИИ-разработкой
+2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
+3. Git: история, commit, push и откат
+4. Старт проекта: сначала документация, потом разработка
+5. Codex, AGENTS.md, Skills, токены и роль модели
+6. PowerShell, Terminal и подключение к серверу
+7. Процесс работы
+8. Обновление документации и новый диалог
+9. Частые ошибки, лайфхаки и правила работы
+
+### Lesson 7 details now current
+
+- Run types: `run`, `design run`, `fix run`, `proof run`.
+- Control logic: one run, one task, one set of checks.
+- Context coverage: `context`, `context window`, and `prefix`-extension practice.
+- Prompt panel: read-only starter prompt with `Смотреть prompt`, `Скопировать prompt`, and `Скачать .md`.
+
+### Not next
+
+This docs sync does not change the roadmap phase. The next safe app step remains the proof-only design workflow preflight if app work resumes.

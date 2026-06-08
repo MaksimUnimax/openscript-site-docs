@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-05
-CURRENT_STATUS_ID: CURRENT_STATUS_20260605_COURSE_ACCEPTED_DESIGN_PREFLIGHT_READY
+UPDATED: 2026-06-08
+CURRENT_STATUS_ID: CURRENT_STATUS_20260608_SITE_DOCS_CURRENT_STATE_SYNC
 
 ## Repository separation
 
@@ -16,85 +16,35 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260605_COURSE_ACCEPTED_DESIGN_PREFLIGHT_READ
 
 ## Current active block
 
-Design/Kilo workflow preparation for OpenScript / AI Starter Community using proven localhost-only staging.
+Docs repo memory update for the verified current course state and legacy bridge reclassification.
 
-This does not mean a UI patch is approved.
+## Verified source inspection
 
-The next run must be proof-only preflight:
-site-design-workflow-preflight-20260605
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/index.html`
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- `source/tests/test_course_rendering.py`
 
-## Current proven state
+## Accepted course baseline
 
-- Staging/test contour exists.
-- Staging path: /opt/ai-starter-community/staging/
-- Staging listener was proven on 127.0.0.1:8090 only.
-- /healthz returned {"ok":true,"service":"ai-starter-community"}.
-- /readyz returned {"ok":true,"ready":true}.
-- Staging process was stopped after proof.
-- Port 8090 was free after proof.
-- Production runtime was not touched.
-- Agent Lab repos were not touched.
-- Secrets were not read.
-- app commit 6fae69f was a narrow staging wrapper fix during proof and is classified as minor process deviation.
+- Accepted app course commit: `f6f5c2b100296efd69c67fa7387550cf2595340d`
+- Lesson 7 title: `Процесс работы`
+- Course has 9 lessons, not 10.
 
-## Accepted course lesson work after previous docs state
+## Current lesson 7 scope
 
-The previous docs state was stale and still pointed to an older course app commit.
+- `run`, `design run`, `fix run`, `proof run`
+- one-run/one-task control logic
+- `context` and `context window`
+- `prefix`-extension practice
+- starter prompt panel with `Смотреть prompt`, `Скопировать prompt`, `Скачать .md`, and a readonly textarea preview
 
-The latest accepted course app state includes commit:
+## Legacy bridge reclassification
 
-f6f5c2b100296efd69c67fa7387550cf2595340d — Rewrite lesson 7 process workflow
+- `docs/codex_source/project/module_map.md`, `docs/codex_source/project/project_snapshot.md`, and `docs/codex_source/project/project_overview.md` are legacy/imported history, not current site memory.
+- Current site module map: `docs/codex_source/module_map/module_map.md`.
+- Current site status: `docs/codex_source/project/current_status.md` and `docs/codex_source/project/CURRENT_STATUS.md`.
 
-This commit changed:
+## Current stop-point
 
-- source/app/materials/course_content/drafts/dair_smoke_20260529/index.html
-- source/app/materials/course_content/drafts/dair_smoke_20260529/script.js
-- source/tests/test_course_rendering.py
-
-Accepted lesson state:
-
-- Lesson 7 is now "Процесс работы".
-- Lesson 7 explains run, Design run, Fix run, Proof run.
-- Lesson 7 explains one-run/one-task control logic.
-- Lesson 7 explains context, context window and prefix-extension practice.
-- Lesson 7 includes student-kit reference.
-- Lesson 7 quiz was updated.
-- Lesson 6 next link points to Lesson 7 "Процесс работы".
-
-## Current blocker
-
-Need to design and run a controlled Kilo/design workflow preflight against staging.
-
-This preflight must decide the exact design workflow method before any UI patch.
-
-## Next safe technical run
-
-site-design-workflow-preflight-20260605
-
-Run mode:
-
-design-workflow-proof / no app UI changes yet
-
-Goal:
-
-- inspect staging availability;
-- inspect current UI/materials state as inventory only;
-- inspect Kilo local config state if needed;
-- decide exact design workflow method;
-- produce design/Kilo implementation plan;
-- no UI patch;
-- no production changes;
-- no Agent Lab changes.
-
-## Not current / not approved
-
-- production deployment
-- payment implementation
-- AI Sales Agent implementation
-- Agent Lab work
-- APM/autopostmanager work
-- OpenDesign Lab work
-- public staging exposure
-- nginx/systemd changes
-- direct UI patch without design preflight
-- app source refactor without separate proof/design
+The current app course baseline remains the accepted lesson 7 rewrite.
+Next safe app step remains the proof-only design workflow preflight.

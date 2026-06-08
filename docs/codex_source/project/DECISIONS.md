@@ -114,3 +114,15 @@ Lesson 6 is `PowerShell, Terminal и подключение к серверу`.
 
 Consequence:
 The canonical docs course map and any current pointers must reflect this order; the previous 5/6 order is historical only.
+
+### DECISION_20260608_12 — Lesson 7 rewrite is the current accepted course baseline
+
+Decision:
+The latest accepted app course commit for the current lesson baseline is `f6f5c2b100296efd69c67fa7387550cf2595340d`.
+Lesson 7 is `Процесс работы`.
+
+Reason:
+Local source inspection proves that the app course still has 9 lessons, lesson 7 now covers `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice, and the source includes the relevant starter prompt panel and controls.
+
+Consequence:
+Current docs and bridge docs must treat the lesson 7 rewrite as the active course baseline and must not leave the older 2026-06-04 lesson map as the current state.

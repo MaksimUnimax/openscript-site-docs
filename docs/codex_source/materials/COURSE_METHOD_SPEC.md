@@ -83,3 +83,14 @@ Use this method for the current lessons:
 - copied/downloaded markdown prompt files are backup copies for the user, not repo transfer;
 - the working repo documents are created by Codex from text embedded in ChatGPT-prepared Codex prompts;
 - Git must be taught as history/check/rollback safety at owner level, not as internals-only knowledge.
+
+## COURSE_METHOD_SPEC_UPDATE_20260608_LESSON_7_PREFIX_PROMPTS_VERIFIED
+
+### Current course rule set
+
+- The current course still has 9 lessons.
+- Lesson 7 is `Процесс работы` and must teach `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice.
+- The starter prompt panel in lesson 7 is read-only reference content with copy/download actions; it is not free-form student composition practice.
+- Lesson 6 and lesson 8 also use starter prompt panels for fixed course tasks, so prompt panels remain part of the course method.
+- Continue to keep checks click-based with ready answers.
+- Continue to avoid turning the course into free-form textarea practice for student-written prompts.

@@ -211,3 +211,31 @@ Any older Kilo/design workflow references are historical unless the user explici
 - Production remains no-touch.
 - No secrets may be read.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260608_SITE_DOCS_CURRENT_STATE_SYNC source=codex_sync -->
+## 2026-06-08 — Site docs current-state sync verified from local source
+
+### Verified app course baseline
+
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/index.html`
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- `source/tests/test_course_rendering.py`
+- accepted app commit: `f6f5c2b100296efd69c67fa7387550cf2595340d`
+- current lesson 7 title: `Процесс работы`
+
+### Verified current course facts
+
+- course has 9 lessons;
+- lesson 7 covers `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice;
+- lesson 7 includes a starter prompt panel with copy/download actions and a readonly textarea preview;
+- lesson 6 has the starter prompt panel for project documentation start;
+- lesson 8 has starter prompt panels for docs update and new dialogue;
+- no visible lesson 10 exists in the current source.
+
+### Docs repair result
+
+- stale uppercase current status, roadmap, lesson map, materials spec, course method spec, and decisions were synchronized to the current lesson 7 state;
+- legacy Agent Lab / YouTube bridge docs were marked as legacy/imported, not current site state;
+- current safe next app step remains the proof-only design workflow preflight;
+- no app source was changed.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260608_SITE_DOCS_CURRENT_STATE_SYNC -->

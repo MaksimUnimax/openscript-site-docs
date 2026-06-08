@@ -1,6 +1,6 @@
 # Project overview
 
-STATUS: IMPORTED_FROM_CHATGPT_UPLOAD
+STATUS: LEGACY_IMPORTED_NOT_CURRENT
 
 OpenScript Agent Lab is not just a Telegram bot around one LLM. It is an agent lab where:
 - agents are first-class product entities;
@@ -16,6 +16,11 @@ The first applied scenario is “Расходы с характером”:
 - the user confirms the draft;
 - deterministic code stores and reports expenses;
 - the chosen agent contributes tone, explanation and dialog quality.
+
+Current OpenScript / AI Starter Community site docs live under:
+- `docs/codex_source/project/current_status.md`
+- `docs/codex_source/project/CURRENT_STATUS.md`
+- `docs/codex_source/module_map/module_map.md`
 
 Current source-of-truth split:
 - vendor docs live under `docs/codex_source/vendor/**`;

@@ -63,3 +63,18 @@ Visible HTML must not contain the GitHub raw URL.
 - Current state: 9 lessons are implemented as semantic blocks/cards; lesson 4 keeps prompt controls and the corrected deploy-key flow.
 - Course checks are theory + tests only for this current draft area.
 - Access rules remain unchanged.
+
+## MATERIALS_SPEC_UPDATE_20260608_LESSON_7_AND_PROMPT_PANELS_VERIFIED
+
+### Current course/materials state
+
+- Visible area: “Обучение” / “Работа с ИИ”.
+- Current draft path: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`.
+- Current state: 9 lessons remain implemented as semantic blocks/cards.
+- Lesson 7 is `Процесс работы`.
+- Lesson 7 includes `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice.
+- Lesson 7 includes a starter prompt panel for prefix-extension practice with copy/download actions and a readonly textarea preview.
+- Lesson 6 includes the starter prompt panel for project documentation start.
+- Lesson 8 includes starter prompt panels for docs update and new dialogue.
+- Course checks remain theory + click tests only; the readonly starter prompt textarea is reference content, not student-authored free-form practice.
+- Access rules remain unchanged.

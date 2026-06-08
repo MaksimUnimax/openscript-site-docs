@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY
-last_append_title: "Course lesson work accepted; design workflow preflight ready"
-last_updated_utc: 2026-06-05T07:19:57Z
+last_append_id: CTX_SITE_20260608_SITE_DOCS_CURRENT_STATE_SYNC
+last_append_title: "Site docs current-state sync verified from local source"
+last_updated_utc: 2026-06-08T07:31:15Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks

@@ -132,3 +132,60 @@ Next safe step is either:
 2. if visual review is accepted, choose the next docs/app task from the current product stop-point.
 
 Do not start payment, production, Agent Lab, or broad app work automatically.
+
+## CURRENT_STATUS_20260608_COURSE_LESSON_7_REWRITE_VERIFIED
+
+### Current active block
+
+Docs repo memory update for the verified current course state and legacy bridge reclassification.
+
+### Verified source inspection
+
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/index.html`
+- `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`
+- `source/tests/test_course_rendering.py`
+
+### Accepted app course commit
+
+- `f6f5c2b100296efd69c67fa7387550cf2595340d` — Rewrite lesson 7 process workflow
+
+### Current course state
+
+Course has 9 lessons:
+1. Как устроена работа с ИИ-разработкой
+2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
+3. Git: история, commit, push и откат
+4. Старт проекта: сначала документация, потом разработка
+5. Codex, AGENTS.md, Skills, токены и роль модели
+6. PowerShell, Terminal и подключение к серверу
+7. Процесс работы
+8. Обновление документации и новый диалог
+9. Частые ошибки, лайфхаки и правила работы
+
+### Current lesson 7 scope
+
+- Lesson 7 title: `Процесс работы`.
+- Lesson 7 explains `run`, `design run`, `fix run`, and `proof run`.
+- Lesson 7 explains one-run/one-task control logic.
+- Lesson 7 explains `context` and `context window`.
+- Lesson 7 explains `prefix`-extension practice.
+- Lesson 7 includes a starter prompt panel for `Prompt для создания расширения`.
+- The starter prompt panel has `Смотреть prompt`, `Скопировать prompt`, `Скачать .md`, and a hidden readonly textarea.
+
+### Current prompt panels found in the source
+
+- Lesson 6: starter prompt for project documentation start.
+- Lesson 7: starter prompt for prefix-extension practice.
+- Lesson 8: starter prompt for docs update.
+- Lesson 8: starter prompt for new dialogue.
+
+### Legacy bridge reclassification
+
+- `docs/codex_source/project/module_map.md`, `docs/codex_source/project/project_snapshot.md`, and `docs/codex_source/project/project_overview.md` are legacy/imported history, not current site memory.
+- Current site module map: `docs/codex_source/module_map/module_map.md`.
+- Current site status: `docs/codex_source/project/current_status.md` and `docs/codex_source/project/CURRENT_STATUS.md`.
+
+### Current stop-point
+
+The current app course baseline is verified and remains the accepted lesson 7 rewrite.
+Next safe app step remains the proof-only design workflow preflight.

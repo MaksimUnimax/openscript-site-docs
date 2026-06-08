@@ -1,8 +1,14 @@
 # Project snapshot
 
-STATUS: CURRENT
+STATUS: LEGACY_IMPORTED_NOT_CURRENT
 
-This lightweight snapshot reflects the current YouTube Research state.
+This lightweight snapshot reflects historical YouTube Research / Agent Lab state.
+It is not the current OpenScript / AI Starter Community site memory.
+Current site status:
+- `docs/codex_source/project/current_status.md`
+- `docs/codex_source/project/CURRENT_STATUS.md`
+Current site module map:
+- `docs/codex_source/module_map/module_map.md`
 
 Current snapshot:
 
