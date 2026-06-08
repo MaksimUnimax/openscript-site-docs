@@ -133,7 +133,7 @@ Next safe step is either:
 
 Do not start payment, production, Agent Lab, or broad app work automatically.
 
-## CURRENT_STATUS_20260608_COURSE_LESSON_7_REWRITE_VERIFIED
+## CURRENT_STATUS_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
 
 ### Current active block
 
@@ -151,16 +151,17 @@ Docs repo memory update for the verified current course state and legacy bridge 
 
 ### Current course state
 
-Course has 9 lessons:
+Course has 9 numbered lessons plus a visible final section:
 1. Как устроена работа с ИИ-разработкой
 2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
 3. Git: история, commit, push и откат
-4. Старт проекта: сначала документация, потом разработка
-5. Codex, AGENTS.md, Skills, токены и роль модели
-6. PowerShell, Terminal и подключение к серверу
+4. Codex, AGENTS.md, Skills, токены и роль модели
+5. PowerShell, Terminal и подключение к серверу
+6. Старт проекта: сначала документация, потом разработка
 7. Процесс работы
 8. Обновление документации и новый диалог
 9. Частые ошибки, лайфхаки и правила работы
+10. Финал курса
 
 ### Current lesson 7 scope
 
@@ -187,5 +188,5 @@ Course has 9 lessons:
 
 ### Current stop-point
 
-The current app course baseline is verified and remains the accepted lesson 7 rewrite.
+The current app course baseline is verified and remains the accepted lesson 7 rewrite, with the lesson 4/5/6 order and final section verified from source.
 Next safe app step remains the proof-only design workflow preflight.

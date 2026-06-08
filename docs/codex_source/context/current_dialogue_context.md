@@ -239,3 +239,28 @@ Any older Kilo/design workflow references are historical unless the user explici
 - current safe next app step remains the proof-only design workflow preflight;
 - no app source was changed.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260608_SITE_DOCS_CURRENT_STATE_SYNC -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR source=codex_sync -->
+## 2026-06-08 — Course order and final section repaired from source
+
+### Verified current source truth
+
+- Lesson 4: `Codex, AGENTS.md, Skills, токены и роль модели`
+- Lesson 5: `PowerShell, Terminal и подключение к серверу`
+- Lesson 6: `Старт проекта: сначала документация, потом разработка`
+- Lesson 7: `Процесс работы`
+- Final section: `lesson-10` / `Финал курса`
+
+### Verified current course wording
+
+- The course has 9 numbered lessons plus a visible final section.
+- Lesson 6 owns the starter prompt for project documentation start.
+- Lesson 7 owns the starter prompt for prefix-extension practice.
+- Lesson 8 owns the starter prompts for docs update and new dialogue.
+
+### Repair result
+
+- Previous course-order statements that treated 4/5/6 as start project / Codex / PowerShell are superseded.
+- Previous wording that said there was no visible lesson 10 is superseded.
+- Current docs should use the 9 numbered lessons plus final section wording.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR -->

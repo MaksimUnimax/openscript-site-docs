@@ -164,6 +164,8 @@
 
 ### Current visible lesson map
 
+This current block supersedes the older 2026-06-04 swap block and the stale no-final-section wording.
+
 1. **Как устроена работа с ИИ-разработкой**
    ChatGPT, Codex, roles, overall workflow, beginner-level meaning framing.
 
@@ -173,14 +175,14 @@
 3. **Git: история, commit, push и откат**
    Git/GitHub at owner level, commit, push, diff, rollback, proof-by-facts.
 
-4. **Старт проекта: сначала документация, потом разработка**
-   Start project through ChatGPT documentation, starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
-
-5. **Codex, AGENTS.md, Skills, токены и роль модели**
+4. **Codex, AGENTS.md, Skills, токены и роль модели**
    Codex as technical executor; ChatGPT manages development; Codex executes instructions; AGENTS.md; Skills; tokens; model choice; mini-model default for ordinary Codex runs; permissions; slash commands; server/workdir context; installation context; good vs bad Codex task examples; practice; quiz/check; pass criteria; common mistakes.
 
-6. **PowerShell, Terminal и подключение к серверу**
+5. **PowerShell, Terminal и подключение к серверу**
    Terminal, PowerShell, commands, server, SSH, safe commands, dangerous commands, secrets, practice, quiz/check, pass criteria, common mistakes.
+
+6. **Старт проекта: сначала документация, потом разработка**
+   Start project through ChatGPT documentation, starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
 
 7. **Процесс работы**
    One run per task, run types, context window, prefix-extension practice, starter prompt panel with read-only prompt preview and actions.
@@ -191,10 +193,12 @@
 9. **Частые ошибки, лайфхаки и правила работы**
    Common mistakes, proof, docs, Git, secrets, and safe workflow rules.
 
+10. **Финал курса**
+   Visible final section with course wrap-up, next steps, and closing guidance.
+
 ### Current source facts
 
-- The rendered course navigation still shows 9 lessons.
-- There is no visible lesson 10 in the current source.
+- The rendered course navigation shows 9 numbered lessons and the course source includes a visible final section (`lesson-10`).
 - Lesson 7 title is `Процесс работы`.
 - Lesson 7 includes a starter prompt panel with `Смотреть prompt`, `Скопировать prompt`, `Скачать .md`, and a readonly textarea preview.
 - Current prompt panels found in the source:

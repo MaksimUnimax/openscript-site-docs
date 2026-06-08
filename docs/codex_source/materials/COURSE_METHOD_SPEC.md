@@ -88,7 +88,8 @@ Use this method for the current lessons:
 
 ### Current course rule set
 
-- The current course still has 9 lessons.
+- The current course still has 9 numbered lessons plus a visible final section.
+- The current lesson order in source is 4: `Codex, AGENTS.md, Skills, токены и роль модели`; 5: `PowerShell, Terminal и подключение к серверу`; 6: `Старт проекта: сначала документация, потом разработка`.
 - Lesson 7 is `Процесс работы` and must teach `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice.
 - The starter prompt panel in lesson 7 is read-only reference content with copy/download actions; it is not free-form student composition practice.
 - Lesson 6 and lesson 8 also use starter prompt panels for fixed course tasks, so prompt panels remain part of the course method.

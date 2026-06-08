@@ -1,6 +1,6 @@
 roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 append_only: true
-last_append_id: RM_SITE_20260608_COURSE_LESSON_7_REWRITE_VERIFIED
+last_append_id: RM_SITE_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
 current_phase: design_workflow_preflight
 next_phase: manual_review_and_screenshots_after_design_patch
 later_phase_after_screenshots: production_handoff_after_manual_approval
@@ -8,4 +8,4 @@ final_phase: production_deployment_separate_approval
 current_roadmap_version: v0.2
 current_roadmap_file: docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md
 no_destructive_rewrite: true
-last_updated_utc: 2026-06-08T07:31:15Z
+last_updated_utc: 2026-06-08T07:46:07Z

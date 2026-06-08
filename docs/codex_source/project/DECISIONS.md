@@ -126,3 +126,25 @@ Local source inspection proves that the app course still has 9 lessons, lesson 7
 
 Consequence:
 Current docs and bridge docs must treat the lesson 7 rewrite as the active course baseline and must not leave the older 2026-06-04 lesson map as the current state.
+
+### DECISION_20260608_13 — Current course numbering includes a visible final section
+
+Decision:
+The current course source has 9 numbered lessons plus a visible final section (`lesson-10`).
+The current lesson order in source is:
+1. Как устроена работа с ИИ-разработкой
+2. Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст
+3. Git: история, commit, push и откат
+4. Codex, AGENTS.md, Skills, токены и роль модели
+5. PowerShell, Terminal и подключение к серверу
+6. Старт проекта: сначала документация, потом разработка
+7. Процесс работы
+8. Обновление документации и новый диалог
+9. Частые ошибки, лайфхаки и правила работы
+10. Финал курса
+
+Reason:
+Local source inspection shows `nextStepTargetId: "lesson-10"`, `id: "lesson-10"`, `navTitle: "Финал курса"`, and a separate final section is rendered after lesson 9.
+
+Consequence:
+Current docs must not say that lesson 10 is absent or that the course is only 9 total visible sections. The accurate wording is 9 numbered lessons plus a final section.

@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-08
-CURRENT_STATUS_ID: CURRENT_STATUS_20260608_SITE_DOCS_CURRENT_STATE_SYNC
+CURRENT_STATUS_ID: CURRENT_STATUS_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
 
 ## Repository separation
 
@@ -16,7 +16,7 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260608_SITE_DOCS_CURRENT_STATE_SYNC
 
 ## Current active block
 
-Docs repo memory update for the verified current course state and legacy bridge reclassification.
+Docs repo memory update for the verified current course order and final section.
 
 ## Verified source inspection
 
@@ -27,8 +27,11 @@ Docs repo memory update for the verified current course state and legacy bridge 
 ## Accepted course baseline
 
 - Accepted app course commit: `f6f5c2b100296efd69c67fa7387550cf2595340d`
+- Lesson 4 title: `Codex, AGENTS.md, Skills, токены и роль модели`
+- Lesson 5 title: `PowerShell, Terminal и подключение к серверу`
+- Lesson 6 title: `Старт проекта: сначала документация, потом разработка`
 - Lesson 7 title: `Процесс работы`
-- Course has 9 lessons, not 10.
+- Course has 9 numbered lessons plus a visible final section (`lesson-10`).
 
 ## Current lesson 7 scope
 
@@ -46,5 +49,5 @@ Docs repo memory update for the verified current course state and legacy bridge 
 
 ## Current stop-point
 
-The current app course baseline remains the accepted lesson 7 rewrite.
+The current app course baseline remains the accepted lesson 7 rewrite, with the 4/5/6 order and final section verified from source.
 Next safe app step remains the proof-only design workflow preflight.

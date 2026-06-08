@@ -70,7 +70,8 @@ Visible HTML must not contain the GitHub raw URL.
 
 - Visible area: “Обучение” / “Работа с ИИ”.
 - Current draft path: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`.
-- Current state: 9 lessons remain implemented as semantic blocks/cards.
+- Current state: 9 numbered lessons plus a visible final section remain implemented as semantic blocks/cards.
+- Current lesson order in source is 4: `Codex, AGENTS.md, Skills, токены и роль модели`; 5: `PowerShell, Terminal и подключение к серверу`; 6: `Старт проекта: сначала документация, потом разработка`.
 - Lesson 7 is `Процесс работы`.
 - Lesson 7 includes `run`, `design run`, `fix run`, `proof run`, `context`, `context window`, and `prefix`-extension practice.
 - Lesson 7 includes a starter prompt panel for prefix-extension practice with copy/download actions and a readonly textarea preview.
