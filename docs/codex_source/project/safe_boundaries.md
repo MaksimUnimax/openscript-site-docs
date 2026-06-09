@@ -38,6 +38,13 @@ PROJECT: OpenScript / AI Starter Community
 - Do not modify /opt/openscript-agent-lab or /opt/openscript-agent-lab-docs
 - Proof-only runs must not silently fix and commit unless the prompt explicitly allows a narrow fix
 
+## Production/live change boundary
+
+- Production/live changes in the app repo happened only because the user explicitly approved them in the corresponding technical prompts.
+- That approval does not remove the future requirement for explicit user approval before any later production mutation.
+- Production DB changes still require a backup, a narrow scope, and explicit approval in the task prompt.
+- Docs-only runs must stay inside `/opt/openscript-site-docs/docs/codex_source/**`.
+
 ## Staging environment
 
 - Staging root: /opt/ai-starter-community/staging/

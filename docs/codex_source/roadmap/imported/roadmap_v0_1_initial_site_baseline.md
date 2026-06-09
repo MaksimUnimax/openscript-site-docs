@@ -133,3 +133,51 @@ DATE: 2026-05-31
 - direct UI patch without design workflow preflight
 
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260605_COURSE_ACCEPTED_AND_DESIGN_PREFLIGHT_READY -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-09 — Cabinet account-blocks and paid-options live iteration
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the latest live cabinet iteration.
+- App repo branch remains `design/product-story-03`.
+- Paid-options cabinet block is live and shows active add-ons from the database.
+- Base AI / GPT tool option is hidden from the add-on activation block.
+- Add-ons are ordered by price descending.
+- Buy remains a safe placeholder; real payment processing is still not implemented.
+- Server-backed account blocks are live in `/cabinet`.
+- LocalStorage is no longer the source of truth for account blocks.
+- Account block types supported in UI: ChatGPT, Сервер, Почта.
+- Owner is resolved server-side and hidden from the visible UI.
+- Manual title and email fields were removed from the account block UI.
+- Admin and moderator can create, edit, delete, and activate account blocks.
+- Moderator does not gain full admin dashboard rights.
+- Activation email is wired to the owner user's registered email.
+- Activation text uses elapsed-day wording, not remaining-days wording.
+- Account actions use fetch-based no-jump handling and preserve scroll position.
+- Account cards use bounded tracks and do not stretch full width on desktop/tablet when only one card is visible.
+- Production test-user cleanup was completed with a backup before deletion.
+
+### Current completion state
+
+- Paid-options cabinet block live iteration: completed technically, manual browser verification pending
+- Account-block backend/UI live iteration: completed technically, manual browser verification pending
+- Moderator assignment live iteration: completed technically
+- Activation email live iteration: completed technically
+- No-jump and bounded-width cabinet UX: completed technically, manual browser verification pending
+- Production test-user cleanup: completed technically
+
+### Open follow-ups
+
+- Manual browser verification of the latest no-jump/card-width/account-email behavior
+- Real payment processing / entitlement flow
+- Password-secret encryption or other secret-storage policy decision
+
+### Not current
+
+- Kilo/design workflow preflight as the active app task
+- Payment provider implementation
+- Any app repo or runtime change in this docs run
+- Agent Lab work
+
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION -->

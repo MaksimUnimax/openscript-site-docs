@@ -17,8 +17,9 @@ Current canonical project:
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch for current course/staging work: `design/product-story-03`
 - Current accepted app commit for the course work: `f6f5c2b100296efd69c67fa7387550cf2595340d`
-- Current stop-point: course lesson refinement accepted through the lesson 7 process-workflow rewrite
-- Next safe step: `site-design-workflow-preflight-20260605` proof-only preflight
+- Current accepted app commit for the latest live cabinet/account-blocks/paid-options iteration: `7c94211819ddb334575d7835152637972930d393`
+- Current stop-point: the live cabinet/account-blocks/paid-options technical iteration is deployed; manual browser verification is still pending unless the user explicitly confirms acceptance
+- Next safe step: manual browser verification of the live cabinet/account-blocks/paid-options behavior, or the next explicit user-selected task
 - Kilo/design workflow references are current only for the active design preflight and any later user-approved design runs
 
 Main read path for ChatGPT:

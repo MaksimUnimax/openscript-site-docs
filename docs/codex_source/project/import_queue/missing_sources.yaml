@@ -9,7 +9,7 @@ items:
   - id: payment_implementation
     status: not_yet_proven
     expected_target_path: docs/codex_source/project/payments.md
-    notes: Payments module exists as empty structure only
+    notes: Payments module exists as empty structure only; paid-options cabinet display is live, but real payment processing / entitlement flow is still NOT_YET_PROVEN
     must_not_invent: true
   - id: ai_sales_agent_implementation
     status: not_yet_proven
@@ -55,4 +55,19 @@ items:
     status: done
     expected_target_path: docs/codex_source/project/current_status.md
     notes: Kilo/design workflow is not the current active block for this dialogue; wait for user-selected next site/course task
+    must_not_invent: true
+  - id: paid_options_cabinet_activation_block
+    status: done
+    expected_target_path: docs/codex_source/project/paid_options_activation.md
+    notes: Cabinet paid-options activation block is live; base AI/GPT tool is hidden; add-ons are ordered by price descending; real payment is still NOT_YET_PROVEN
+    must_not_invent: true
+  - id: account_blocks_backend_and_ui
+    status: done
+    expected_target_path: docs/codex_source/project/account_blocks.md
+    notes: Server-backed account blocks, moderator assignment, activation email, no-jump actions, and bounded-width cards are live
+    must_not_invent: true
+  - id: account_block_password_secret_encryption_decision
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/account_blocks.md
+    notes: password_secret is still stored as a service-isolated text field; encryption or alternate secret-storage policy is open
     must_not_invent: true

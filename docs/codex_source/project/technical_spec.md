@@ -114,3 +114,26 @@ Tables proven from source:
 - Runtime performance characteristics
 - Testing coverage depth of auth/admin flows
 - Materials access control behavior when fully enabled
+
+## 2026-06-09 — Cabinet account-blocks, moderator role, paid-options block, and activation email live state
+
+### Source-derived additions
+
+- `account_blocks` is now a proven database table with the columns documented in `project/account_blocks.md`.
+- `users.role` remains the source of truth for roles; `admin`, `moderator`, and `user` are the current role values used by the live app.
+- The admin-only moderator assignment flow is implemented in the app and documented in `project/account_blocks.md`.
+- The cabinet now renders server-backed account blocks instead of localStorage-backed cards.
+- Supported account-block types are `chatgpt`, `server`, and `mail`.
+- Block titles are derived from type labels.
+- Owner is resolved server-side and hidden from the visible cabinet UI.
+- Visible account-block edits are limited to login and password fields.
+- Delete and activate are real POST actions.
+- Activation uses internal 60-day logic but visible wording uses elapsed-day text.
+- Activation email is queued/sent through the existing notification layer to the owner user's registered email.
+- The cabinet now includes the user-facing paid-options activation block.
+- Real payment processing, entitlement linkage, and production checkout remain NOT_YET_PROVEN.
+
+### Security note
+
+- `password_secret` is still stored as a service-isolated text field in the current implementation.
+- Encryption or a different secret-storage policy has not been proven as implemented.

@@ -133,3 +133,32 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - `source/app/**` remains app source; `source/tests/**` remains test source.
 - Agent Lab repos are not part of the site module map for current site workflow.
 - The next run is proof-only design workflow preflight; no UI patch yet.
+
+## 2026-06-09 — Cabinet account-blocks and paid-options live iteration
+
+### Append id
+
+- MODULE_MAP_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
+
+### Current module-state note
+
+- `app/user_cabinet/` now includes the server-backed cabinet account-blocks flow.
+- `app/account_blocks/` is implemented and provides the account block backend/service.
+- `app/admin/` includes moderator assignment for `users.role` and keeps admin-only dashboard access.
+- `app/notifications/` includes activation email wiring for account blocks through the existing outbox/SMTP adapter layer.
+- `app/paid_options/` remains the paid-option catalog layer; the cabinet now shows the active add-on activation block.
+- `app/shared/db.py` now includes the `account_blocks` table schema support.
+- `source/app/static/cabinet-local-accounts.js` no longer acts as the source of truth for server-backed account blocks.
+- `source/app/user_cabinet/templates/cabinet.html` renders the no-jump account action flow and bounded-width account cards.
+- `source/app/static/styles.css` bounds the account card grid so a single card does not stretch full width on desktop/tablet.
+- Legacy localStorage account-block behavior is not the current site memory.
+- Payment processing remains NOT_YET_PROVEN even though the paid-options cabinet block is live.
+- Password-secret encryption policy remains open.
+- Manual browser verification of the latest no-jump/card-width/account-email behavior is still pending unless explicitly confirmed by the user.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.

@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-08
-CURRENT_STATUS_ID: CURRENT_STATUS_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
+UPDATED: 2026-06-09
+CURRENT_STATUS_ID: CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
 
 ## Repository separation
 
@@ -16,7 +16,7 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
 
 ## Current active block
 
-Docs repo memory update for the verified current course order and final section.
+Docs repo memory update for the verified live cabinet/account-blocks/paid-options iteration. Manual browser verification is still pending unless the user explicitly confirms acceptance.
 
 ## Verified source inspection
 
@@ -49,5 +49,43 @@ Docs repo memory update for the verified current course order and final section.
 
 ## Current stop-point
 
-The current app course baseline remains the accepted lesson 7 rewrite, with the 4/5/6 order and final section verified from source.
-Next safe app step remains the proof-only design workflow preflight.
+The current app live state now includes the server-backed cabinet account blocks, moderator assignment, activation email wiring, paid-options cabinet block, no-jump account action handling, and bounded account card width.
+Next safe step is manual browser verification of the live cabinet/account-blocks/paid-options behavior, unless the user explicitly confirms acceptance.
+
+## CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
+
+### Verified current live state
+
+- Paid-options cabinet block is live with active add-ons displayed from the database.
+- Base AI / GPT tool option is hidden from the add-on activation block.
+- Add-ons are ordered by price descending.
+- Buy remains a safe placeholder button; real payment processing is still not implemented.
+- Server-backed account blocks are live in `/cabinet`.
+- LocalStorage is no longer the source of truth for account blocks.
+- Account block types supported in UI: ChatGPT, Сервер, Почта.
+- Owner is resolved server-side and hidden from the visible UI.
+- Manual title and email fields were removed from the account block UI.
+- Admin and moderator can create, edit, delete, and activate account blocks.
+- Moderator does not gain full admin dashboard rights.
+- Activation email is wired to the owner user's registered email.
+- Activation text uses elapsed-day wording, not remaining-days wording.
+- Account actions use fetch-based no-jump handling and preserve scroll position.
+- Account cards use bounded tracks and do not stretch full width on desktop/tablet when only one card is visible.
+- Production test-user cleanup was completed with a backup before deletion.
+
+### Accepted live-source commits
+
+- `f10fb8efd2b2d044f66122952675ee66cc0dbd3d` — paid-options hide-base/sort/alignment live deploy
+- `3e45d12c1807eae877065459a5c68f762ef02da1` — account_blocks backend/service foundation
+- `a16ab80cf354ddfe1a3b48e3d5ee52e716c9b00c` — server-backed cabinet UI and admin/moderator management
+- `f67ef013eb831ec76ce3cf69eca40fc8da19d0a8` — moderator assignment for users.role
+- `da3ce7f939bffe1cbb802048964c83aae96214a9` — compact card UI and elapsed activation status
+- `1a89fd5eea26e955b4f2fe33cfb6e13cf44f3201` — owner selector / action form fixes
+- `a3bd97243a267691c6d06403223a470c2fafdefb` — activation email import-cycle/runtime fix
+- `7c94211819ddb334575d7835152637972930d393` — no-jump account actions and bounded account card width
+
+### Manual verification status
+
+- Manual browser verification of the latest no-jump/card-width/account-email behavior is still pending unless explicitly confirmed by the user.
+- This docs update records the technical deployed state only.
+- Real payment processing remains NOT_YET_PROVEN.

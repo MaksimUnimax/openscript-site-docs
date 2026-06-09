@@ -31,3 +31,9 @@ PROJECT: OpenScript / AI Starter Community
   - port (8090, non-default)
   - session cookie name
   - env configuration (staging/env.staging.example)
+
+## Cabinet/runtime note
+
+- Runtime database rows for `account_blocks` and runtime rows in `email_outbox` are live state, not docs source of truth.
+- This docs repo records the verified technical state, not per-request production row contents.
+- Do not copy live passwords, password secrets, token values, or email body secrets into docs.

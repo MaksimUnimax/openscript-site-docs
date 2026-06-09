@@ -264,3 +264,51 @@ Any older Kilo/design workflow references are historical unless the user explici
 - Previous wording that said there was no visible lesson 10 is superseded.
 - Current docs should use the 9 numbered lessons plus final section wording.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION source=codex_sync -->
+## 2026-06-09 — Cabinet account-blocks and paid-options live iteration
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+- App branch: design/product-story-03
+
+### Verified live state from the latest app reports
+
+- Paid-options cabinet block is live and shows active add-ons from the database.
+- The base AI / GPT tool option is hidden from the add-on activation block.
+- Add-ons are ordered by price descending.
+- The buy button remains a safe placeholder; real payment processing is still not implemented.
+- Server-backed account blocks are live in `/cabinet`.
+- LocalStorage is no longer the source of truth for account blocks.
+- Account block types supported in UI: ChatGPT, Сервер, Почта.
+- Owner is resolved server-side and hidden from the visible UI.
+- Manual title and email inputs were removed from the account block UI.
+- Admin and moderator can create, edit, delete, and activate account blocks.
+- Moderator does not gain full admin dashboard rights.
+- Activation email is wired to the owner user's registered email.
+- Activation text uses elapsed-day wording, not remaining-days wording.
+- Account actions use fetch-based no-jump handling and preserve scroll position.
+- Account cards use bounded tracks and do not stretch full width on desktop/tablet when only one card is visible.
+- Production test-user cleanup was completed with a backup before deletion.
+
+### Accepted live-source commits
+
+- `f10fb8efd2b2d044f66122952675ee66cc0dbd3d` — paid-options hide-base/sort/alignment live deploy
+- `3e45d12c1807eae877065459a5c68f762ef02da1` — account_blocks backend/service foundation
+- `a16ab80cf354ddfe1a3b48e3d5ee52e716c9b00c` — server-backed cabinet UI and admin/moderator management
+- `f67ef013eb831ec76ce3cf69eca40fc8da19d0a8` — moderator assignment for users.role
+- `da3ce7f939bffe1cbb802048964c83aae96214a9` — compact card UI and elapsed activation status
+- `1a89fd5eea26e955b4f2fe33cfb6e13cf44f3201` — owner selector / action form fixes
+- `a3bd97243a267691c6d06403223a470c2fafdefb` — activation email import-cycle/runtime fix
+- `7c94211819ddb334575d7835152637972930d393` — no-jump account actions and bounded account card width
+
+### Manual verification status
+
+- Manual browser verification of the latest no-jump/card-width/account-email behavior is still pending unless explicitly confirmed by the user.
+- This docs update records the technical deployed state only.
+- Real payment processing remains NOT_YET_PROVEN.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION -->

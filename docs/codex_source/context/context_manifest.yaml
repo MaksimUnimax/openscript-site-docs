@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260608_COURSE_ORDER_AND_FINAL_SECTION_REPAIR
-last_append_title: "Course order and final section repaired from source"
-last_updated_utc: 2026-06-08T07:46:07Z
+last_append_id: CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
+last_append_title: "Cabinet account-blocks and paid-options live iteration"
+last_updated_utc: 2026-06-09T00:00:00Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks
