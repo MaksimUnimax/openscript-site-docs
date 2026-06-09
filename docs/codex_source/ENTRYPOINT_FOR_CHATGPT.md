@@ -30,7 +30,9 @@ Main read path for ChatGPT:
 - public docs repo -> `docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md`
 
 Public docs repo scope:
-- contains only `docs/codex_source/**`: yes
+- source-of-truth docs live under `docs/codex_source/**`
+- root `AGENTS.md` is mandatory and may coexist with repo metadata, README, and GitHub-facing files outside that tree
+- files outside `docs/codex_source/**` are not application source
 
 Legacy imported history:
 - This docs repo also contains legacy OpenScript Agent Lab documentation that was imported before the docs repo was currentized.

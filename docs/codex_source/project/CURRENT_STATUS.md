@@ -7,6 +7,7 @@ STATUS: INITIAL_FROM_CURRENT_REPO_DOCS
 ### Current active block
 
 Docs repo memory update for the verified live cabinet/account-blocks/paid-options iteration. Manual browser verification is still pending unless the user explicitly confirms acceptance.
+Canonical detailed current status is `docs/codex_source/project/current_status.md`.
 
 ### Current live state summary
 
