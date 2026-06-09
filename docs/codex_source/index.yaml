@@ -29,6 +29,13 @@ current_project:
   public_docs_repo: "https://github.com/MaksimUnimax/openscript-site-docs"
   active_scope: "main_site"
   stale_legacy_scope_note: "Some existing docs may still mention OpenScript Agent Lab; current canonical project for this docs repo is the main OpenScript / AI Starter Community site."
+  current_docs_paths:
+    current_status: "docs/codex_source/project/current_status.md"
+    context: "docs/codex_source/context/current_dialogue_context.md"
+    roadmap: "docs/codex_source/roadmap/imported/roadmap_v0_1_initial_site_baseline.md"
+    module_map: "docs/codex_source/module_map/module_map.md"
+    account_blocks: "docs/codex_source/project/account_blocks.md"
+    paid_options_activation: "docs/codex_source/project/paid_options_activation.md"
 
 current_dialogue_state:
   latest_context_update_id: "CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION"
@@ -43,6 +50,8 @@ canonical_docs:
   project_context: "docs/codex_source/project/CONTEXT.md"
   project_roadmap: "docs/codex_source/project/ROADMAP.md"
   project_current_status: "docs/codex_source/project/CURRENT_STATUS.md"
+  project_account_blocks: "docs/codex_source/project/account_blocks.md"
+  project_paid_options_activation: "docs/codex_source/project/paid_options_activation.md"
   project_decisions: "docs/codex_source/project/DECISIONS.md"
   project_open_questions: "docs/codex_source/project/OPEN_QUESTIONS.md"
   app_module_map: "docs/codex_source/app/MODULE_MAP.md"
@@ -61,6 +70,8 @@ material_access_canon:
 
 # Legacy imported Agent Lab context. Not the active project for this docs repo.
 legacy_current_dialogue_state:
+  LEGACY_AGENT_LAB_SECTION_NOT_CURRENT_SITE_CORPUS: true
+  DO_NOT_USE_FOR_OPENSCRIPT_SITE_CURRENT_STAGE: true
   latest_context_append_id: CTX_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
   latest_roadmap_append_id: RM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION
   latest_module_map_append_id: MM_20260529_YOUTUBE_RANKED_BATCH_ACTIVE_STATUS_CORRECTION

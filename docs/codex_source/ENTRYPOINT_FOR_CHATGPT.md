@@ -7,6 +7,10 @@ Purpose:
 - It exists so ChatGPT and Codex use repo memory instead of guessing from prior chat state.
 
 Do not rely on memory before reading this entrypoint.
+Repo-level contract note:
+- Root `AGENTS.md` is the mandatory repo-level Codex execution contract and must also be followed.
+- Public docs source-of-truth is `docs/codex_source/**`.
+- Repository metadata, README files, and GitHub-facing files may exist outside that tree and are not application source.
 
 Current canonical project:
 - OpenScript / AI Starter Community
@@ -33,6 +37,7 @@ Legacy imported history:
 - Agent Lab is a separate project.
 - Any file referencing `openscript-agent-lab`, `Hermes`, `Fin Instrument`, `Telegram Router`, `youtube_ranked_batch`, or agent-packages is legacy Agent Lab history unless the file header explicitly states otherwise.
 - Do not mistake legacy Agent Lab docs for active site documentation.
+- The legacy Agent Lab section in `index.yaml` is historical-only and must not be read as the current OpenScript / AI Starter Community site corpus.
 
 Current active docs index:
 - `docs/codex_source/index.yaml`

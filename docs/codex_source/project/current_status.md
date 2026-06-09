@@ -72,6 +72,8 @@ Next safe step is manual browser verification of the live cabinet/account-blocks
 - Account actions use fetch-based no-jump handling and preserve scroll position.
 - Account cards use bounded tracks and do not stretch full width on desktop/tablet when only one card is visible.
 - Production test-user cleanup was completed with a backup before deletion.
+- Password-secret encryption policy remains open / not yet proven.
+- Agent Lab content is legacy / no-touch and not the current site corpus.
 
 ### Accepted live-source commits
 

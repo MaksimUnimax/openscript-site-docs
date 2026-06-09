@@ -2,6 +2,34 @@
 
 STATUS: INITIAL_FROM_CURRENT_REPO_DOCS
 
+## CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
+
+### Current active block
+
+Docs repo memory update for the verified live cabinet/account-blocks/paid-options iteration. Manual browser verification is still pending unless the user explicitly confirms acceptance.
+
+### Current live state summary
+
+- Latest app commit for the current live cabinet/account-blocks/paid-options iteration: `7c94211819ddb334575d7835152637972930d393`
+- Active block: `cabinet_account_blocks_paid_options_live_iteration`
+- Paid-options cabinet block is live; real payment processing is still not implemented.
+- Server-backed account blocks are live in `/cabinet`.
+- Account actions use fetch-based no-jump handling and preserve scroll position.
+- Account cards use bounded tracks and do not stretch full width on desktop/tablet when only one card is visible.
+- Activation email is wired to the owner user's registered email.
+- Real payment remains NOT_YET_PROVEN.
+- Password-secret encryption policy remains open / not yet proven.
+- Agent Lab content is legacy / no-touch and not the current site corpus.
+
+### Current stop-point
+
+Manual browser verification of the latest cabinet/account-blocks/paid-options behavior is still pending unless explicitly confirmed by the user.
+
+## Historical / superseded context
+
+The sections below are preserved append-only history from earlier site and course states.
+They are not the current active block and must not be selected as the current stage when the 2026-06-09 cabinet/account-blocks/paid-options status exists above.
+
 ## CURRENT_STATUS_20260529_AI_STARTER_COMMUNITY
 
 ### Current active block

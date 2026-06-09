@@ -11,6 +11,16 @@ items:
     expected_target_path: docs/codex_source/project/payments.md
     notes: Payments module exists as empty structure only; paid-options cabinet display is live, but real payment processing / entitlement flow is still NOT_YET_PROVEN
     must_not_invent: true
+  - id: real_payment_provider
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/payments.md
+    notes: Real payment provider / checkout flow is still NOT_YET_PROVEN
+    must_not_invent: true
+  - id: entitlement_or_purchase_flow
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/payments.md
+    notes: Purchase / entitlement flow is still NOT_YET_PROVEN
+    must_not_invent: true
   - id: ai_sales_agent_implementation
     status: not_yet_proven
     expected_target_path: docs/codex_source/project/ai_sales_agent.md
@@ -70,4 +80,24 @@ items:
     status: not_yet_proven
     expected_target_path: docs/codex_source/project/account_blocks.md
     notes: password_secret is still stored as a service-isolated text field; encryption or alternate secret-storage policy is open
+    must_not_invent: true
+  - id: password_secret_encryption_policy
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/account_blocks.md
+    notes: Password-secret encryption policy is OPEN / not yet proven
+    must_not_invent: true
+  - id: account_blocks_backend_ui_docs
+    status: done
+    expected_target_path: docs/codex_source/project/account_blocks.md
+    notes: Account blocks backend/UI docs are current and cover server-backed cabinet account blocks
+    must_not_invent: true
+  - id: paid_options_activation_docs
+    status: done
+    expected_target_path: docs/codex_source/project/paid_options_activation.md
+    notes: Paid-options activation docs are current and cover the live cabinet activation block
+    must_not_invent: true
+  - id: manual_browser_acceptance_latest_cabinet_iteration
+    status: pending
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: Manual browser verification of the latest cabinet/account-blocks/paid-options iteration is still pending
     must_not_invent: true
