@@ -36,14 +36,18 @@ current_project:
     module_map: "docs/codex_source/module_map/module_map.md"
     account_blocks: "docs/codex_source/project/account_blocks.md"
     paid_options_activation: "docs/codex_source/project/paid_options_activation.md"
+    course_lesson_map: "docs/codex_source/materials/COURSE_LESSON_MAP.md"
+    materials_spec: "docs/codex_source/materials/MATERIALS_SPEC.md"
+    course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
 
 current_dialogue_state:
-  latest_context_update_id: "CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION"
-  latest_roadmap_update_id: "RM_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION"
-  latest_current_status_id: "CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION"
+  latest_context_update_id: "CTX_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
+  latest_roadmap_update_id: "RM_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
+  latest_module_map_update_id: "MODULE_MAP_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
+  latest_current_status_id: "CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
   latest_decisions_update_id: "DECISION_20260608_13"
-  current_active_block: "cabinet_account_blocks_paid_options_live_iteration"
-  next_exact_run: "manual_browser_verification_pending_for_cabinet_account_blocks_paid_options"
+  current_active_block: "course_practice_carousels_and_vpn_account_block_iteration"
+  next_exact_run: "manual_browser_verification_pending_for_course_carousels_and_vpn_block"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
 canonical_docs:

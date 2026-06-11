@@ -79,3 +79,19 @@ Visible HTML must not contain the GitHub raw URL.
 - Lesson 8 includes starter prompt panels for docs update and new dialogue.
 - Course checks remain theory + click tests only; the readonly starter prompt textarea is reference content, not student-authored free-form practice.
 - Access rules remain unchanged.
+
+## MATERIALS_SPEC_UPDATE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+
+### Current course/materials state
+
+- Visible area remains “Обучение” / “Работа с ИИ”.
+- The course now uses visual carousels in practical lessons.
+- Real screenshot carousels are used where screenshots already exist.
+- Placeholder carousels are used where screenshots are still pending.
+- Carousel controls are scoped per carousel instance.
+- Lesson 3 Git uses the real screenshot carousel from `/static/course-assets/dair-smoke-20260529/git-carousel/`.
+- Lesson 6 project-start uses a placeholder carousel that was added after the first pass missed it.
+- Lesson 7 prefix-extension uses the placeholder carousel pattern.
+- Lesson 8 docs update / new-dialog uses the same placeholder carousel pattern when present in source.
+- Course checks remain theory + click-based only; the README-style prompt textarea is reference content, not free-form student practice.
+- Access rules remain unchanged.

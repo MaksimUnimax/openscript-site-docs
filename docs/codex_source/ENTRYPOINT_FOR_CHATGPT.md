@@ -20,11 +20,19 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch for current course/staging work: `design/product-story-03`
-- Current accepted app commit for the course work: `f6f5c2b100296efd69c67fa7387550cf2595340d`
-- Current accepted app commit for the latest live cabinet/account-blocks/paid-options iteration: `7c94211819ddb334575d7835152637972930d393`
-- Current stop-point: the live cabinet/account-blocks/paid-options technical iteration is deployed; manual browser verification is still pending unless the user explicitly confirms acceptance
-- Next safe step: manual browser verification of the live cabinet/account-blocks/paid-options behavior, or the next explicit user-selected task
-- Kilo/design workflow references are current only for the active design preflight and any later user-approved design runs
+- Current site/docs active block: `course_practice_carousels_and_vpn_account_block_iteration`
+- Current stop-point: the course carousel and VPN account-block documentation is currentized; manual browser verification of the latest course carousel and VPN cabinet behavior is still pending unless the user explicitly confirms acceptance
+- Next safe step: manual browser verification of the latest course carousel and VPN behavior, or the next explicit user-selected task
+- Separate collapsible VPN block after Accounts is requested but not yet proven
+- Reported app/source facts tied to the current memory update:
+  - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets
+  - `91a849344708a3629bfb2be2862e78a9cd02c81c` — Polish Git carousel screenshot sizing and labels
+  - `4755532dcf186d653f132f1e79d43b11f264a4ea` — Restore Git lesson term emphasis and step one label
+  - `56aac56f3eb30f703b86d82fa40e7e33b27cd7de` — Add placeholder carousels to practical lessons
+  - `b1e208c4f13f7651772062cb22aaaf6421d4540a` — Add lesson 6 practice carousel
+  - `3e8e351564b07c154a887e768b1c37711ffb2634` — Restore account grid and make VPN a real block type
+  - `fbb1477a69ee517ff30736326617e5d4b914b320` — Polish VPN panel and account card titles; if this commit is only in a feature/live-synced branch, treat it as pending branch integration until fast-forwarded
+- Kilo/design workflow references remain historical unless the user explicitly selects a Kilo-related task
 
 Main read path for ChatGPT:
 - public docs repo -> `docs/codex_source/ENTRYPOINT_FOR_CHATGPT.md`

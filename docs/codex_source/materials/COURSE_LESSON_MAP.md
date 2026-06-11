@@ -206,3 +206,38 @@ This current block supersedes the older 2026-06-04 swap block and the stale no-f
   - lesson 7 starter prompt for prefix-extension practice;
   - lesson 8 starter prompt for docs update;
   - lesson 8 starter prompt for new dialogue.
+
+## COURSE_LESSON_MAP_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+
+### Current visible lesson map
+
+The course still presents 9 numbered lessons plus a visible final section.
+
+### Current materials state
+
+- Lesson 3 Git now uses a real screenshot carousel from static assets.
+- The Git carousel screenshots are served from `/static/course-assets/dair-smoke-20260529/git-carousel/`.
+- Slide sizing, labels, and the first slide label were polished in the current course memory.
+- Placeholder carousels are used for the remaining practical lessons.
+- Lesson 6 project-start had been missed in the first pass and was fixed with a placeholder carousel.
+- Lesson 7 prefix-extension keeps a placeholder carousel pattern.
+- Lesson 8 docs update / new-dialog workflow uses the same placeholder carousel pattern when present in source.
+- Carousel controls are scoped per carousel instance, not shared globally.
+- The course remains beginner-facing and click-based.
+
+### Reported app/source facts tied to this memory update
+
+- `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets
+- `91a849344708a3629bfb2be2862e78a9cd02c81c` — Polish Git carousel screenshot sizing and labels
+- `4755532dcf186d653f132f1e79d43b11f264a4ea` — Restore Git lesson term emphasis and step one label
+- `56aac56f3eb30f703b86d82fa40e7e33b27cd7de` — Add placeholder carousels to practical lessons
+- `b1e208c4f13f7651772062cb22aaaf6421d4540a` — Add lesson 6 practice carousel
+- `3e8e351564b07c154a887e768b1c37711ffb2634` — Restore account grid and make VPN a real block type
+- `fbb1477a69ee517ff30736326617e5d4b914b320` — Polish VPN panel and account card titles; if this commit is only in a feature/live-synced branch, treat it as pending branch integration until fast-forwarded
+
+### Not current
+
+- Real payment remains NOT_YET_PROVEN.
+- Password-secret policy remains open.
+- The separate collapsible VPN block request is pending/not proven.
+- Agent Lab remains legacy history only.

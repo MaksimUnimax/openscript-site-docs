@@ -95,3 +95,19 @@ Use this method for the current lessons:
 - Lesson 6 and lesson 8 also use starter prompt panels for fixed course tasks, so prompt panels remain part of the course method.
 - Continue to keep checks click-based with ready answers.
 - Continue to avoid turning the course into free-form textarea practice for student-written prompts.
+
+## COURSE_METHOD_SPEC_UPDATE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+
+### Current course rule set
+
+- The current course keeps 9 numbered lessons plus a visible final section.
+- Practical assignments now use visual carousels.
+- Use real screenshot carousels where screenshots are available.
+- Use placeholder carousels where screenshots are still pending.
+- Keep carousel controls scoped per carousel instance.
+- Lesson 3 Git uses the real screenshot carousel from static assets.
+- Lesson 6 project-start uses a placeholder carousel that was added after the first pass missed it.
+- Lesson 7 prefix-extension uses the placeholder carousel pattern.
+- Lesson 8 docs update / new-dialog uses the same placeholder carousel pattern when present in source.
+- Keep the course beginner-facing, click-based, and Russian UI only.
+- Do not turn the course into free-form textarea practice for student-written prompts.

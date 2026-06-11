@@ -181,3 +181,48 @@ DATE: 2026-05-31
 - Agent Lab work
 
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION -->
+
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION source=codex_sync -->
+
+## 2026-06-10 — Course carousels and VPN account-block iteration
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the latest course and cabinet iteration.
+- App repo branch remains `design/product-story-03`.
+- Course practical carousels are implemented in the current course memory:
+  - lesson 3 Git real screenshot carousel from static assets;
+  - lesson 6 project-start placeholder carousel;
+  - lesson 7 prefix-extension placeholder carousel;
+  - lesson 8 docs update / new-dialog placeholder carousel pattern.
+- VPN is a real account-block type; login/password are not required.
+- VPN video asset is `/static/videos/amnezia-vpn-guide.mp4`.
+- The polished VPN panel with Tech Talk attribution and a normal-sized Amnezia button is reported as feature/live-synced state; if not already fast-forwarded into the active branch, treat it as pending branch integration.
+
+### Current completion state
+
+- Course practical carousels currentization: completed technically, manual browser verification pending
+- VPN real account-block type: completed technically, manual browser verification pending
+- VPN separate collapsible block after Accounts: pending / not yet proven
+- Real payment processing: still NOT_YET_PROVEN
+- Password-secret policy: still open
+
+### Current stop-point
+
+- Manual browser verification of the latest course carousel and VPN cabinet behavior is still pending unless explicitly confirmed by the user.
+
+### Next phase
+
+- `manual_browser_verification_pending_for_course_carousels_and_vpn_block`
+
+### Later phase after screenshots
+
+- Replace placeholder carousels with real screenshots where they are still pending.
+- Continue with real payment provider implementation and password-secret policy decision as separate follow-up work.
+
+### Not current
+
+- Kilo/design workflow is not the current active task unless the user explicitly selects it.
+- Payment provider implementation is not the current run.
+- Agent Lab is not the current project for this docs repo.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION -->

@@ -312,3 +312,58 @@ Any older Kilo/design workflow references are historical unless the user explici
 - This docs update records the technical deployed state only.
 - Real payment processing remains NOT_YET_PROVEN.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION source=codex_sync -->
+## 2026-06-10 — Course carousels and VPN account-block iteration
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- App branch: design/product-story-03
+
+### Current active block
+
+- `course_practice_carousels_and_vpn_account_block_iteration`
+
+### Completed / proven since the last saved site docs point
+
+1. Course practical carousels are now part of the current course memory.
+- Lesson 3 Git uses a real screenshot carousel from static course assets.
+- The Git carousel image delivery moved to `/static/course-assets/dair-smoke-20260529/git-carousel/`.
+- Slide sizing, labels, and the first slide label were polished.
+- Placeholder carousels were added for remaining practical lessons.
+- Lesson 6 project-start carousel was initially missed and then fixed.
+- Lesson 7 prefix-extension practice keeps a placeholder carousel pattern.
+- Lesson 8 docs update / new-dialog workflow uses the same placeholder carousel pattern when present in source.
+
+2. VPN is now a real account-block type in the cabinet memory.
+- VPN is server-backed, not hardcoded.
+- VPN does not require login/password.
+- The 4-column desktop / 2-column tablet / 1-column mobile grid was restored.
+- ChatGPT title wrapping was fixed in the cabinet panel.
+- VPN video asset is served from `/static/videos/amnezia-vpn-guide.mp4`.
+- The polished VPN panel adds Tech Talk attribution and a normal-sized Amnezia VPN button in the reported feature/live-synced state.
+- If `fbb1477a69ee517ff30736326617e5d4b914b320` has not yet been fast-forwarded into the active branch, treat that polish as pending branch integration instead of accepted mainline state.
+
+### Current pending user task
+
+- Move VPN into a separate collapsible block after Accounts.
+- Remove the crossed-out instruction line from the VPN block.
+- Keep the video inside the collapsible content.
+- This request is pending/not proven unless a later report explicitly confirms it.
+
+### Open / not current
+
+- Real payment remains NOT_YET_PROVEN.
+- Password-secret encryption policy remains open.
+- Manual browser verification of the latest course carousel and VPN behavior is still required unless explicitly confirmed by the user.
+- Agent Lab docs remain legacy / no-touch and are not the current site corpus.
+
+### Not next
+
+- Do not treat the separate collapsible VPN block as completed until it is proven.
+- Do not move into payment or production work from this docs update.
+- Do not use Kilo/design as the current active task unless the user explicitly selects it.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION -->

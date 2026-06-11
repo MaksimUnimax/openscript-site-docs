@@ -101,3 +101,23 @@ items:
     expected_target_path: docs/codex_source/project/current_status.md
     notes: Manual browser verification of the latest cabinet/account-blocks/paid-options iteration is still pending
     must_not_invent: true
+  - id: site_course_practice_carousels_iteration
+    status: done
+    expected_target_path: docs/codex_source/materials/COURSE_LESSON_MAP.md
+    notes: Git real screenshot carousel plus placeholder carousels for practical lessons are now currentized in the course docs memory; lesson 6 project-start carousel was fixed after the initial pass
+    must_not_invent: true
+  - id: vpn_account_block_real_type
+    status: done
+    expected_target_path: docs/codex_source/project/account_blocks.md
+    notes: VPN is a real server-backed account-block type; login/password are not required and the restored cabinet grid keeps the 4/2/1 layout
+    must_not_invent: true
+  - id: manual_browser_verification_latest_course_carousels_and_vpn
+    status: pending
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: Manual browser verification of the latest course carousels and VPN cabinet behavior is still pending unless explicitly confirmed by the user
+    must_not_invent: true
+  - id: vpn_separate_collapsible_block
+    status: not_yet_proven
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: The requested separate collapsible VPN block after Accounts has not yet been proven in a chatGPT_REPORT_END
+    must_not_invent: true

@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-09
-CURRENT_STATUS_ID: CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_LIVE_ITERATION
+UPDATED: 2026-06-10
+CURRENT_STATUS_ID: CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
 
 ## Repository separation
 
@@ -13,6 +13,63 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260609_CABINET_ACCOUNT_BLOCKS_PAID_OPTIONS_L
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: design/product-story-03
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+
+### Current active block
+
+Docs repo memory update for the current course carousel and VPN account-block iteration. Manual browser verification is still pending unless the user explicitly confirms acceptance.
+
+### Current live state summary
+
+- App branch: design/product-story-03
+- Latest reported app/source facts tied to the current memory update:
+  - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Git carousel screenshots from static assets
+  - `91a849344708a3629bfb2be2862e78a9cd02c81c` — Git carousel sizing and labels polished
+  - `4755532dcf186d653f132f1e79d43b11f264a4ea` — Git term emphasis and step one label restored
+  - `56aac56f3eb30f703b86d82fa40e7e33b27cd7de` — placeholder carousels added to practical lessons
+  - `b1e208c4f13f7651772062cb22aaaf6421d4540a` — lesson 6 practice carousel added
+  - `3e8e351564b07c154a887e768b1c37711ffb2634` — account grid restored and VPN made a real block type
+  - `fbb1477a69ee517ff30736326617e5d4b914b320` — VPN panel polish and account card title fixes; if only in a feature/live-synced branch, treat it as pending branch integration until fast-forwarded
+- Active block: `course_practice_carousels_and_vpn_account_block_iteration`
+- Course practical carousels are implemented in the course docs memory.
+- Lesson 3 Git uses a real screenshot carousel from static assets.
+- Lesson 6 project-start carousel was initially missed and then fixed.
+- Lesson 7 prefix-extension practice keeps a placeholder carousel pattern.
+- Lesson 8 docs update / new-dialog workflow uses the same placeholder carousel pattern when present in source.
+- VPN is a real account-block type and does not require login/password.
+- The account grid is restored to 4 columns desktop / 2 tablet / 1 mobile.
+- VPN video asset is served from `/static/videos/amnezia-vpn-guide.mp4`.
+- The polished VPN panel adds Tech Talk attribution and a normal-sized Amnezia button in the reported feature/live-synced state.
+- Real payment remains NOT_YET_PROVEN.
+- Password-secret encryption policy remains open / not yet proven.
+- Agent Lab content is legacy / no-touch and not the current site corpus.
+
+### Current stop-point
+
+Manual browser verification of the latest course carousel and VPN cabinet behavior is still pending unless explicitly confirmed by the user.
+
+### Pending user request
+
+- Move VPN into a separate collapsible block after Accounts.
+- Remove the crossed-out instruction line from the VPN block.
+- Keep the video inside the collapsible content.
+- This request is pending/not proven unless a later report explicitly confirms it.
+
+### Open follow-ups
+
+- Real payment remains NOT_YET_PROVEN.
+- Password-secret encryption policy remains open / not yet proven.
+- Manual browser verification of the latest course carousel and VPN cabinet behavior remains pending.
+- Agent Lab content is legacy / no-touch and not the current site corpus.
+
+### Not next
+
+- Do not treat the separate collapsible VPN block as completed until it is proven.
+- Do not move into payment or production work from this docs update.
+- Do not use Kilo/design as the current active task unless the user explicitly selects it.
+
+The 2026-06-09 cabinet/account-blocks/paid-options block below is preserved as append-only history.
 
 ## Current active block
 

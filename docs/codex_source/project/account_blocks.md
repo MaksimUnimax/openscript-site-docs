@@ -40,18 +40,20 @@ Proven `account_blocks` columns:
 - `chatgpt` → `ChatGPT`
 - `server` → `Сервер`
 - `mail` → `Почта`
+- `vpn` → `ВПН`
 
 ## UI rules
 
 - The cabinet is server-backed; localStorage is not the source of truth for account blocks.
 - Owner is resolved server-side and hidden from the visible block UI.
 - Manual title and manual email inputs are not part of the visible block UI.
-- Visible copy fields are login and password.
+- Visible copy fields are login and password for regular account blocks; VPN does not require credential fields.
 - Admin and moderator can create, edit, delete, and activate blocks.
 - Normal users are copy-only.
 - Delete and activate are real protected POST actions.
 - Latest no-jump behavior is implemented with fetch-based form handling and scroll preservation.
 - Account cards use bounded width and do not stretch full width on desktop/tablet when only one card exists.
+- The restored cabinet grid remains 4 columns desktop / 2 tablet / 1 mobile.
 
 ## Activation rules
 
@@ -73,6 +75,16 @@ Proven `account_blocks` columns:
 - Activation email is sent/queued only on activate/reactivate.
 - Create/update/delete do not send the activation email.
 - Login and password are not included in the email body.
+
+## VPN block notes
+
+- VPN is a real server-backed account-block type, not a hardcoded cabinet card.
+- VPN create/activate/renew/delete lifecycle exists alongside the other account blocks.
+- VPN does not require login/password fields.
+- The cabinet can render VPN content without credential inputs.
+- VPN video source: `/static/videos/amnezia-vpn-guide.mp4`.
+- The polished VPN panel in the reported feature/live-synced state includes Tech Talk attribution and a normal-sized Amnezia VPN button.
+- The requested separate collapsible VPN block after Accounts is pending/not yet proven unless a later report confirms it.
 
 ## Security and limitations
 

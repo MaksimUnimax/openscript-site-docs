@@ -162,3 +162,29 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no Agent Lab changes;
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
+
+## 2026-06-10 — Course carousels and VPN account-block iteration
+
+### Append id
+
+- MODULE_MAP_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+
+### Current module-state note
+
+- `app/materials/` now carries the course practice-carousel pattern used by the current course memory update.
+- The lesson 3 Git practice uses a real screenshot carousel sourced from static course assets.
+- The remaining practical lessons keep placeholder carousel instances for the click-based course method.
+- The lesson 6 project-start carousel was added after the first pass missed it.
+- `app/user_cabinet/` now includes the restored 4/2/1 account grid, real VPN block rendering, VPN video panel, and the account-card title wrap fix.
+- `app/account_blocks/` now includes VPN type support and the validation rule that blank login/password fields are not required for VPN.
+- `source/app/static/course-assets/dair-smoke-20260529/git-carousel/*.png` and `source/app/static/videos/amnezia-vpn-guide.mp4` are the relevant static asset families for this current memory state.
+- The polished VPN panel with Tech Talk attribution and the normal-sized Amnezia button is reported as feature/live-synced state; if not already fast-forwarded into the active branch, treat it as pending branch integration.
+- The requested separate collapsible VPN block after Accounts is pending/not yet proven.
+- `app/payments/` remains NOT_YET_PROVEN.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
