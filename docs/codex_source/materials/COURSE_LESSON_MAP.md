@@ -241,3 +241,49 @@ The course still presents 9 numbered lessons plus a visible final section.
 - Password-secret policy remains open.
 - The separate collapsible VPN block request is pending/not proven.
 - Agent Lab remains legacy history only.
+
+## COURSE_LESSON_MAP_20260614_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
+
+### Current visible lesson map
+
+The course still presents 9 numbered lessons plus a visible final section.
+
+1. **Как устроена работа с ИИ-разработкой**
+   ChatGPT, Codex, roles, overall workflow, beginner-level meaning framing.
+
+2. **Документы проекта: техническое задание (ТЗ), roadmap, правила и контекст**
+   Minimum document set for the project, why docs preserve context and control work.
+
+3. **Git: история, commit, push и откат**
+   Git/GitHub at owner level, commit, push, diff, rollback, proof-by-facts.
+
+4. **Codex, AGENTS.md, токены и роль модели**
+   Codex as technical executor; ChatGPT manages development; approved `рабочий шаг (run)` terminology; `лимиты ресурсов`; permissions; slash commands; run-types and common mistakes.
+
+5. **PowerShell, Terminal и подключение к серверу**
+   Terminal, PowerShell, commands, server, SSH, safe commands, dangerous commands, secrets, practice, quiz/check, pass criteria, common mistakes.
+
+6. **Старт проекта: сначала документация, потом разработка**
+   Start project through ChatGPT documentation, starter prompt, repo docs created by Codex from prompt text, deploy-key flow.
+
+7. **Процесс работы**
+   One run per task, run types, context window, prefix-extension practice, starter prompt panel with read-only prompt preview and actions.
+
+8. **Обновление документации и новый диалог**
+   Docs update, stop-point, current context, start new dialogue safely.
+
+9. **Частые ошибки, лайфхаки и правила работы**
+   Common mistakes, proof, docs, Git, secrets, and safe workflow rules.
+
+10. **Финал курса**
+   Visible final section with course wrap-up, next steps, and closing guidance.
+
+### Accepted current facts
+
+- Lesson 4 visible content no longer shows `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 4 uses approved `рабочий шаг (run)` terminology and clarifies `лимиты ресурсов`.
+- Lesson 4 slash-command section now teaches only `/status`, `/model`, and `/permissions`, with the slash-menu explanation.
+- Lesson 5 links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- Lesson 6 includes the starter prompt panel for project documentation start.
+- Lesson 8 includes starter prompt panels for docs update and new dialogue.
+- Admin course export includes the three prompt markdown files.

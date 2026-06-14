@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-10
-CURRENT_STATUS_ID: CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
+UPDATED: 2026-06-14
+CURRENT_STATUS_ID: CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
 
 ## Repository separation
 
@@ -13,6 +13,42 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOC
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: design/product-story-03
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted course lesson 4/5 polish and accepted admin course ZIP export fixes.
+
+### Current live state summary
+
+- App branch: design/product-story-03
+- Latest accepted app commits:
+  - `a6c0b277b6e6c35def432cf26b630dd02b161a77` — lesson 4 terminology and lesson 5 cabinet link polished
+  - `cf23dda5585e176d9be0075d5e47e557d1ec309d` — all referenced course assets included in export
+  - `56d3f0a1a6be067ea1178f3ef3516fe7ff142a0f` — course prompt files exported and manifest sanitized
+- Lesson 4 title is now `Codex, AGENTS.md, токены и роль модели`.
+- Lesson 4 accepted visible content no longer shows `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 4 uses approved `рабочий шаг (run)` terminology and clarifies `лимиты ресурсов`.
+- Lesson 4 slash-command section now teaches only `/status`, `/model`, and `/permissions`, with the `/` menu explanation and arrow-key / Enter guidance.
+- Lesson 5 links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- Admin course export route: `/admin/course-export`.
+- Admin course ZIP export facts:
+  - 72 total ZIP entries;
+  - 51 carousel assets;
+  - 2 hero images;
+  - 3 prompt markdown files;
+  - sanitized `manifest.json` with no absolute server paths.
+- Prompt markdown files exported:
+  - `prompts/01-start-project-documentation.md` — start-project / documentation prompt;
+  - `prompts/02-project-docs-update.md` — project docs update prompt;
+  - `prompts/03-new-project-dialogue.md` — new dialogue prompt.
+- Current health checks from the acceptance run reported no 500/502 on the relevant live probes.
+- The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work.
+
+### Current stop-point
+
+Course lesson 4/5 wording and the admin course ZIP export are accepted. The export now contains course text/source, all referenced carousel assets, hero images, three course prompt markdown files, and a sanitized manifest. Next safe step is the next explicit user-selected task. Do not start payment, production, Agent Lab, or broad app refactor automatically.
 
 ## CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
 

@@ -41,13 +41,13 @@ current_project:
     course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
 
 current_dialogue_state:
-  latest_context_update_id: "CTX_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
-  latest_roadmap_update_id: "RM_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
-  latest_module_map_update_id: "MODULE_MAP_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
-  latest_current_status_id: "CURRENT_STATUS_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION"
+  latest_context_update_id: "CTX_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
+  latest_roadmap_update_id: "RM_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
+  latest_module_map_update_id: "MODULE_MAP_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
+  latest_current_status_id: "CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
   latest_decisions_update_id: "DECISION_20260608_13"
-  current_active_block: "course_practice_carousels_and_vpn_account_block_iteration"
-  next_exact_run: "manual_browser_verification_pending_for_course_carousels_and_vpn_block"
+  current_active_block: "course_lesson_4_5_and_admin_export_accepted"
+  next_exact_run: "next_explicit_user_selected_task"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
 canonical_docs:

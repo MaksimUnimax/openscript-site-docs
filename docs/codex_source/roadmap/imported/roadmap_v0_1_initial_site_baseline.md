@@ -226,3 +226,37 @@ DATE: 2026-05-31
 - Payment provider implementation is not the current run.
 - Agent Lab is not the current project for this docs repo.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-14 — Course lesson 4/5 and admin export repair: COMPLETED and ACCEPTED
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted lesson 4/5 wording and the accepted admin course ZIP export state.
+- App repo branch remains `design/product-story-03`.
+- Lesson 4 title is now `Codex, AGENTS.md, токены и роль модели`.
+- Lesson 4 accepted visible content no longer shows `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 4 uses approved `рабочий шаг (run)` wording and `лимиты ресурсов`.
+- Lesson 4 slash-command section now teaches only `/status`, `/model`, and `/permissions`, plus the slash-menu explanation.
+- Lesson 5 links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- Admin course export route is `/admin/course-export`.
+- ZIP export is accepted with 72 entries, 51 carousel assets, 2 hero images, and 3 prompt markdown files.
+- The exported manifest is sanitized and no longer leaks absolute server paths.
+
+### Accepted prompt files
+
+- `prompts/01-start-project-documentation.md`
+- `prompts/02-project-docs-update.md`
+- `prompts/03-new-project-dialogue.md`
+
+### Current completion state
+
+- Course lesson 4/5 wording repair: completed and accepted
+- Admin course ZIP export repair: completed and accepted
+- Manifest sanitization: completed and accepted
+- App repo changes are already accepted in the app task; this docs repo update only records the accepted state
+
+### Current stop-point
+
+Course lesson 4/5 wording and the admin course ZIP export are accepted. The export now contains course text/source, all referenced carousel assets, hero images, three course prompt markdown files, and a sanitized manifest. Next safe step is the next explicit user-selected task. Do not start payment, production, Agent Lab, or broad app refactor automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED -->

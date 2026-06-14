@@ -367,3 +367,46 @@ Any older Kilo/design workflow references are historical unless the user explici
 - Do not move into payment or production work from this docs update.
 - Do not use Kilo/design as the current active task unless the user explicitly selects it.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED source=codex_sync -->
+## 2026-06-14 — Course lesson 4/5 polish and admin ZIP export accepted
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- App branch: design/product-story-03
+
+### Accepted app facts recorded here
+
+- `a6c0b277b6e6c35def432cf26b630dd02b161a77` — lesson 4 terminology and lesson 5 cabinet link polished
+- `cf23dda5585e176d9be0075d5e47e557d1ec309d` — all referenced course assets included in export
+- `56d3f0a1a6be067ea1178f3ef3516fe7ff142a0f` — course prompt files exported and manifest sanitized
+
+### Accepted course facts
+
+- Lesson 4 title is `Codex, AGENTS.md, токены и роль модели`.
+- Lesson 4 no longer shows `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins` in accepted visible content.
+- Lesson 4 uses approved `рабочий шаг (run)` wording and `лимиты ресурсов`.
+- Lesson 4 slash-command section now teaches `/status`, `/model`, and `/permissions` with the slash-menu explanation.
+- Lesson 5 links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+
+### Accepted export facts
+
+- Admin course export route: `/admin/course-export`
+- ZIP export totals: 72 entries, 51 carousel assets, 2 hero images, 3 prompt markdown files
+- Manifest is sanitized and does not leak absolute server paths
+- Prompt files exported:
+  - `prompts/01-start-project-documentation.md`
+  - `prompts/02-project-docs-update.md`
+  - `prompts/03-new-project-dialogue.md`
+
+### Current stop-point
+
+Course lesson 4/5 wording and the admin course ZIP export are accepted. The next safe step is the next explicit user-selected task. Do not start payment, production, Agent Lab, or broad app refactor automatically.
+
+### No app-source change here
+
+- This docs update did not modify `/opt/ai-starter-community`.
+- This docs update is docs-only and append-only.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED -->

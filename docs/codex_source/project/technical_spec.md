@@ -137,3 +137,13 @@ Tables proven from source:
 
 - `password_secret` is still stored as a service-isolated text field in the current implementation.
 - Encryption or a different secret-storage policy has not been proven as implemented.
+
+## 2026-06-14 — Course lesson 4/5 and admin ZIP export accepted
+
+- Admin course export route: `/admin/course-export`
+- ZIP export includes all referenced course carousel assets, 2 hero images, and the 3 prompt markdown files
+- Exported manifest is sanitized and does not leak absolute server paths
+- Accepted app commit references:
+  - `a6c0b277b6e6c35def432cf26b630dd02b161a77`
+  - `cf23dda5585e176d9be0075d5e47e557d1ec309d`
+  - `56d3f0a1a6be067ea1178f3ef3516fe7ff142a0f`

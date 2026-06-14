@@ -163,6 +163,39 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
 
+## 2026-06-14 — Admin course export and course lesson 4/5 accepted
+
+### Append id
+
+- MODULE_MAP_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
+
+### Current module-state note
+
+- `app/materials/` now reflects the accepted lesson 4 title `Codex, AGENTS.md, токены и роль модели`.
+- Lesson 4 visible content no longer includes `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 4 uses approved `рабочий шаг (run)` terminology, `лимиты ресурсов`, and the three slash commands `/status`, `/model`, and `/permissions`.
+- `app/materials/` lesson 5 now links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- `app/admin/course_export.py` now source-drives the export of all referenced static carousel assets, hero images, and the three prompt markdown files.
+- `tests/test_admin_course_export.py` covers the accepted export asset/prompt/manifest behavior.
+- `tests/test_course_rendering.py` covers the accepted lesson 4/5 rendering expectations.
+- Accepted export facts:
+  - 72 ZIP entries total;
+  - 51 carousel assets;
+  - 2 hero images;
+  - 3 prompt markdown files;
+  - sanitized `manifest.json` with no absolute server paths.
+- Prompt file paths:
+  - `prompts/01-start-project-documentation.md`
+  - `prompts/02-project-docs-update.md`
+  - `prompts/03-new-project-dialogue.md`
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
 ## 2026-06-10 — Course carousels and VPN account-block iteration
 
 ### Append id

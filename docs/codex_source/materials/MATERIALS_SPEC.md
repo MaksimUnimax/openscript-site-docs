@@ -95,3 +95,21 @@ Visible HTML must not contain the GitHub raw URL.
 - Lesson 8 docs update / new-dialog uses the same placeholder carousel pattern when present in source.
 - Course checks remain theory + click-based only; the README-style prompt textarea is reference content, not free-form student practice.
 - Access rules remain unchanged.
+
+## MATERIALS_SPEC_UPDATE_20260614_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
+
+### Current course/materials state
+
+- Visible area remains “Обучение” / “Работа с ИИ”.
+- Current draft path: `source/app/materials/course_content/drafts/dair_smoke_20260529/script.js`.
+- The course keeps 9 numbered lessons plus a visible final section.
+- Current lesson order in source is 4: `Codex, AGENTS.md, токены и роль модели`; 5: `PowerShell, Terminal и подключение к серверу`; 6: `Старт проекта: сначала документация, потом разработка`; 7: `Процесс работы`; 8: `Обновление документации и новый диалог`.
+- Lesson 4 no longer shows visible `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 4 teaches approved `рабочий шаг (run)` terminology and `лимиты ресурсов`.
+- Lesson 4 slash-command section now includes the `/` menu explanation and only `/status`, `/model`, and `/permissions`.
+- Lesson 5 links `личный кабинет курса` and grammatical variants to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- Lesson 6 includes the starter prompt panel for project documentation start.
+- Lesson 8 includes starter prompt panels for docs update and new dialogue.
+- Course checks remain theory + click tests only; the readonly starter prompt textarea is reference content, not student-authored free-form practice.
+- Admin course export includes the three prompt markdown files.
+- Access rules remain unchanged.

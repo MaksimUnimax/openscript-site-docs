@@ -96,6 +96,22 @@ Use this method for the current lessons:
 - Continue to keep checks click-based with ready answers.
 - Continue to avoid turning the course into free-form textarea practice for student-written prompts.
 
+## COURSE_METHOD_SPEC_UPDATE_20260614_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
+
+### Current course rule set
+
+- The current course keeps 9 numbered lessons plus a visible final section.
+- Lesson 4 is `Codex, AGENTS.md, токены и роль модели`.
+- Lesson 4 uses approved `рабочий шаг (run)` wording, `лимиты ресурсов`, and only `/status`, `/model`, and `/permissions` in the slash-command section.
+- Lesson 4 no longer includes visible `Skills`, `Skill`, `/skills`, `plugins`, `plugin`, or `/plugins`.
+- Lesson 5 is `PowerShell, Terminal и подключение к серверу` and links `личный кабинет курса` / `личном кабинете курса` to `https://openscript.ru/cabinet` with `target="_blank"` and `rel="noreferrer"`.
+- Lesson 6 keeps the starter prompt panel for project documentation start.
+- Lesson 8 keeps the starter prompt panels for docs update and new dialogue.
+- Copied/downloaded markdown prompt files are backup copies for the user, not repo transfer.
+- The admin course ZIP export includes the three prompt markdown files.
+- Continue to keep checks click-based with ready answers.
+- Continue to avoid turning the course into free-form textarea practice for student-written prompts.
+
 ## COURSE_METHOD_SPEC_UPDATE_20260610_COURSE_CAROUSELS_AND_VPN_ACCOUNT_BLOCK_ITERATION
 
 ### Current course rule set

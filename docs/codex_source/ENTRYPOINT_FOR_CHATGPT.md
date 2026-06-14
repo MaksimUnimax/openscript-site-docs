@@ -19,10 +19,11 @@ Current canonical project:
 - Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
-- App branch for current course/staging work: `design/product-story-03`
-- Current site/docs active block: `course_practice_carousels_and_vpn_account_block_iteration`
-- Current stop-point: the course carousel and VPN account-block documentation is currentized; manual browser verification of the latest course carousel and VPN cabinet behavior is still pending unless the user explicitly confirms acceptance
-- Next safe step: manual browser verification of the latest course carousel and VPN behavior, or the next explicit user-selected task
+  - App branch for current course/staging work: `design/product-story-03`
+  - Current site/docs active block: `course_lesson_4_5_and_admin_export_accepted`
+  - Current stop-point: Course lesson 4/5 polish and admin course export fixes are accepted. The course ZIP export now includes all referenced carousel assets, hero images, three prompt markdown files, and a sanitized manifest. Next safe step is the next explicit user-selected course/site task.
+  - Next safe step: the next explicit user-selected course/site task
+  - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Separate collapsible VPN block after Accounts is requested but not yet proven
 - Reported app/source facts tied to the current memory update:
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets
@@ -32,6 +33,9 @@ Current canonical project:
   - `b1e208c4f13f7651772062cb22aaaf6421d4540a` — Add lesson 6 practice carousel
   - `3e8e351564b07c154a887e768b1c37711ffb2634` — Restore account grid and make VPN a real block type
   - `fbb1477a69ee517ff30736326617e5d4b914b320` — Polish VPN panel and account card titles; if this commit is only in a feature/live-synced branch, treat it as pending branch integration until fast-forwarded
+  - `a6c0b277b6e6c35def432cf26b630dd02b161a77` — Polish lesson 4 terminology and lesson 5 cabinet link
+  - `cf23dda5585e176d9be0075d5e47e557d1ec309d` — Include all referenced course assets in export
+  - `56d3f0a1a6be067ea1178f3ef3516fe7ff142a0f` — Export course prompt files and sanitize manifest
 - Kilo/design workflow references remain historical unless the user explicitly selects a Kilo-related task
 
 Main read path for ChatGPT:
