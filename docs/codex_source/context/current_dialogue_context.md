@@ -410,3 +410,34 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - This docs update did not modify `/opt/ai-starter-community`.
 - This docs update is docs-only and append-only.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED source=codex_sync -->
+## 2026-06-15 — Public tariff/access UI iteration accepted
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- App branch: fix/carousel-arrow-button-visuals
+
+### Current active block
+
+- `public_tariff_access_ui_iteration_accepted`
+
+### Accepted live-state facts
+
+- Latest accepted/deployed app commit: `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
+- Earlier typography-control commit: `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
+- Tariff admin now supports source-backed order, selected-card alignment, and safe integer px typography controls
+- Tariff edit save stays on the same edit page with the success notice `Изменения сохранены.`
+- New tariff creation redirects to the new tariff edit page with the success notice `Тариф создан.`
+- Selected tariff cards render through the shared pricing partial and safe CSS variables so large typography does not overlap the description
+- Public/authenticated UI and cabinet access-gate recovery remain part of the accepted live state
+- Real payment remains NOT_YET_PROVEN
+
+### Current stop-point
+
+- The latest public tariff/access/UI iteration is accepted and deployed. Next safe step is the next explicit user-selected task.
+- Do not infer payment or Agent Lab work automatically.
+- This docs update is append-only and docs-only.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED -->

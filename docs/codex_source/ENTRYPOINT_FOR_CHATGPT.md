@@ -19,13 +19,15 @@ Current canonical project:
 - Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
-  - App branch for current course/staging work: `design/product-story-03`
-  - Current site/docs active block: `course_lesson_4_5_and_admin_export_accepted`
-  - Current stop-point: Course lesson 4/5 polish and admin course export fixes are accepted. The course ZIP export now includes all referenced carousel assets, hero images, three prompt markdown files, and a sanitized manifest. Next safe step is the next explicit user-selected course/site task.
-  - Next safe step: the next explicit user-selected course/site task
+  - App branch for current site work: `fix/carousel-arrow-button-visuals`
+  - Current site/docs active block: `public_tariff_access_ui_iteration_accepted`
+  - Current stop-point: The public tariff/access/UI iteration is accepted and deployed. The live state now records the tariff edit-page save behavior, safe tariff typography controls, and the scaled selected-card layout that avoids overlap at large font sizes. Next safe step is the next explicit user-selected task.
+  - Next safe step: the next explicit user-selected task
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Separate collapsible VPN block after Accounts is requested but not yet proven
 - Reported app/source facts tied to the current memory update:
+  - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
+  - `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets
   - `91a849344708a3629bfb2be2862e78a9cd02c81c` — Polish Git carousel screenshot sizing and labels
   - `4755532dcf186d653f132f1e79d43b11f264a4ea` — Restore Git lesson term emphasis and step one label

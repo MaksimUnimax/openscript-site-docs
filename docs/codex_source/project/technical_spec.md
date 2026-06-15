@@ -147,3 +147,32 @@ Tables proven from source:
   - `a6c0b277b6e6c35def432cf26b630dd02b161a77`
   - `cf23dda5585e176d9be0075d5e47e557d1ec309d`
   - `56d3f0a1a6be067ea1178f3ef3516fe7ff142a0f`
+
+## 2026-06-15 — Public tariff/access UI iteration accepted
+
+- App branch for the accepted live state: `fix/carousel-arrow-button-visuals`
+- Latest accepted/deployed app commit: `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
+- Earlier tariff typography commit: `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
+- Tariffs are now proven to carry the following source-backed display fields in addition to the baseline catalog fields:
+  - `show_on_homepage`
+  - `pricing_text_align`
+  - `title_font_size_px`
+  - `price_font_size_px`
+  - `description_font_size_px`
+- Safe typography controls use nullable integer pixel values only.
+- Empty typography values fall back to CSS defaults.
+- Non-integer typography values are rejected.
+- Out-of-range typography values are clamped to the documented safe ranges:
+  - title: 16–40 px
+  - price: 20–56 px
+  - description: 12–24 px
+- Admin tariff CRUD now exposes order, text alignment, and typography controls.
+- Successful tariff edit POST redirects back to the same edit page and shows a success notice.
+- New tariff creation can redirect to the new tariff edit page and show a creation notice.
+- Shared tariff display uses `source/app/shared/tariff_display.py` and `source/app/shared/templates/tariff_pricing_section.html` to render selected cards with safe CSS custom properties:
+  - `--tariff-title-font-size`
+  - `--tariff-price-font-size`
+  - `--tariff-description-font-size`
+- Selected tariff card layout is font-size-aware and avoids title/price/description overlap at the allowed typography limits.
+- Card colors remain source CSS, not raw admin input.
+- Real payment processing remains NOT_YET_PROVEN.

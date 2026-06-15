@@ -260,3 +260,36 @@ DATE: 2026-05-31
 
 Course lesson 4/5 wording and the admin course ZIP export are accepted. The export now contains course text/source, all referenced carousel assets, hero images, three course prompt markdown files, and a sanitized manifest. Next safe step is the next explicit user-selected task. Do not start payment, production, Agent Lab, or broad app refactor automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED source=codex_sync -->
+
+## 2026-06-15 — Public tariff/access UI iteration accepted
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted live public tariff/access UI iteration.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted/deployed commit: `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography.
+- Earlier typography-control commit: `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls.
+- Tariff admin now supports source-backed order, selected-card alignment, and safe integer px typography controls.
+- Tariff edit save stays on the same edit page with the notice `Изменения сохранены.`
+- New tariff creation redirects to the new tariff edit page with the notice `Тариф создан.`
+- Selected tariff cards render through the shared pricing partial with safe CSS variables and font-size-aware rows, so large typography does not overlap the description.
+- Public/authenticated UI and cabinet access-gate recovery remain part of the accepted live state.
+- Real payment remains NOT_YET_PROVEN.
+
+### Current completion state
+
+- Public tariff/access/UI recovery: completed technically, deployed, and accepted
+- Tariff typography controls: completed technically, deployed, and accepted
+- Same-page tariff edit save behavior: completed technically, deployed, and accepted
+- Real payment processing: still NOT_YET_PROVEN
+
+### Current stop-point
+
+- The live public tariff/access/UI iteration is accepted and deployed. Next safe step is the next explicit user-selected task.
+
+### Not current
+
+- Do not infer payment or Agent Lab work automatically.
+- Do not treat the earlier course-export stop-point as current.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED -->

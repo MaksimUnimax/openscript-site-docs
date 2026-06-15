@@ -163,6 +163,25 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
 
+## 2026-06-15 — Public tariff/access UI iteration accepted
+
+### Current module-state note
+
+- `app/admin/` tariff CRUD now includes same-page edit save notices and safe integer typography controls.
+- `app/tariffs/` tariff rows now carry `show_on_homepage`, `pricing_text_align`, `title_font_size_px`, `price_font_size_px`, and `description_font_size_px`.
+- `app/shared/` tariff display helper and pricing partial render selected tariff cards with safe CSS custom properties and font-size-aware rows.
+- `app/user_cabinet/` the shared selected-tariff block remains the cabinet surface for tariff/access UI and continues to show up to two selected tariffs in source-backed order.
+- `source/app/static/styles.css` owns the selected tariff typography variables and row sizing that prevents overlap at larger font sizes.
+- `app/public_landing/` and `app/user_cabinet/` continue to consume the shared pricing surface; source-backed order and alignment remain intact.
+- Real payment remains NOT_YET_PROVEN.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
 ## 2026-06-14 — Admin course export and course lesson 4/5 accepted
 
 ### Append id

@@ -2,6 +2,43 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
+UPDATED: 2026-06-15
+CURRENT_STATUS_ID: CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED
+
+## Repository separation
+
+- Docs repo: /opt/openscript-site-docs
+- Public docs repo: https://github.com/MaksimUnimax/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+- App branch: fix/carousel-arrow-button-visuals
+- Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted live public tariff/access UI iteration.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted/deployed app commit: `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
+- Earlier accepted tariff typography commit: `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
+- Public/authenticated navigation and cabinet/access-gate recovery remain part of the accepted live state.
+- Admin tariff CRUD now supports source-backed order, selected-card alignment, and safe integer px typography controls.
+- Tariff edit save stays on the same edit page with the notice `Изменения сохранены.`
+- New tariff creation redirects to the new tariff edit page with the notice `Тариф создан.`
+- Selected tariff cards render via the shared pricing partial and safe CSS custom properties, and large typography no longer overlaps the description.
+- The current live tariff/access/UI recovery remains accepted and deployed on the public site.
+- Real payment remains NOT_YET_PROVEN.
+- Agent Lab remains legacy / no-touch for this docs repo.
+
+### Current stop-point
+
+The live public tariff/access/UI iteration is accepted and deployed. Next safe step is the next explicit user-selected task. Do not start payment, production, Agent Lab, or broad refactor automatically.
+
+## CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
 UPDATED: 2026-06-14
 CURRENT_STATUS_ID: CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED
 

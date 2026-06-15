@@ -41,12 +41,12 @@ current_project:
     course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
 
 current_dialogue_state:
-  latest_context_update_id: "CTX_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
-  latest_roadmap_update_id: "RM_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
-  latest_module_map_update_id: "MODULE_MAP_SITE_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
-  latest_current_status_id: "CURRENT_STATUS_20260614_COURSE_LESSON_4_5_AND_ADMIN_EXPORT_ACCEPTED"
+  latest_context_update_id: "CTX_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED"
+  latest_roadmap_update_id: "RM_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED"
+  latest_module_map_update_id: "MODULE_MAP_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED"
+  latest_current_status_id: "CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED"
   latest_decisions_update_id: "DECISION_20260608_13"
-  current_active_block: "course_lesson_4_5_and_admin_export_accepted"
+  current_active_block: "public_tariff_access_ui_iteration_accepted"
   next_exact_run: "next_explicit_user_selected_task"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
