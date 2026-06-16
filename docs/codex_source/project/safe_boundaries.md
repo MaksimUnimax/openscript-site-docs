@@ -27,6 +27,10 @@ PROJECT: OpenScript / AI Starter Community
 ## Boundary rules
 
 - Docs-only runs may edit only /opt/openscript-site-docs/docs/codex_source/**
+- Isolated editor work may modify only /opt/ai-starter-community/staging/course-editor/current/** when explicitly approved for editor tasks
+- Docs-only updates must not touch the isolated editor path
+- App source /opt/ai-starter-community/source/app/materials/course_content/** remains forbidden unless explicitly approved
+- Production remains forbidden
 - Before any app source run, the following must be proven:
   1. A staging/test environment exists and is isolated
   2. The run will not modify production runtime

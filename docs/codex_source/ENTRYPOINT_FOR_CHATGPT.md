@@ -20,10 +20,12 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: The public tariff/access/UI iteration is accepted and deployed. The live state now records the tariff edit-page save behavior, safe tariff typography controls, and the scaled selected-card layout that avoids overlap at large font sizes. Next safe step is the next explicit user-selected task.
-  - Next safe step: the next explicit user-selected task
+  - Current site/docs active block: `isolated_course_editor_version_manager_repair_restored`
+  - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
+  - Current stop-point: The isolated course editor version manager is repaired and restored. The live editor state now records the recovered version list, the isolated restore scope, and the pending safe delete proof boundary. Next safe step is safe delete proof with a temporary managed version only.
+  - Next safe step: `course_editor_safe_delete_proof_with_temporary_version`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
+- Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
 - Reported app/source facts tied to the current memory update:
   - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls

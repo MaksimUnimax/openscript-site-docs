@@ -240,3 +240,32 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no Agent Lab changes;
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
+
+## 2026-06-16 — Isolated course editor version manager repaired and restored
+
+### Append id
+
+- MODULE_MAP_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
+
+### Current module-state note
+
+- `staging/course-editor/current/` is isolated editor tooling/runtime under the app repo staging path, not app source.
+- The active editor version registry lives at `staging/course-editor/current/versions/index.json`.
+- Managed versions are stored under `staging/course-editor/current/versions/`.
+- The working copy lives under `staging/course-editor/current/work/`.
+- Editor exports live under `staging/course-editor/current/exports/` and are runtime/recovery artifacts, not app source.
+- `/tmp/course-editor-version-uploads/` and `/tmp/openscript-universal-method-course-*.zip` are source ZIP recovery artifacts, not app source.
+- Real delete tests must not target real course versions.
+
+### Current module-state summary
+
+- The editor dropdown/list was restored to `current`, `v01`, `v02`, `v03`, `edited`, and `v04`.
+- The mistaken deletion test had reduced the registry to only `v001 / current`.
+- The restore was explicitly approved after that mistake and scoped only to the isolated editor registry/list.
+- The restore used safe ZIP sources only and did not touch production, app source, or Agent Lab.
+
+### Boundaries
+
+- docs-only updates must not touch `/opt/ai-starter-community/staging/course-editor/current/**`
+- app source `/opt/ai-starter-community/source/app/materials/course_content/**` remains forbidden unless explicitly approved
+- production remains forbidden

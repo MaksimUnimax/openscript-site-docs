@@ -293,3 +293,46 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Do not infer payment or Agent Lab work automatically.
 - Do not treat the earlier course-export stop-point as current.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED -->
+
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-16 — Isolated course editor version manager repaired and restored
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the explicit user-selected isolated course editor tooling repair/restoration task.
+- The isolated course editor is under `/opt/ai-starter-community/staging/course-editor/current/` and is not production app source.
+- The editor version manager / dropdown was restored from safe ZIP sources to `current`, `v01`, `v02`, `v03`, `edited`, and `v04`.
+- The previous mistaken real-version deletion test reduced the registry to only `v001 / current`; that was a process mistake.
+- Safe source ZIPs remained available and were used for the restore.
+- Safe source ZIP recovery locations were `/tmp/course-editor-version-uploads/` and `/tmp/openscript-universal-method-course-*.zip`.
+- The restore was later explicitly approved and scoped only to the isolated editor registry/list.
+- No app source, production runtime, nginx/systemd, docs repo, or Agent Lab repo was touched by that restore.
+
+### Completed
+
+- version dropdown restored from safe ZIP sources
+- compact top editor menu and compact version dropdown reported as accepted fixes
+- Deleted / Edited counters removed from the top bar
+- readable dropdown options
+- iframe height/layout fixed so the preview fills the viewport below the editor toolbar
+- rendered CSS/JS aliases fixed for `/rendered/styles.css` and `/rendered/script.js`
+
+### Pending
+
+- safe delete proof using a temporary managed `delete-test` version only
+
+### Not current
+
+- production deploy
+- payment implementation
+- Agent Lab work
+- app refactor
+- Kilo/design preflight unless explicitly selected
+- real-version deletion tests
+
+### Current stop-point
+
+- The isolated editor version manager repair/restore is complete.
+- Next safe step is `course_editor_safe_delete_proof_with_temporary_version`.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR -->

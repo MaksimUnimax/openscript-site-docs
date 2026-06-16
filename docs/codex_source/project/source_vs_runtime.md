@@ -8,11 +8,18 @@ PROJECT: OpenScript / AI Starter Community
 - App source: /opt/ai-starter-community/source/**
 - App staging support: /opt/ai-starter-community/staging/start.sh, /opt/ai-starter-community/staging/env.staging.example, /opt/ai-starter-community/staging/README.md
 - Docs source: /opt/openscript-site-docs/docs/codex_source/**
+- Production/app course source remains /opt/ai-starter-community/source/**
 
 ## Runtime / not source of truth
 
 - /opt/ai-starter-community/staging/data/**
 - /opt/ai-starter-community/staging/runtime/**
+- /opt/ai-starter-community/staging/course-editor/current/**
+- /opt/ai-starter-community/staging/course-editor/current/versions/**
+- /opt/ai-starter-community/staging/course-editor/current/work/**
+- /opt/ai-starter-community/staging/course-editor/current/exports/**
+- /tmp/course-editor-version-uploads/**
+- /tmp/openscript-universal-method-course-*.zip
 - /opt/ai-starter-community/state/**
 - /opt/ai-starter-community/runtime/**
 - /opt/ai-starter-community/logs/**
@@ -31,6 +38,8 @@ PROJECT: OpenScript / AI Starter Community
   - port (8090, non-default)
   - session cookie name
   - env configuration (staging/env.staging.example)
+- Do not import editor ZIPs into app source without explicit production/source update approval
+- Editor managed-version deletion must not delete ZIP source files
 
 ## Cabinet/runtime note
 

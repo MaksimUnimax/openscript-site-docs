@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-15
-CURRENT_STATUS_ID: CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED
+UPDATED: 2026-06-16
+CURRENT_STATUS_ID: CURRENT_STATUS_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
 
 ## Repository separation
 
@@ -13,6 +13,39 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACC
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
+
+### Current active block
+
+Docs repo memory update for the isolated course editor version manager repair and restore.
+
+### Current live state summary
+
+- Latest saved prior public site state remains the public tariff/access UI iteration accepted and deployed.
+- Current explicit user-selected task after that is isolated course editor tooling repair/restoration.
+- Isolated editor URL: `http://80.74.29.249:8092/`
+- Isolated editor root: `/opt/ai-starter-community/staging/course-editor/current/`
+- Editor process reported: `python /opt/ai-starter-community/staging/course-editor/current/server.py`
+- Current reported PID after restore: `2793406`
+- Editor version registry: `/opt/ai-starter-community/staging/course-editor/current/versions/index.json`
+- Editor version storage: `/opt/ai-starter-community/staging/course-editor/current/versions/`
+- Editor work copy: `/opt/ai-starter-community/staging/course-editor/current/work/`
+- Editor export: `/opt/ai-starter-community/staging/course-editor/current/exports/openscript-universal-method-course-v04-edited.zip`
+- Restored version list: `current`, `v01`, `v02`, `v03`, `edited`, `v04`
+- The mistaken real-version deletion test reduced the registry to only `v001 / current`.
+- Safe source ZIPs remained available and were used for the restore.
+- Safe source ZIP recovery locations were `/tmp/course-editor-version-uploads/` and `/tmp/openscript-universal-method-course-*.zip`.
+- Editor UI fixes reported as accepted: compact menu, readable dropdown, iframe height/layout, rendered CSS/JS aliases.
+- App source and production were not modified.
+
+### Current blocker
+
+Deletion behavior must be proven only with a temporary managed delete-test version. Real versions must not be used for deletion tests.
+
+### Current stop-point
+
+The isolated editor version manager is restored. Next safe step is safe delete proof with a temporary managed version only. Do not resume Kilo/design workflow automatically. Do not run production changes. Do not test delete on real versions. Editor work remains isolated under `/opt/ai-starter-community/staging/course-editor/current/`.
 
 ## CURRENT_STATUS_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED
 

@@ -121,3 +121,8 @@ items:
     expected_target_path: docs/codex_source/project/current_status.md
     notes: The requested separate collapsible VPN block after Accounts has not yet been proven in a chatGPT_REPORT_END
     must_not_invent: true
+  - id: course_editor_safe_delete_behavior_proof
+    status: pending
+    expected_target_path: docs/codex_source/project/current_status.md
+    notes: Menu deletion semantics must be proven using only a temporary managed delete-test version; real versions current/v01/v02/v03/edited/v04 must not be used for deletion tests.
+    must_not_invent: true

@@ -441,3 +441,68 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Do not infer payment or Agent Lab work automatically.
 - This docs update is append-only and docs-only.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260615_PUBLIC_TARIFF_ACCESS_UI_ITERATION_ACCEPTED -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR source=codex_sync -->
+## 2026-06-16 — Isolated course editor version manager repaired and restored
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+
+### Isolated editor
+
+- Editor URL: http://80.74.29.249:8092/
+- Editor root: /opt/ai-starter-community/staging/course-editor/current/
+- Editor process reported: `python /opt/ai-starter-community/staging/course-editor/current/server.py`
+- Current reported PID after restore: `2793406`
+- Version registry: `/opt/ai-starter-community/staging/course-editor/current/versions/index.json`
+- Version storage: `/opt/ai-starter-community/staging/course-editor/current/versions/`
+- Work copy: `/opt/ai-starter-community/staging/course-editor/current/work/`
+- Export: `/opt/ai-starter-community/staging/course-editor/current/exports/openscript-universal-method-course-v04-edited.zip`
+
+### Current restored editor state
+
+- Version manager / dropdown restored to: `current`, `v01`, `v02`, `v03`, `edited`, `v04`
+- The mistaken real-version deletion test reduced the registry to only `v001 / current`
+- Safe source ZIPs were still present and were used for the restore
+- Safe source ZIP recovery locations were `/tmp/course-editor-version-uploads/` and `/tmp/openscript-universal-method-course-*.zip`
+- The restore was explicitly approved afterward and scoped only to the isolated editor registry/list
+- No app source, production runtime, nginx/systemd, docs repo, or Agent Lab repo was touched by that restore
+- The restore rebuilt the editor dropdown/list from safe ZIP sources
+
+### Editor UI fixes already reported
+
+- compact top editor menu
+- removed Deleted / Edited counters from the top bar
+- compact version dropdown
+- readable dropdown options
+- iframe height/layout fixed so the preview fills the viewport below the editor toolbar
+- rendered asset resolution fixed by aliasing `/rendered/styles.css` and `/rendered/script.js` to the active worktree CSS/JS when needed
+
+### Deletion semantics
+
+- Menu deletion must delete only a managed editor version
+- Menu deletion must remove the version record from `versions/index.json`
+- Menu deletion must remove the managed copy under `versions/<id>/`
+- Menu deletion must not delete uploaded source ZIPs in `/tmp/course-editor-version-uploads/`
+- Menu deletion must not delete `/tmp/openscript-universal-method-course-*.zip`
+- Menu deletion must not delete editor exports, the active work copy, app source, or production source/runtime
+- Source ZIPs remaining after menu deletion is normal
+- What must disappear after a successful menu deletion is the selected version from the editor dropdown and registry
+
+### Current blocker
+
+- Delete behavior after restore is still pending proof
+- Future delete proof must use only a temporary managed `delete-test` version
+- Real versions `current`, `v01`, `v02`, `v03`, `edited`, and `v04` must not be used for deletion tests again
+
+### Current stop-point
+
+- The isolated editor version manager is repaired and restored.
+- The next safe step is safe delete proof with a temporary managed version only.
+- Do not resume Kilo/design or production work automatically.
+- Do not test delete on real versions.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR -->
