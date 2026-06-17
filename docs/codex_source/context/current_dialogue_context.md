@@ -603,7 +603,7 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - The Codex test run reported `uv run pytest tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q` passed.
 - `uv lock --check` passed.
 - The app commit was verified locally and on public GitHub.
-- The local rollback backup was only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-073632`.
+- The local rollback backup was only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-065237`.
 
 ### Current limitation
 

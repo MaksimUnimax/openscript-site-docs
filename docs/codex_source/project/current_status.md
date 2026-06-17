@@ -507,7 +507,7 @@ Docs repo memory update for the accepted Phase 1 source-only encryption support 
 - No real secret rows were read.
 - No secrets were read or printed.
 - No Agent Lab work was touched.
-- The local rollback backup existed only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-073632`.
+- The local rollback backup existed only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-065237`.
 
 ### Important limitation
 
