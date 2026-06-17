@@ -79,12 +79,12 @@ items:
   - id: account_block_password_secret_encryption_decision
     status: done
     expected_target_path: docs/codex_source/project/account_blocks.md
-    notes: Phase 1 source-only encryption support is accepted; legacy plaintext rows remain readable until the separate phase 2 migration run
+    notes: Phase 1 source-only encryption support is accepted, and the separate preview Phase 2 DB migration is now complete
     must_not_invent: true
   - id: password_secret_encryption_policy
-    status: not_yet_proven
+    status: done
     expected_target_path: docs/codex_source/project/account_blocks.md
-    notes: Phase 1 source support is accepted, but full at-rest protection for existing plaintext rows still requires the separate phase 2 migration run
+    notes: Preview Phase 2 DB migration completed; full at-rest protection for existing plaintext rows is now present in the preview environment
     must_not_invent: true
   - id: account_blocks_backend_ui_docs
     status: done

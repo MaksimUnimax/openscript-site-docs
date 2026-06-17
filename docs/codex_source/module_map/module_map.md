@@ -182,6 +182,27 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - this docs update does not modify the app repo.
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->
 
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED source=codex_sync -->
+## 2026-06-17 — Password-secret Phase 2 preview DB migration completed
+
+### Current module-state note
+
+- `app/account_blocks/secret_crypto.py` remains the narrow helper that handles authenticated symmetric encryption envelopes for `password_secret`.
+- `app/account_blocks/` now stores/decrypts encrypted envelopes in the preview DB, and the preview plaintext rows were migrated to `enc:v1:` envelopes.
+- `app/core/` still exposes the `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY` runtime setting used by the account-block secret helper.
+- `source/tests/conftest.py` still provides the deterministic test-key fixture support used by the account-block encryption tests.
+- `tests/test_account_blocks_service.py`, `tests/test_account_blocks_admin_ui.py`, and `tests/test_account_blocks_cabinet_ui.py` still cover encrypted storage, legacy plaintext compatibility, and safe missing/wrong-key behavior.
+- `source/pyproject.toml` and `source/uv.lock` still include the `cryptography` dependency required for AES-GCM.
+- The preview runtime venv was synced with `cryptography==49.0.0` and runtime deps because it initially lacked the dependency needed by the Phase 1 source support.
+- Phase 2 migration of already stored plaintext rows is now complete in preview.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED -->
+
 ## 2026-06-15 — Public tariff/access UI iteration accepted
 
 ### Current module-state note

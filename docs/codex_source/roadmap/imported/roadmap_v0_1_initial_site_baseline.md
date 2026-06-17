@@ -433,3 +433,51 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Next safe step is `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`.
 - Do not start production deployment, runtime mutation, Agent Lab work, or broader app refactors automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — Password-secret Phase 2 preview DB migration completed
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the completed preview DB migration of `account_blocks.password_secret`.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Phase 1 source commit remains `2b9e13c608c36cf4c44712f59b01dd396dbc17f2`.
+- The preview runtime key was provisioned in `/etc/ai-starter-community/preview.env`.
+- The preview service `ai-starter-community-preview.service` restarted and is active.
+- The preview runtime venv had to be synced with `cryptography==49.0.0` and runtime deps because it initially lacked the dependency.
+- No app source commit was created in the migration run.
+- No production deployment or public handoff was performed.
+
+### Migration result
+
+- DB backup path: `/opt/ai-starter-community/state_backups/pre-password-secret-phase2-migration-20260617-081637/ai_starter_community.sqlite3`
+- Pre-migration counts: total `8`, empty `2`, encrypted `0`, plaintext `6`, suspicious `0`
+- `6` legacy plaintext rows were migrated to `enc:v1:` envelopes.
+- Post-migration counts: total `8`, empty `2`, encrypted `6`, plaintext `0`, suspicious `0`
+- Decrypt verification: `6` success / `0` failure
+- DB backup integrity was verified and counts matched before migration.
+
+### Current completion state
+
+- Phase 2 preview DB migration for `password_secret`: completed technically and accepted
+- Targeted account-block tests: passed (`cd /opt/ai-starter-community/source && uv run pytest tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q`)
+- Production deployment: not performed
+- Runtime state: mutated only in preview DB / preview runtime
+- Live DB migration: completed in preview only
+
+### Open follow-ups
+
+- P1: CSRF tokens for state-changing forms
+- P1/P2: `change_password()` session revocation behavior
+- P2: SQLite WAL / busy_timeout
+- P2: admin N+1 owner lookup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Runtime key provisioning: complete for preview; production still needs separate approval and rollout
+
+### Current stop-point
+
+- Phase 2 preview DB migration is complete.
+- Next safe step is `csrf_tokens_design_or_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app refactors automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED -->

@@ -630,3 +630,43 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step: `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`.
 - Do not start production deployment, runtime mutation, Agent Lab work, or broader app fixes automatically.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED source=codex_sync -->
+## 2026-06-17 — Password-secret Phase 2 DB migration completed in preview
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+
+### Source / runtime baseline carried into migration
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Phase 1 source commit remains `2b9e13c608c36cf4c44712f59b01dd396dbc17f2`
+- The preview runtime key `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY` was provisioned in `/etc/ai-starter-community/preview.env`
+- The preview service `ai-starter-community-preview.service` had the key loaded from `EnvironmentFile` after restart
+
+### Recorded migration result
+
+- Preview DB path: `/opt/ai-starter-community/state/ai_starter_community.sqlite3`
+- DB backup path: `/opt/ai-starter-community/state_backups/pre-password-secret-phase2-migration-20260617-081637/ai_starter_community.sqlite3`
+- Pre-migration counts: total `8`, empty `2`, encrypted `0`, plaintext `6`, suspicious `0`
+- Migration updated `6` legacy plaintext rows to `enc:v1:` envelopes
+- Post-migration counts: total `8`, empty `2`, encrypted `6`, plaintext `0`, suspicious `0`
+- Decrypt verification succeeded for `6` encrypted rows with `0` failures
+- The targeted account-block tests passed again after the migration
+- No app source commit was created in the migration run
+- No production deployment or public handoff was performed
+
+### Runtime remediation note
+
+- The preview runtime venv initially lacked `cryptography`
+- The runtime venv was synced with `cryptography==49.0.0` and its runtime deps so the preview service could restart successfully
+
+### Current stop-point
+
+- Phase 2 preview DB migration is complete
+- Next safe step is `csrf_tokens_design_or_source_fix_with_backup`
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED -->

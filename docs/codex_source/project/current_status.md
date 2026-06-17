@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED
 
 ## Repository separation
 
@@ -13,6 +13,48 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOU
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED
+
+### Current active block
+
+Docs repo memory update for the completed preview DB migration of `account_blocks.password_secret`.
+
+### Current live state summary
+
+- Preview runtime env file `/etc/ai-starter-community/preview.env` now contains `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY`.
+- Preview SQLite DB `/opt/ai-starter-community/state/ai_starter_community.sqlite3` was backed up at `/opt/ai-starter-community/state_backups/pre-password-secret-phase2-migration-20260617-081637/ai_starter_community.sqlite3`.
+- Pre-migration counts: total `8`, empty `2`, encrypted `0`, plaintext `6`, suspicious `0`.
+- Migration updated `6` legacy plaintext rows to `enc:v1:` envelopes.
+- Post-migration counts: total `8`, empty `2`, encrypted `6`, plaintext `0`, suspicious `0`.
+- Decrypt verification succeeded for `6` encrypted rows with `0` failures.
+- `ai-starter-community-preview.service` restarted and is active.
+- The service process has the key loaded from `EnvironmentFile`.
+- The preview runtime venv had to be synced with `cryptography==49.0.0` and runtime deps because it initially lacked the dependency needed by the Phase 1 source support.
+- The targeted account-block tests passed again after the migration.
+- No app source commit was created in the migration run.
+- No production deployment or public handoff was performed.
+
+### Current limitation
+
+- Production/public deployment is not proven by this docs update.
+- Additional security follow-ups remain open.
+
+### Remaining security priorities
+
+- P1: CSRF tokens for state-changing forms.
+- P1/P2: `change_password()` should revoke active sessions or document the accepted behavior.
+- P2: SQLite WAL / busy_timeout hardening.
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+- Informational/deployment: runtime key provisioning is complete for preview, but production deployment still needs a separate approval path.
+
+### Current stop-point
+
+- Phase 2 preview DB migration is complete and recorded.
+- Next safe step is `csrf_tokens_design_or_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
 

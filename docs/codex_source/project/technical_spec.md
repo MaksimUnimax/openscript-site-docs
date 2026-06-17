@@ -231,3 +231,19 @@ Tables proven from source:
 - No production deployment or runtime mutation was performed.
 - Runtime key provisioning is still a separate deployment concern and is not proven by this docs update.
 - Phase 2 migration of already stored plaintext rows remains required for full at-rest coverage.
+
+## 2026-06-17 — Password-secret Phase 2 DB migration completed in preview
+
+- The preview DB migration completed for `account_blocks.password_secret`.
+- Preview DB path: `/opt/ai-starter-community/state/ai_starter_community.sqlite3`
+- Backup path: `/opt/ai-starter-community/state_backups/pre-password-secret-phase2-migration-20260617-081637/ai_starter_community.sqlite3`
+- Pre-migration counts: total `8`, empty `2`, encrypted `0`, plaintext `6`, suspicious `0`
+- `6` legacy plaintext rows were migrated to `enc:v1:` envelopes.
+- Post-migration counts: total `8`, empty `2`, encrypted `6`, plaintext `0`, suspicious `0`
+- Decrypt verification succeeded for `6` encrypted rows with `0` failures.
+- The preview runtime key `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY` is provisioned in `/etc/ai-starter-community/preview.env`.
+- `ai-starter-community-preview.service` restarted and is active with the key loaded from `EnvironmentFile`.
+- The preview runtime venv had to be synced with `cryptography==49.0.0` and runtime deps because it initially lacked the dependency required by the Phase 1 source support.
+- No app source commit was created in the migration run.
+- No production deployment or public handoff was performed.
+- Next safe step is `csrf_tokens_design_or_source_fix_with_backup`.
