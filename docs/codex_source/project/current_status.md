@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED
 
 ## Repository separation
 
@@ -13,6 +13,44 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_C
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted CSRF source fix for browser forms on the main app repo.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted app commit: `c0b4edf58bab56c2669229b873ab2348cea00c2b` — `Add CSRF protection for browser forms`
+- Browser-form CSRF protection is now enforced across auth, admin, user_cabinet, and public_landing surfaces.
+- Hidden `_csrf_token` fields are rendered in the affected forms.
+- Missing or invalid CSRF tokens return 403.
+- 29 browser-form POST handlers are protected.
+- The source-only fix is complete and was tested successfully.
+- No runtime deployment/restart was performed in this docs sync.
+- Password-secret Phase 1 source support and preview Phase 2 migration remain complete as separate prior accepted work.
+
+### Current limitation
+
+- Runtime deployment/restart for the CSRF source fix is not proven by this docs update.
+- Production/public handoff remains separate.
+
+### Remaining security priorities
+
+- P1: `change_password()` should revoke active sessions or document the accepted behavior.
+- P2: SQLite WAL / busy_timeout hardening.
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+- Informational/deployment: runtime deployment for the source fix remains separate and unproven in this docs sync.
+
+### Current stop-point
+
+- CSRF source fix is complete and recorded.
+- Next safe step is `change_password_session_revocation_source_fix_with_backup`.
+- Do not start runtime deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED
 

@@ -3,9 +3,9 @@ append_only: true
 current_snapshot_id: MODULE_MAP_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
 current_snapshot_file: docs/codex_source/module_map/imported/current_module_map_snapshot.md
 source_kind: source_derived_app_repo_inventory
-status: password_secret_phase2_db_migration_completed
-current_active_block: password_secret_phase2_db_migration_completed
-current_ui_surface_decision: password_secret_phase2_db_migration_completed
+status: csrf_source_fix_completed
+current_active_block: csrf_source_fix_completed
+current_ui_surface_decision: csrf_source_fix_completed
 task_card_not_reevaluated: true
 last_updated_utc: 2026-06-17T00:00:00Z
 no_destructive_rewrite: true

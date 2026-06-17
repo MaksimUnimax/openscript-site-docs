@@ -247,3 +247,14 @@ Tables proven from source:
 - No app source commit was created in the migration run.
 - No production deployment or public handoff was performed.
 - Next safe step is `csrf_tokens_design_or_source_fix_with_backup`.
+
+## 2026-06-17 — CSRF source fix accepted
+
+- Browser-form state-changing routes now require a session-bound CSRF token derived from the browser session and rendered into forms as `_csrf_token`.
+- Missing or invalid CSRF tokens are rejected with HTTP 403.
+- The source fix covers the auth, admin, user_cabinet, and public_landing browser forms without changing read-only GET/HEAD behavior.
+- Shared helper: `source/app/shared/csrf.py`
+- Updated browser-flow templates now include the hidden token field on unsafe forms.
+- Dedicated CSRF tests plus the updated auth and account-block browser-flow tests passed.
+- No runtime deployment, service restart, or DB mutation was performed in this docs update.
+- The remaining security follow-up is `change_password()` session revocation behavior.

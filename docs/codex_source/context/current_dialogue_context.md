@@ -670,3 +670,31 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step is `csrf_tokens_design_or_source_fix_with_backup`
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED source=codex_sync -->
+## 2026-06-17 — CSRF source fix accepted
+
+### Accepted app source fix
+
+- App repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `c0b4edf58bab56c2669229b873ab2348cea00c2b` — `Add CSRF protection for browser forms`
+- Source-only browser-form CSRF protection is now implemented across auth, admin, user_cabinet, and public_landing surfaces.
+- Shared helper: `source/app/shared/csrf.py`
+- Hidden field name: `_csrf_token`
+- Missing or invalid tokens return HTTP 403.
+- 29 browser-form POST handlers are protected.
+- Updated browser-flow tests: `source/tests/test_auth_flow.py`, `source/tests/test_account_blocks_admin_ui.py`, `source/tests/test_account_blocks_cabinet_ui.py`
+- Dedicated CSRF tests: `source/tests/test_csrf_protection.py`
+- Targeted pytest command passed in the app repo:
+  - `cd /opt/ai-starter-community/source && uv run pytest tests/test_csrf_protection.py tests/test_auth_flow.py tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q`
+- `git diff --check` passed.
+- `python -m py_compile` on the modified source/tests passed.
+- No runtime deployment/restart was performed in this docs sync.
+- No DB mutation was performed in this docs sync.
+
+### Current stop-point
+
+- CSRF source fix is complete and recorded.
+- Next safe step is `change_password_session_revocation_source_fix_with_backup`.
+- Do not start runtime deployment, Agent Lab work, or broader app fixes automatically.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED -->

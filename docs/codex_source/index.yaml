@@ -41,13 +41,13 @@ current_project:
     course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
 
 current_dialogue_state:
-  latest_context_update_id: "CTX_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED"
-  latest_roadmap_update_id: "RM_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED"
-  latest_module_map_update_id: "MODULE_MAP_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED"
-  latest_current_status_id: "CURRENT_STATUS_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED"
+  latest_context_update_id: "CTX_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED"
+  latest_roadmap_update_id: "RM_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED"
+  latest_module_map_update_id: "MODULE_MAP_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED"
+  latest_current_status_id: "CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED"
   latest_decisions_update_id: "DECISION_20260608_13"
-  current_active_block: "SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED"
-  next_exact_run: "csrf_tokens_design_or_source_fix_with_backup"
+  current_active_block: "SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED"
+  next_exact_run: "change_password_session_revocation_source_fix_with_backup"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
 canonical_docs:

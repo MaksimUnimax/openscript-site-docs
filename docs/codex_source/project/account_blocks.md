@@ -129,3 +129,11 @@ Proven `account_blocks` columns:
 - No production deployment or public handoff was performed.
 - Future environments still need the same stable key plus a DB/state backup gate before any migration run.
 - The next safe step is `csrf_tokens_design_or_source_fix_with_backup`.
+
+## 2026-06-17 — CSRF source fix accepted
+
+- Account-block admin and cabinet browser forms now include the hidden `_csrf_token` field for state-changing POST actions.
+- Missing or invalid CSRF tokens are rejected with HTTP 403 before the account-block action runs.
+- The CSRF source fix covers the account-block create, update, delete, activate, deactivate, and copy flows in the browser UI.
+- The CSRF source fix is source-only and does not change `password_secret` storage or migration state.
+- No runtime deployment, service restart, DB mutation, or Agent Lab work was performed in this docs update.

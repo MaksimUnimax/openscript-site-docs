@@ -180,6 +180,7 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no production runtime changes in this docs update;
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
+
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->
 
 <!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED source=codex_sync -->
@@ -202,6 +203,19 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED -->
+
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED source=codex_sync -->
+## 2026-06-17 — CSRF source fix accepted
+
+- `app/shared/csrf.py` now centralizes browser-form CSRF token generation and validation.
+- `app/auth/`, `app/admin/`, `app/user_cabinet/`, and `app/public_landing/` templates now render the hidden `_csrf_token` field for state-changing browser forms.
+- Unsafe browser POST handlers now reject missing or invalid CSRF tokens with HTTP 403.
+- The protected browser-form surface covers login, logout, register, resend verification, forgot/reset password, admin user/material/tariff/account-block forms, cabinet settings/account-block forms, and public landing forms.
+- `tests/test_csrf_protection.py` adds dedicated coverage for missing-token, invalid-token, valid-token, and GET/read-only behavior.
+- The updated browser-flow tests still pass for the account-block and auth routes.
+- The CSRF source fix is source-only; no runtime deployment or preview rollout is claimed in this docs update.
+- The next security follow-up remains `change_password()` session revocation behavior.
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED -->
 
 ## 2026-06-15 — Public tariff/access UI iteration accepted
 

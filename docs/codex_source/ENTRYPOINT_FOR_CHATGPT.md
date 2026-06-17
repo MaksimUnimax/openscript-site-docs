@@ -20,10 +20,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_PASSWORD_SECRET_PHASE2_DB_MIGRATION_COMPLETED`
+  - Current site/docs active block: `SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: Phase 2 preview DB migration for `account_blocks.password_secret` is complete and recorded. The preview runtime key is provisioned, the preview service is active, legacy plaintext rows were migrated to `enc:v1:` envelopes, and the preview runtime venv had to be synced with `cryptography==49.0.0` before the service could restart. The next safe step is CSRF-token design/fix work with a backup gate.
-  - Next safe step: `csrf_tokens_design_or_source_fix_with_backup`
+  - Current stop-point: CSRF protection for browser forms is complete and recorded. The source-only fix is pushed, the docs memory is currentized for it, and no runtime deployment/restart was performed in this docs sync. The next safe step is `change_password_session_revocation_source_fix_with_backup`.
+  - Next safe step: `change_password_session_revocation_source_fix_with_backup`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
