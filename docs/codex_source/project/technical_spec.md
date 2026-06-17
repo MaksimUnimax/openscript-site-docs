@@ -258,3 +258,20 @@ Tables proven from source:
 - Dedicated CSRF tests plus the updated auth and account-block browser-flow tests passed.
 - No runtime deployment, service restart, or DB mutation was performed in this docs update.
 - The remaining security follow-up is `change_password()` session revocation behavior.
+
+## 2026-06-17 — Post-CSRF emergency fixes and materials public preview proof
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Session revocation was accepted in app commit `e7fc37d272ca136418dd7e3a175cbbfb5bb03f96`; successful password change now revokes active sessions and forces re-login.
+- Emergency `/admin/users` 500 came from a stale running process missing the CSRF helper; restarting only `ai-starter-community-preview.service` fixed the live runtime.
+- Emergency `/` 500 came from a duplicate `request` argument in the public landing template helper; app commit `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` fixed it.
+- Authenticated materials draft 500 came from the materials Jinja environment missing the shared CSRF helper; app commit `e29d591039c46fc4651f49281937f0dd564b8750` fixed it.
+- Gated public preview for selected materials drafts was accepted in app commit `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928`; it is disabled by default, allowlisted, and limited to GET/HEAD.
+- Unsafe methods remain protected; non-allowlisted materials paths remain protected.
+- Preview smoke proof after the emergency fixes tested 30 GET URLs and reported `TOTAL_5XX: 0`.
+- Public checks from the smoke proof recorded `/` `200`, `/admin/users` `303` to `/login`, unauthenticated materials draft `303` to `/login`, and health endpoints `200`.
+- `ai-starter-community-preview.service` is active.
+- Authenticated materials coverage in the proof runs was provided by pytest fixtures; no browser cookies were used.
+- The session-revocation app-source run had a strict pre-edit backup gate violation, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.
+- Remaining follow-ups: SQLite WAL / busy_timeout, admin N+1 owner lookup, duplicated account-block presentation/selection logic, admin users pagination.
+- Next safe step: `sqlite_wal_busy_timeout_source_fix_with_backup`.

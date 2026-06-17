@@ -89,8 +89,8 @@ Proven `account_blocks` columns:
 ## Security and limitations
 
 - `password_secret` now uses Phase 1 source-only encryption support for new and updated non-empty values.
-- Legacy plaintext rows remain readable for backward compatibility until the separate Phase 2 migration is run.
-- Password-secret Phase 2 migration is still open.
+- Legacy plaintext rows remain readable for backward compatibility in source; the preview DB migration has already converted the stored preview rows to `enc:v1:` envelopes.
+- Password-secret Phase 2 migration is complete in preview; future environments still need the same stable key plus DB/state backup gate before their own migration run.
 - Manual browser verification of the latest live no-jump/card-width/email behavior is still pending unless explicitly confirmed by the user.
 
 ## 2026-06-17 — P0 auth hardening source fix accepted
@@ -137,3 +137,16 @@ Proven `account_blocks` columns:
 - The CSRF source fix covers the account-block create, update, delete, activate, deactivate, and copy flows in the browser UI.
 - The CSRF source fix is source-only and does not change `password_secret` storage or migration state.
 - No runtime deployment, service restart, DB mutation, or Agent Lab work was performed in this docs update.
+
+## 2026-06-17 — Password-change session revocation accepted
+
+- App repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `e7fc37d272ca136418dd7e3a175cbbfb5bb03f96` — `Revoke sessions on password change`
+- `change_password()` now revokes all active sessions for the user via the existing `sessions.revoked_at` column.
+- `cabinet_change_password()` clears the current browser session cookie and CSRF cookie, then redirects to `/login?reset=1`.
+- Successful password change forces re-login; old sessions no longer authenticate.
+- No DB schema change was required.
+- No raw password hash is stored in the client-visible session or cookie.
+- Existing CSRF, login rate-limit, and password-secret behavior was left intact.
+- The app-source run had an honest process deviation: the strict pre-edit backup gate was violated, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.

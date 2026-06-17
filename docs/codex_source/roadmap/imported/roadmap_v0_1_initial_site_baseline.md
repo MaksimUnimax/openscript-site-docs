@@ -526,3 +526,58 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Do not start runtime deployment, Agent Lab work, or broader app refactors automatically.
 
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — Post-CSRF emergency fixes and materials public preview accepted
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted session-revocation source fix, the emergency runtime 500 fixes, the materials CSRF helper fix, and the gated public materials preview state.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commits:
+  - `e7fc37d272ca136418dd7e3a175cbbfb5bb03f96` — Revoke sessions on password change
+  - `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` — Fix public landing template request context
+  - `e29d591039c46fc4651f49281937f0dd564b8750` — Register CSRF helper for materials templates
+  - `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928` — Add gated public preview for selected materials drafts
+- `change_password()` now revokes active sessions on password change and forces re-login.
+- The emergency `/admin/users` 500 was fixed by restarting only `ai-starter-community-preview.service` so the live process loaded the CSRF helper.
+- The emergency `/` 500 was fixed in source by removing the duplicate `request` argument from the public landing template helper.
+- Authenticated materials draft pages stopped 500ing after the materials Jinja environment registered the shared CSRF helper.
+- Gated public preview for selected materials drafts is disabled by default, keyed by `APP_ENV=staging` plus `STAGING_PUBLIC_COURSE_PREVIEW`, and limited to the explicit allowlist:
+  - `/materials/drafts/dair-smoke-20260529/`
+  - `/materials/drafts/dair-smoke-20260529/styles.css`
+  - `/materials/drafts/dair-smoke-20260529/script.js`
+- The public preview bypass applies only to GET/HEAD. Unsafe methods remain protected.
+- Preview smoke proof after the emergency fixes tested 30 GET URLs and reported `TOTAL_5XX: 0`.
+- Public checks from the smoke proof recorded `/` `200`, `/admin/users` `303` to `/login`, unauthenticated materials draft `303` to `/login`, and health endpoints `200`.
+- `ai-starter-community-preview.service` is active.
+- Authenticated materials coverage in the proof runs was provided by pytest fixtures; no browser cookies were used.
+- No fresh tracebacks were observed after the last restart/smoke.
+
+### Process note
+
+- The session-revocation app-source run violated the strict pre-edit backup gate, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.
+
+### Current completion state
+
+- Session revocation source fix: completed and accepted
+- Emergency `/admin/users` runtime fix: completed and accepted
+- Emergency `/` source fix: completed and accepted
+- Materials CSRF helper source fix: completed and accepted
+- Gated public preview for selected materials drafts: completed and accepted
+- Preview runtime smoke proof: completed with `TOTAL_5XX: 0`
+
+### Open follow-ups
+
+- P2: SQLite WAL / busy_timeout
+- P2: admin N+1 owner lookup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Production/public handoff remains separate and requires explicit approval
+
+### Current stop-point
+
+- The post-CSRF emergency fixes and materials public preview state are recorded.
+- Next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED -->

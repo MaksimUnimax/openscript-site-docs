@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED
 
 ## Repository separation
 
@@ -13,6 +13,55 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted session-revocation source fix, the emergency runtime 500 fixes, the materials CSRF helper fix, and the gated public materials preview state on the main app repo.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted app commits:
+  - `e7fc37d272ca136418dd7e3a175cbbfb5bb03f96` — Revoke sessions on password change
+  - `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` — Fix public landing template request context
+  - `e29d591039c46fc4651f49281937f0dd564b8750` — Register CSRF helper for materials templates
+  - `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928` — Add gated public preview for selected materials drafts
+- `change_password()` now revokes active sessions via the existing `sessions.revoked_at` mechanism.
+- Successful password change forces re-login and redirects to `/login?reset=1`; the current session cookie and CSRF cookie are cleared.
+- The emergency `/admin/users` 500 was fixed by restarting only `ai-starter-community-preview.service` so the live process loaded the CSRF helper.
+- The emergency `/` 500 was fixed in source by removing the duplicate `request` argument from the public landing template helper.
+- Authenticated materials draft pages stopped 500ing after the materials Jinja environment registered the shared CSRF helper.
+- Gated public preview for selected materials drafts is disabled by default, keyed by `APP_ENV=staging` plus `STAGING_PUBLIC_COURSE_PREVIEW`, and limited to the explicit allowlist:
+  - `/materials/drafts/dair-smoke-20260529/`
+  - `/materials/drafts/dair-smoke-20260529/styles.css`
+  - `/materials/drafts/dair-smoke-20260529/script.js`
+- The public preview bypass applies only to GET/HEAD. Unsafe methods remain protected.
+- Current preview smoke proof: 30 GET URLs tested, TOTAL_5XX `0`, `/` `200`, `/admin/users` `303` to `/login`, unauthenticated materials draft `303` to `/login`, health endpoints `200`.
+- `ai-starter-community-preview.service` is active.
+- No fresh tracebacks were observed after the last restart/smoke.
+- Authenticated materials coverage in the proof runs was provided by pytest fixtures; no browser cookies were used.
+- The session-revocation source run had an honest process deviation: the strict pre-edit backup gate was violated in the app-source run, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.
+
+### Current limitation
+
+- Production/public handoff remains separate from preview runtime proof.
+- The preview public materials gate is intentionally disabled by default and must not be treated as a production default.
+
+### Remaining security priorities
+
+- P2: SQLite WAL / busy_timeout hardening.
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+- Informational/deployment: production handoff remains separate and unproven.
+
+### Current stop-point
+
+- The post-CSRF emergency fixes and materials public preview state are recorded.
+- Next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260617_CSRF_SOURCE_FIX_ACCEPTED
 

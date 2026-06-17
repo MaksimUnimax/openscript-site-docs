@@ -216,6 +216,29 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - The CSRF source fix is source-only; no runtime deployment or preview rollout is claimed in this docs update.
 - The next security follow-up remains `change_password()` session revocation behavior.
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED -->
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED source=codex_sync -->
+## 2026-06-17 — Post-CSRF emergency fixes and materials public preview accepted
+
+### Current module-state note
+
+- `app/auth/` now includes the session-revocation behavior on password change (`e7fc37d272ca136418dd7e3a175cbbfb5bb03f96`), and successful password change clears the current browser session.
+- `app/public_landing/` now uses the corrected template helper path from `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` so `/` renders without the duplicate-request TypeError.
+- `app/admin/` runtime proof required a controlled restart of `ai-starter-community-preview.service` so the live Jinja environment loaded the CSRF helper used by admin templates.
+- `app/materials/` now registers the shared CSRF helper, and the authenticated draft page no longer fails on `csrf_input`.
+- `app/materials/` also carries the gated public preview allowlist for the selected staging draft paths from `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928`; the bypass is disabled by default, GET/HEAD only, and leaves non-allowlisted materials protected.
+- `source/tests/test_materials_flow.py` and `source/tests/test_routes.py` now cover the current materials/public-landing safety behavior.
+- The preview runtime smoke proof reached 30 GET URLs with `TOTAL_5XX` `0`.
+- `source/app/materials/routes.py` is clean after the gated public preview commit.
+- `app/shared/csrf.py` remains the shared CSRF helper for browser forms.
+- The session-revocation app run had a strict pre-edit backup gate violation, but no rollback was performed and the source fix remains accepted.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED -->
 
 ## 2026-06-15 — Public tariff/access UI iteration accepted
 

@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED
-last_append_title: "CSRF source fix accepted"
-last_updated_utc: 2026-06-17T00:00:00Z
+last_append_id: CTX_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED
+last_append_title: "Post-CSRF emergency fixes and materials preview accepted"
+last_updated_utc: 2026-06-17T11:33:23Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks

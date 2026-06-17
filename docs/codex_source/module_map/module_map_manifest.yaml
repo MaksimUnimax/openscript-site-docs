@@ -3,10 +3,10 @@ append_only: true
 current_snapshot_id: MODULE_MAP_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
 current_snapshot_file: docs/codex_source/module_map/imported/current_module_map_snapshot.md
 source_kind: source_derived_app_repo_inventory
-status: csrf_source_fix_completed
-current_active_block: csrf_source_fix_completed
-current_ui_surface_decision: csrf_source_fix_completed
+status: post_csrf_emergency_fixes_and_materials_preview_completed
+current_active_block: post_csrf_emergency_fixes_and_materials_preview_completed
+current_ui_surface_decision: post_csrf_emergency_fixes_and_materials_preview_completed
 task_card_not_reevaluated: true
-last_updated_utc: 2026-06-17T00:00:00Z
+last_updated_utc: 2026-06-17T11:33:23Z
 no_destructive_rewrite: true
 tail_lines_for_codex: 120

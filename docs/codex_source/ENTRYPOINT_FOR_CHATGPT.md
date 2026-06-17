@@ -20,15 +20,20 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_CSRF_SOURCE_FIX_ACCEPTED`
+  - Current site/docs active block: `SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: CSRF protection for browser forms is complete and recorded. The source-only fix is pushed, the docs memory is currentized for it, and no runtime deployment/restart was performed in this docs sync. The next safe step is `change_password_session_revocation_source_fix_with_backup`.
-  - Next safe step: `change_password_session_revocation_source_fix_with_backup`
+  - Current stop-point: session revocation, the emergency runtime 500 fixes, the materials CSRF helper fix, and the gated public materials preview state are complete and recorded. The source-only fixes are pushed, the preview runtime proof is current, and the next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
+  - Next safe step: `sqlite_wal_busy_timeout_source_fix_with_backup`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
 - Reported app/source facts tied to the current memory update:
   - `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — Harden login and session defaults
+  - `c0b4edf58bab56c2669229b873ab2348cea00c2b` — Add CSRF protection for browser forms
+  - `e7fc37d272ca136418dd7e3a175cbbfb5bb03f96` — Revoke sessions on password change
+  - `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` — Fix public landing template request context
+  - `e29d591039c46fc4651f49281937f0dd564b8750` — Register CSRF helper for materials templates
+  - `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928` — Add gated public preview for selected materials drafts
   - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
   - `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets
