@@ -765,3 +765,36 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step is `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED source=codex_sync -->
+## 2026-06-17 — SQLite WAL / busy_timeout runtime applied accepted
+
+### Runtime apply proof
+
+- Repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- App commit at runtime apply: `3ffd6c9ec2af4b585d94479259c7770c21ce6778`
+- Service: `ai-starter-community-preview.service`
+- Service state before: `active (running)`
+- Service MainPID before: `3087767`
+- DB/state backup gate passed before restart.
+- DB backup dir: `/opt/ai-starter-community/state_backups/pre-sqlite-wal-runtime-apply-20260617-140653`
+- Backed up DB file: `ai_starter_community.sqlite3`
+- Before restart, WAL/SHM files were absent.
+- Service was restarted and is now active running with MainPID `3106155`.
+- A new app-style SQLite connection via `source/app/shared/db.py:get_connection()` reported `busy_timeout = 5000`, `journal_mode = wal`, and `foreign_keys = 1`.
+- After restart, `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` are present.
+- GET-only smoke tested 30 URLs and reported `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were observed after restart.
+
+### Runtime boundary now closed
+
+- The first runtime application of the SQLite WAL / busy_timeout source fix has completed safely.
+- No manual live DB PRAGMA or migration was required.
+- No source, docs, config, or Agent Lab changes were performed in the runtime apply run.
+
+### Current stop-point
+
+- SQLite WAL / busy_timeout runtime application is complete and active in preview.
+- Next safe step is `admin_n_plus_one_owner_lookup_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->

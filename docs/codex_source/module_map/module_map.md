@@ -395,3 +395,28 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - this docs update does not modify the app repo.
 
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED source=codex_sync -->
+## 2026-06-17 — SQLite WAL / busy_timeout runtime applied accepted
+
+### Current module-state note
+
+- `source/app/shared/db.py` is now active in preview runtime via the restarted app service.
+- `SQLITE_BUSY_TIMEOUT_MS = 5000` is live for new app-style SQLite connections.
+- File-backed app SQLite connections now apply `PRAGMA busy_timeout = 5000`, `PRAGMA foreign_keys = ON`, and `PRAGMA journal_mode = WAL` in the preview runtime.
+- After restart, the live state directory contains `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm`.
+- An app-style connection through `source/app/shared/db.py:get_connection()` reported `busy_timeout = 5000`, `journal_mode = wal`, and `foreign_keys = 1`.
+- The runtime apply used the DB/state backup gate before restart and did not require a manual live PRAGMA.
+- The preview service restarted successfully and remained active running.
+- The smoke proof after restart reported `TOTAL_5XX: 0`.
+- No new `database is locked` errors or tracebacks were observed after restart.
+
+### Boundaries
+
+- no source modification in this docs update;
+- no runtime modification in this docs update;
+- no app repo modification;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->

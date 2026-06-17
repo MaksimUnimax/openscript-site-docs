@@ -20,10 +20,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED`
+  - Current site/docs active block: `SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: SQLite WAL / busy_timeout source fix is complete and pushed, but the running preview process has not yet been restarted or reloaded. The first future runtime apply/restart must be DB/state backup-gated because WAL activation can mutate SQLite state and create WAL sidecars.
-  - Next safe step: `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`
+  - Current stop-point: SQLite WAL / busy_timeout is now safely applied in the preview runtime with DB/state backup. The next safe step is the admin N+1 owner lookup source fix with backup.
+  - Next safe step: `admin_n_plus_one_owner_lookup_source_fix_with_backup`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven

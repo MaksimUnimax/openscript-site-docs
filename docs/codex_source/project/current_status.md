@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED
 
 ## Repository separation
 
@@ -13,6 +13,50 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_AC
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted SQLite WAL / busy_timeout runtime application on the main app repo.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted app commit: `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Runtime apply run completed with DB/state backup gate passed before restart.
+- DB/state backup directory: `/opt/ai-starter-community/state_backups/pre-sqlite-wal-runtime-apply-20260617-140653`
+- Backed up live DB file: `ai_starter_community.sqlite3`
+- Before restart: `ai_starter_community.sqlite3-wal` absent, `ai_starter_community.sqlite3-shm` absent.
+- Service restarted: `ai-starter-community-preview.service`
+- Service MainPID before: `3087767`
+- Service MainPID after: `3106155`
+- Service after restart: active running.
+- PRAGMA proof used a new app-style connection via `source/app/shared/db.py:get_connection()` to `/opt/ai-starter-community/state/ai_starter_community.sqlite3`.
+- Runtime PRAGMA results: `busy_timeout = 5000`, `journal_mode = wal`, `foreign_keys = 1`.
+- After restart, `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` are present.
+- GET-only site smoke after restart tested 30 URLs and reported `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were found after restart.
+- No source modification, docs modification, config modification, migration, rollback, restore, or Agent Lab work was performed in the runtime apply run.
+
+### Current completion state
+
+- SQLite WAL / busy_timeout runtime application: completed and accepted.
+- Source fix remains accepted and now active in preview runtime.
+- Production/public handoff remains separate and requires explicit approval.
+
+### Remaining security priorities
+
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+- Informational/deployment: SQLite WAL hardening is now live in preview; no additional runtime apply is needed for this item.
+
+### Current stop-point
+
+- SQLite WAL / busy_timeout source fix and runtime apply are complete and recorded.
+- Next safe step is `admin_n_plus_one_owner_lookup_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED
 

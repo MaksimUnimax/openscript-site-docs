@@ -305,3 +305,26 @@ Tables proven from source:
 - duplicated account-block presentation/selection logic
 - admin users pagination
 - production/public handoff remains separate and requires explicit approval
+
+## 2026-06-17 — SQLite WAL / busy_timeout runtime applied accepted
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Latest accepted app commit: `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Runtime apply used the DB/state backup gate before restarting `ai-starter-community-preview.service`.
+- DB backup dir: `/opt/ai-starter-community/state_backups/pre-sqlite-wal-runtime-apply-20260617-140653`
+- Backed up DB file: `ai_starter_community.sqlite3`
+- Before restart, `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` were absent.
+- After restart, `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` are present.
+- A new app-style SQLite connection via `source/app/shared/db.py:get_connection()` reported:
+  - `PRAGMA busy_timeout = 5000`
+  - `PRAGMA journal_mode = wal`
+  - `PRAGMA foreign_keys = 1`
+- Preview smoke after restart tested 30 GET URLs and reported `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were observed after restart.
+- No source, docs, config, migration, rollback, restore, or Agent Lab changes were performed in the runtime apply run.
+
+### Remaining follow-ups
+
+- admin N+1 owner lookup cleanup
+- duplicated account-block presentation/selection logic
+- admin users pagination

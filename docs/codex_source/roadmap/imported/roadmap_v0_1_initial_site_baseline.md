@@ -638,3 +638,46 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Next safe step is `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — SQLite WAL / busy_timeout runtime applied accepted
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo now records that the preview runtime has applied the accepted SQLite WAL / busy_timeout source fix safely.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commit:
+  - `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Runtime apply used the backup gate before restarting `ai-starter-community-preview.service`.
+- DB/state backup dir:
+  - `/opt/ai-starter-community/state_backups/pre-sqlite-wal-runtime-apply-20260617-140653`
+- Backed up DB file:
+  - `ai_starter_community.sqlite3`
+- Before restart, `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` were absent.
+- After restart, both `ai_starter_community.sqlite3-wal` and `ai_starter_community.sqlite3-shm` are present.
+- Runtime PRAGMA proof from an app-style connection reported:
+  - `PRAGMA busy_timeout = 5000`
+  - `PRAGMA journal_mode = wal`
+  - `PRAGMA foreign_keys = 1`
+- GET-only smoke after restart tested 30 URLs and reported `TOTAL_5XX: 0`.
+- No `database is locked` errors or new tracebacks were observed after restart.
+- No source modification, docs modification, config modification, DB migration, rollback, restore, or Agent Lab work was performed in the runtime apply run.
+
+### Completion state
+
+- SQLite WAL / busy_timeout runtime application: completed and accepted
+- Runtime deployment boundary for this source fix: closed
+- Production/public handoff remains separate and requires explicit approval
+
+### Open follow-ups
+
+- admin N+1 owner lookup cleanup
+- duplicated account-block presentation/selection logic
+- admin users pagination
+
+### Current stop-point
+
+- SQLite WAL / busy_timeout source fix and runtime application are both complete and recorded.
+- Next safe step is `admin_n_plus_one_owner_lookup_source_fix_with_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->
