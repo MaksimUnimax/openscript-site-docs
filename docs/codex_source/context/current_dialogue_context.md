@@ -730,3 +730,38 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED source=codex_sync -->
+## 2026-06-17 — SQLite WAL / busy_timeout source fix accepted, runtime apply pending
+
+### Accepted app source fix
+
+- App repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Changed files:
+  - `source/app/shared/db.py`
+  - `source/tests/test_db_connection_pragmas.py`
+- `source/app/shared/db.py` now centralizes SQLite connection hardening with `SQLITE_BUSY_TIMEOUT_MS = 5000`.
+- App-created file-backed SQLite connections now apply `PRAGMA busy_timeout = 5000`, `PRAGMA foreign_keys = ON`, and `PRAGMA journal_mode = WAL`.
+- In-memory databases (`:memory:`, `file::memory:`, and URI memory mode) skip WAL and parent-directory creation but still get busy timeout and foreign-key setup.
+- `get_connection()` and `initialize_database()` use the same shared helper.
+- New test coverage in `source/tests/test_db_connection_pragmas.py` proved file-backed WAL/busy_timeout behavior and safe in-memory handling.
+- Targeted `py_compile` and pytest checks passed in the source run.
+- The source fix is accepted and pushed, but it is not yet active in the running preview process because runtime restart/reload has not happened.
+- Live DB was not touched; no manual SQLite PRAGMA was run against the live preview database.
+- No schema migration, runtime config change, or Agent Lab work was performed.
+
+### Runtime boundary
+
+- `RUNTIME_NOT_APPLIED_YET: yes`
+- `FIRST_RUNTIME_APPLY_REQUIRES_DB_STATE_BACKUP: yes`
+- `MANUAL_LIVE_DB_PRAGMA_REQUIRED: no`
+- The first future runtime apply/restart will cause the app to open the file-backed SQLite DB and execute `PRAGMA journal_mode = WAL`.
+- WAL activation can mutate SQLite state or create WAL-related sidecar files, so the first runtime apply/restart must be DB/state backup-gated.
+
+### Current stop-point
+
+- SQLite WAL / busy_timeout source fix is complete in source.
+- Next safe step is `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->

@@ -581,3 +581,60 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — SQLite WAL / busy_timeout source fix accepted, runtime apply pending
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted SQLite WAL / busy_timeout source fix on the main app repo.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commit:
+  - `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- `source/app/shared/db.py` now centralizes SQLite connection hardening.
+- `SQLITE_BUSY_TIMEOUT_MS = 5000`.
+- File-backed app SQLite connections now apply:
+  - `PRAGMA busy_timeout = 5000`
+  - `PRAGMA foreign_keys = ON`
+  - `PRAGMA journal_mode = WAL`
+- In-memory SQLite connections skip WAL and parent-directory creation safely while still applying busy timeout and foreign-key setup.
+- The source fix is accepted and pushed.
+- The running preview process has not yet been restarted or reloaded for this source fix.
+- Live DB was not touched and no manual live SQLite PRAGMA was run in the source-only app fix.
+- No schema migration or runtime config change was performed in the app source run.
+
+### Proof
+
+- New test file: `source/tests/test_db_connection_pragmas.py`
+- Targeted coverage proved:
+  - file-backed temp DB gets busy_timeout and WAL;
+  - in-memory DB skips WAL safely;
+  - existing targeted auth/CSRF/routes/materials/account-block tests still passed.
+- `python -m py_compile app/shared/db.py tests/test_db_connection_pragmas.py` passed.
+- `uv run pytest tests/test_db_connection_pragmas.py tests/test_auth_flow.py tests/test_csrf_protection.py tests/test_routes.py tests/test_materials_flow.py tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q` passed.
+
+### Runtime boundary
+
+- The first future runtime apply/restart will open the file-backed SQLite DB and execute `PRAGMA journal_mode = WAL`.
+- Because WAL activation can mutate SQLite state and create WAL-related sidecar files, the first runtime apply/restart must be guarded by a DB/state backup.
+- Manual live DB PRAGMA is not required by the source fix.
+
+### Current completion state
+
+- SQLite WAL / busy_timeout source fix: completed and accepted
+- Runtime application: not yet applied
+- Production/public handoff: separate and still unproven
+
+### Open follow-ups
+
+- admin N+1 owner lookup cleanup
+- duplicated account-block presentation/selection logic
+- admin users pagination
+- runtime apply/restart for SQLite WAL hardening with DB/state backup gate
+
+### Current stop-point
+
+- Source fix is complete and recorded.
+- Next safe step is `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->

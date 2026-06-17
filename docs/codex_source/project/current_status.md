@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED
 
 ## Repository separation
 
@@ -13,6 +13,47 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIA
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED
+
+### Current active block
+
+Docs repo memory update for the accepted SQLite WAL / busy_timeout source fix on the main app repo; runtime application is still pending.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted app commit: `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Changed files:
+  - `source/app/shared/db.py`
+  - `source/tests/test_db_connection_pragmas.py`
+- `source/app/shared/db.py` now centralizes SQLite connection hardening with `SQLITE_BUSY_TIMEOUT_MS = 5000`.
+- App-created file-backed SQLite connections now apply `PRAGMA busy_timeout = 5000`, `PRAGMA foreign_keys = ON`, and `PRAGMA journal_mode = WAL`.
+- In-memory databases (`:memory:`, `file::memory:`, and URI memory mode) skip WAL and parent-directory creation but still get busy timeout and foreign-key setup.
+- `get_connection()` and `initialize_database()` use the same shared helper.
+- New test coverage in `source/tests/test_db_connection_pragmas.py` proved file-backed WAL/busy_timeout behavior and safe in-memory handling.
+- Targeted `py_compile` and pytest checks passed in the source run.
+- The source fix is accepted and pushed, but it is not yet active in the running preview process because runtime restart/reload has not happened.
+- Live DB was not touched; no manual SQLite PRAGMA was run against the live preview database.
+- No schema migration, runtime config change, or Agent Lab work was performed.
+
+### Current limitation
+
+- The first future runtime apply/restart of the app must be backup-gated because the first file-backed SQLite connection after restart will execute `PRAGMA journal_mode = WAL`, which can create or change WAL-related files and mutate SQLite state.
+- `MANUAL_LIVE_DB_PRAGMA_REQUIRED` is `no`.
+
+### Remaining security priorities
+
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+- Informational/deployment: first future runtime apply/restart for SQLite WAL hardening requires a DB/state backup gate.
+
+### Current stop-point
+
+- SQLite WAL / busy_timeout source fix is complete and recorded in source.
+- Next safe step is `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED
 

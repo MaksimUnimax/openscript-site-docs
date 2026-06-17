@@ -275,3 +275,33 @@ Tables proven from source:
 - The session-revocation app-source run had a strict pre-edit backup gate violation, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.
 - Remaining follow-ups: SQLite WAL / busy_timeout, admin N+1 owner lookup, duplicated account-block presentation/selection logic, admin users pagination.
 - Next safe step: `sqlite_wal_busy_timeout_source_fix_with_backup`.
+
+## 2026-06-17 — SQLite WAL / busy_timeout source fix accepted
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Latest accepted app commit: `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — `Configure SQLite WAL and busy timeout`
+- Changed files:
+  - `source/app/shared/db.py`
+  - `source/tests/test_db_connection_pragmas.py`
+- `source/app/shared/db.py` now centralizes SQLite connection hardening with `SQLITE_BUSY_TIMEOUT_MS = 5000`.
+- App-created file-backed SQLite connections now apply `PRAGMA busy_timeout = 5000`, `PRAGMA foreign_keys = ON`, and `PRAGMA journal_mode = WAL`.
+- In-memory SQLite connections (`:memory:`, `file::memory:`, and URI memory mode) skip WAL and parent-directory creation safely while still getting busy timeout and foreign-key setup.
+- `get_connection()` and `initialize_database()` share the same connection-configuration helper.
+- New test coverage in `source/tests/test_db_connection_pragmas.py` proved file-backed WAL/busy_timeout behavior and safe in-memory handling.
+- Targeted `py_compile` and pytest checks passed in the source run.
+- The source fix is accepted and pushed, but it is not yet active in the running preview process because runtime restart/reload has not happened.
+- Live DB was not touched; no manual SQLite PRAGMA was run against the live preview database.
+- No schema migration, runtime config change, or Agent Lab work was performed.
+
+### Runtime boundary
+
+- The first future runtime apply/restart will open the file-backed SQLite DB and execute `PRAGMA journal_mode = WAL`.
+- WAL activation can mutate SQLite state and create WAL-related sidecar files, so the first runtime apply/restart must be DB/state backup-gated.
+- Manual live DB PRAGMA is not required by the source fix.
+
+### Remaining follow-ups after runtime apply
+
+- admin N+1 owner lookup cleanup
+- duplicated account-block presentation/selection logic
+- admin users pagination
+- production/public handoff remains separate and requires explicit approval

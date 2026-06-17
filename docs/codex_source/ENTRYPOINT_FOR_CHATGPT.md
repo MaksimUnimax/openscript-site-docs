@@ -20,10 +20,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_POST_CSRF_EMERGENCY_FIXES_AND_MATERIALS_PREVIEW_ACCEPTED`
+  - Current site/docs active block: `SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: session revocation, the emergency runtime 500 fixes, the materials CSRF helper fix, and the gated public materials preview state are complete and recorded. The source-only fixes are pushed, the preview runtime proof is current, and the next safe step is `sqlite_wal_busy_timeout_source_fix_with_backup`.
-  - Next safe step: `sqlite_wal_busy_timeout_source_fix_with_backup`
+  - Current stop-point: SQLite WAL / busy_timeout source fix is complete and pushed, but the running preview process has not yet been restarted or reloaded. The first future runtime apply/restart must be DB/state backup-gated because WAL activation can mutate SQLite state and create WAL sidecars.
+  - Next safe step: `sqlite_wal_busy_timeout_runtime_apply_with_db_backup`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
@@ -34,6 +34,7 @@ Current canonical project:
   - `55ad86e6e1ff6b8dd7fbf015fd8e46e72390fa10` — Fix public landing template request context
   - `e29d591039c46fc4651f49281937f0dd564b8750` — Register CSRF helper for materials templates
   - `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928` — Add gated public preview for selected materials drafts
+  - `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — Configure SQLite WAL and busy timeout
   - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
   - `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets

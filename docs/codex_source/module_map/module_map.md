@@ -370,3 +370,28 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no production runtime changes in this docs update;
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
+
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED source=codex_sync -->
+## 2026-06-17 — SQLite WAL / busy_timeout source fix accepted, runtime apply pending
+
+### Current module-state note
+
+- `app/shared/db.py` now centralizes SQLite connection hardening with a shared helper.
+- `source/app/shared/db.py` defines `SQLITE_BUSY_TIMEOUT_MS = 5000`.
+- File-backed app SQLite connections now apply `PRAGMA busy_timeout = 5000`, `PRAGMA foreign_keys = ON`, and `PRAGMA journal_mode = WAL`.
+- In-memory SQLite databases skip WAL and parent-directory creation safely while still getting busy timeout and foreign-key setup.
+- `source/tests/test_db_connection_pragmas.py` covers the WAL/busy_timeout behavior on temp file-backed DBs and in-memory DBs.
+- The accepted app source commit is `3ffd6c9ec2af4b585d94479259c7770c21ce6778`.
+- The running preview process has not yet been restarted or reloaded for this source fix.
+- Live DB was not touched in the source run, and no manual live SQLite PRAGMA was executed.
+
+### Boundaries
+
+- first future runtime apply/restart is backup-gated because WAL activation can mutate SQLite state and create WAL-related sidecar files;
+- manual live DB PRAGMA is not required by the source fix;
+- no production runtime changes in this docs update;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_SOURCE_FIX_ACCEPTED_RUNTIME_NOT_APPLIED -->
