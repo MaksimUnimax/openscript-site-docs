@@ -382,3 +382,54 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Next safe step is `password_secret_encryption_design_proof_with_db_backup_plan`.
 - Do not start production deployment, runtime mutation, Agent Lab work, or broad app refactor automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — Password-secret encryption Phase 1 source-only support accepted
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted Phase 1 source-only encryption support for `account_blocks.password_secret`.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commit: `2b9e13c608c36cf4c44712f59b01dd396dbc17f2` — `Encrypt account block password secrets`
+- Changed files:
+  - `source/app/account_blocks/secret_crypto.py`
+  - `source/app/account_blocks/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/conftest.py`
+  - `source/tests/test_account_blocks_service.py`
+  - `source/tests/test_account_blocks_admin_ui.py`
+  - `source/tests/test_account_blocks_cabinet_ui.py`
+  - `source/pyproject.toml`
+  - `source/uv.lock`
+- New and updated non-empty `password_secret` values are now encrypted before storage.
+- The envelope format is `enc:v1:<nonce_b64>.<ciphertext_b64>`.
+- Encryption uses AES-GCM through `cryptography`.
+- Legacy plaintext rows remain readable for backward compatibility.
+- Empty `password_secret` values remain supported.
+
+### Current completion state
+
+- Phase 1 source-only password-secret encryption support: completed technically and accepted
+- Targeted account-block tests: passed (`uv run pytest tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q`)
+- Dependency lock check: passed (`uv lock --check`)
+- Production deployment: not performed
+- Runtime state: not mutated
+- Live DB migration: not performed
+
+### Open follow-ups
+
+- P1: Phase 2 migration of existing plaintext `password_secret` rows with a separate DB/state backup gate
+- P1: CSRF tokens for state-changing forms
+- P1/P2: `change_password()` session revocation behavior
+- P2: SQLite WAL / busy_timeout
+- P2: admin N+1 owner lookup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Runtime key provisioning: not proven by this docs run
+
+### Current stop-point
+
+- Phase 1 password-secret encryption source support is accepted.
+- Next safe step is `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`.
+- Do not start production deployment, runtime mutation, Agent Lab work, or broader app refactors automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->

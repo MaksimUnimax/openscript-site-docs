@@ -200,3 +200,34 @@ Tables proven from source:
 - Selected tariff card layout is font-size-aware and avoids title/price/description overlap at the allowed typography limits.
 - Card colors remain source CSS, not raw admin input.
 - Real payment processing remains NOT_YET_PROVEN.
+
+## 2026-06-17 — Password-secret encryption phase 1 source support accepted
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Latest accepted app commit: `2b9e13c608c36cf4c44712f59b01dd396dbc17f2` — `Encrypt account block password secrets`
+- Changed files:
+  - `source/app/account_blocks/secret_crypto.py`
+  - `source/app/account_blocks/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/conftest.py`
+  - `source/tests/test_account_blocks_service.py`
+  - `source/tests/test_account_blocks_admin_ui.py`
+  - `source/tests/test_account_blocks_cabinet_ui.py`
+  - `source/pyproject.toml`
+  - `source/uv.lock`
+- Phase 1 source-only account-block secret support is implemented with authenticated symmetric encryption.
+- New and updated non-empty `password_secret` values are encrypted before storage.
+- The envelope format is `enc:v1:<nonce_b64>.<ciphertext_b64>`.
+- Encryption uses AES-GCM through `cryptography`.
+- The runtime key env var is `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY`.
+- The expected key format is a base64url-encoded 32-byte key.
+- Legacy plaintext rows remain readable for backward compatibility.
+- Existing live plaintext rows are not migrated by this source-only run.
+- Authorized copy/UI behavior still returns the original secret after decrypt-on-read.
+- Empty `password_secret` values remain supported.
+- `uv lock --check` passed in the implementation run.
+- Targeted account-block tests passed in the implementation run.
+- No live DB migration was performed.
+- No production deployment or runtime mutation was performed.
+- Runtime key provisioning is still a separate deployment concern and is not proven by this docs update.
+- Phase 2 migration of already stored plaintext rows remains required for full at-rest coverage.

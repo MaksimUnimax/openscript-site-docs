@@ -41,13 +41,13 @@ current_project:
     course_method_spec: "docs/codex_source/materials/COURSE_METHOD_SPEC.md"
 
 current_dialogue_state:
-  latest_context_update_id: "CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED"
-  latest_roadmap_update_id: "RM_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED"
-  latest_module_map_update_id: "MODULE_MAP_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED"
-  latest_current_status_id: "CURRENT_STATUS_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED"
+  latest_context_update_id: "CTX_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED"
+  latest_roadmap_update_id: "RM_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED"
+  latest_module_map_update_id: "MODULE_MAP_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED"
+  latest_current_status_id: "CURRENT_STATUS_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED"
   latest_decisions_update_id: "DECISION_20260608_13"
-  current_active_block: "SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED"
-  next_exact_run: "password_secret_encryption_design_proof_with_db_backup_plan"
+  current_active_block: "SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED"
+  next_exact_run: "password_secret_phase2_migration_design_or_preflight_with_db_backup_gate"
   docs_update_workflow_rule: "ChatGPT writes update blocks inline before Codex docs-only run"
 
 canonical_docs:

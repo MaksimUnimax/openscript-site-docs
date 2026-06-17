@@ -562,3 +562,71 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - No runtime state was mutated.
 - No secrets were read or printed.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED source=codex_sync -->
+## 2026-06-17 — Phase 1 password-secret encryption source support accepted
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+
+### Accepted app source fix
+
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `2b9e13c608c36cf4c44712f59b01dd396dbc17f2`
+- Commit title: `Encrypt account block password secrets`
+- Changed files:
+  - `source/app/account_blocks/secret_crypto.py`
+  - `source/app/account_blocks/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/conftest.py`
+  - `source/tests/test_account_blocks_service.py`
+  - `source/tests/test_account_blocks_admin_ui.py`
+  - `source/tests/test_account_blocks_cabinet_ui.py`
+  - `source/pyproject.toml`
+  - `source/uv.lock`
+
+### Recorded result
+
+- Phase 1 source-only encryption support is now implemented for `account_blocks.password_secret`.
+- New and updated non-empty `password_secret` values are encrypted before storage.
+- The envelope format is `enc:v1:<nonce_b64>.<ciphertext_b64>`.
+- Encryption uses AES-GCM through `cryptography`.
+- The nonce is freshly generated and 12 bytes long for each encryption.
+- The dedicated runtime key env var is `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY`.
+- The expected key format is a base64url-encoded 32-byte key.
+- Legacy plaintext rows remain readable for backward compatibility.
+- Authorized copy/UI behavior still returns the original secret after decrypt-on-read.
+- Empty `password_secret` values remain supported.
+- The Codex test run reported `uv run pytest tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q` passed.
+- `uv lock --check` passed.
+- The app commit was verified locally and on public GitHub.
+- The local rollback backup was only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-073632`.
+
+### Current limitation
+
+- Existing live plaintext rows are not migrated in this source-only run.
+- Runtime key provisioning is not proven by this docs run.
+- Production deployment or restart is not proven by this docs run.
+- Full at-rest protection for already stored plaintext contents still requires Phase 2 migration.
+- Phase 2 migration requires a separate explicit run with a DB/state backup gate and rollback path.
+
+### Remaining security priorities
+
+- P1: Phase 2 migration of existing plaintext `password_secret` rows
+- P1: CSRF tokens for state-changing forms
+- P1/P2: `change_password()` should revoke active sessions or document the accepted behavior
+- P2: SQLite WAL / busy_timeout hardening
+- P2: admin N+1 owner lookup cleanup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Informational/deployment: SQLite file permissions and server hardening
+
+### Current stop-point
+
+- Phase 1 source-only encryption support is accepted.
+- Next safe step: `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`.
+- Do not start production deployment, runtime mutation, Agent Lab work, or broader app fixes automatically.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->

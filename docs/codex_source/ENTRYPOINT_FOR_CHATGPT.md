@@ -20,10 +20,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED`
+  - Current site/docs active block: `SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: The P0 auth hardening source fix is complete and recorded. The login limiter is process-local in memory, secure session defaults are hardened, and the next safe step is password-secret encryption design proof with a DB/state backup gate.
-  - Next safe step: `password_secret_encryption_design_proof_with_db_backup_plan`
+  - Current stop-point: The Phase 1 password-secret encryption source fix is complete and recorded. New and updated non-empty password secrets are encrypted by app source when the key is configured, legacy plaintext read compatibility remains, and existing live plaintext rows are not migrated yet. The next safe step is password-secret phase 2 migration preflight/design with a DB/state backup gate.
+  - Next safe step: `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven

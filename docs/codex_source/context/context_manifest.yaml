@@ -1,7 +1,7 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
-last_append_title: "P0 auth hardening source fix accepted"
+last_append_id: CTX_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED
+last_append_title: "Phase 1 password-secret encryption source support accepted"
 last_updated_utc: 2026-06-17T00:00:00Z
 read_policy:
   codex_append: read manifest + tail only

@@ -88,8 +88,9 @@ Proven `account_blocks` columns:
 
 ## Security and limitations
 
-- `password_secret` is stored as a service-isolated text field in the current implementation.
-- Password-secret encryption or alternative secret storage policy is still open.
+- `password_secret` now uses Phase 1 source-only encryption support for new and updated non-empty values.
+- Legacy plaintext rows remain readable for backward compatibility until the separate Phase 2 migration is run.
+- Password-secret Phase 2 migration is still open.
 - Manual browser verification of the latest live no-jump/card-width/email behavior is still pending unless explicitly confirmed by the user.
 
 ## 2026-06-17 — P0 auth hardening source fix accepted
@@ -98,3 +99,18 @@ Proven `account_blocks` columns:
 - `password_secret` remains a service-isolated text field in the current implementation.
 - Password-secret encryption or an alternate secret-storage policy remains open.
 - The next safe docs run for that topic should be a design/proof run with a DB/state backup gate before any migration or runtime mutation.
+
+## 2026-06-17 — Password-secret encryption phase 1 source support accepted
+
+- The Phase 1 source-only encryption support completed in app commit `2b9e13c608c36cf4c44712f59b01dd396dbc17f2` added authenticated symmetric encryption for `password_secret`.
+- New and updated non-empty `password_secret` values are encrypted before storage.
+- The envelope format is `enc:v1:<nonce_b64>.<ciphertext_b64>`.
+- Encryption uses AES-GCM through `cryptography`.
+- The dedicated runtime key env var is `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY`.
+- The expected key format is a base64url-encoded 32-byte key.
+- Legacy plaintext rows remain readable for backward compatibility.
+- Authorized copy/UI behavior still returns the original secret after decrypt-on-read.
+- Empty `password_secret` values remain supported.
+- Existing live plaintext rows are not migrated in this source-only run.
+- Phase 2 migration of already stored plaintext rows remains required for full at-rest protection.
+- Production deployment, runtime key provisioning, and live DB migration were not performed in this run.

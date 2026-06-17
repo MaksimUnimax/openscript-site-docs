@@ -162,6 +162,25 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - no Agent Lab changes;
 - no app runtime/state changes recorded in this docs update;
 - this docs update does not modify the app repo.
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED source=codex_sync -->
+## 2026-06-17 — Phase 1 password-secret encryption source support accepted
+
+### Current module-state note
+
+- `app/account_blocks/secret_crypto.py` is the new narrow helper that handles authenticated symmetric encryption envelopes for `password_secret`.
+- `app/account_blocks/` now stores new and updated non-empty password secrets as encrypted envelopes and decrypts them on authorized read paths.
+- `app/core/` now exposes the `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY` runtime setting used by the account-block secret helper.
+- `source/tests/conftest.py` now provides the deterministic test key fixture support used by the account-block encryption tests.
+- `tests/test_account_blocks_service.py`, `tests/test_account_blocks_admin_ui.py`, and `tests/test_account_blocks_cabinet_ui.py` now cover encrypted storage, legacy plaintext compatibility, and safe missing/wrong-key behavior.
+- `source/pyproject.toml` and `source/uv.lock` now include the `cryptography` dependency required for AES-GCM.
+- Phase 2 migration of already stored plaintext rows remains open.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED -->
 
 ## 2026-06-15 — Public tariff/access UI iteration accepted
 

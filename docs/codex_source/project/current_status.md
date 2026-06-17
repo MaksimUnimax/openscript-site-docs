@@ -3,7 +3,7 @@
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
 UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED
 
 ## Repository separation
 
@@ -461,3 +461,75 @@ Docs repo memory update for the accepted P0 auth hardening source fix on the mai
 ### Current stop-point
 
 The P0 auth hardening source fix is complete and recorded. The next safe step is `password_secret_encryption_design_proof_with_db_backup_plan`. Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+
+## CURRENT_STATUS_20260617_PASSWORD_SECRET_ENCRYPTION_PHASE1_SOURCE_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted Phase 1 source-only encryption support for `account_blocks.password_secret` on the main app repo.
+
+### Accepted app source fix
+
+- App repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `2b9e13c608c36cf4c44712f59b01dd396dbc17f2` — `Encrypt account block password secrets`
+- Changed files:
+  - `source/app/account_blocks/secret_crypto.py`
+  - `source/app/account_blocks/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/conftest.py`
+  - `source/tests/test_account_blocks_service.py`
+  - `source/tests/test_account_blocks_admin_ui.py`
+  - `source/tests/test_account_blocks_cabinet_ui.py`
+  - `source/pyproject.toml`
+  - `source/uv.lock`
+
+### What changed
+
+- Phase 1 source-only encryption support is now implemented for `account_blocks.password_secret`.
+- New and updated non-empty `password_secret` values are encrypted before storage.
+- Stored envelopes use the versioned format `enc:v1:<nonce_b64>.<ciphertext_b64>`.
+- Encryption uses AES-GCM through `cryptography`.
+- The nonce is freshly generated and 12 bytes long for each encryption.
+- The dedicated runtime key env var is `ACCOUNT_BLOCKS_PASSWORD_SECRET_KEY`.
+- The expected key format is a base64url-encoded 32-byte key.
+- Legacy plaintext rows remain readable for backward compatibility.
+- Authorized copy/UI behavior still returns the original secret after decrypt-on-read.
+- Empty `password_secret` values remain supported.
+
+### Proof
+
+- Targeted account-block tests passed: `uv run pytest tests/test_account_blocks_service.py tests/test_account_blocks_admin_ui.py tests/test_account_blocks_cabinet_ui.py tests/test_account_blocks_activation.py -q`
+- `uv lock --check` passed.
+- App commit was verified locally and on public GitHub.
+- No production deployment or runtime mutation was performed.
+- No live DB migration was performed.
+- No real secret rows were read.
+- No secrets were read or printed.
+- No Agent Lab work was touched.
+- The local rollback backup existed only inside `/opt/ai-starter-community/.codex_backups/pre-password-secret-encryption-phase1-20260617-073632`.
+
+### Important limitation
+
+- Existing live plaintext rows are not migrated in this source-only run.
+- Runtime key provisioning is not proven by this docs run.
+- Production deployment or restart is not proven by this docs run.
+- Full at-rest protection for already stored plaintext contents still requires Phase 2 migration.
+- Phase 2 migration requires a separate explicit run with a DB/state backup gate and rollback path.
+
+### Remaining security priorities
+
+- P1: Phase 2 migration of existing plaintext `password_secret` rows
+- P1: CSRF tokens for state-changing forms
+- P1/P2: `change_password()` should revoke active sessions or document the accepted behavior
+- P2: SQLite WAL / busy_timeout hardening
+- P2: admin N+1 owner lookup cleanup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Informational/deployment: SQLite file permissions and server hardening
+
+### Current stop-point
+
+- Phase 1 source-only encryption support is complete and recorded.
+- Next safe step: `password_secret_phase2_migration_design_or_preflight_with_db_backup_gate`.
+- Do not start production deployment, runtime mutation, Agent Lab work, or broader app fixes automatically.
