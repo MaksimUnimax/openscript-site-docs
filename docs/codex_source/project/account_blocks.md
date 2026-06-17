@@ -91,3 +91,10 @@ Proven `account_blocks` columns:
 - `password_secret` is stored as a service-isolated text field in the current implementation.
 - Password-secret encryption or alternative secret storage policy is still open.
 - Manual browser verification of the latest live no-jump/card-width/email behavior is still pending unless explicitly confirmed by the user.
+
+## 2026-06-17 — P0 auth hardening source fix accepted
+
+- The P0 auth hardening source fix completed in app commit `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` did not change account-block storage semantics.
+- `password_secret` remains a service-isolated text field in the current implementation.
+- Password-secret encryption or an alternate secret-storage policy remains open.
+- The next safe docs run for that topic should be a design/proof run with a DB/state backup gate before any migration or runtime mutation.

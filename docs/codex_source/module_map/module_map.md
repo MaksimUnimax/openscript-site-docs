@@ -269,3 +269,27 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - docs-only updates must not touch `/opt/ai-starter-community/staging/course-editor/current/**`
 - app source `/opt/ai-starter-community/source/app/materials/course_content/**` remains forbidden unless explicitly approved
 - production remains forbidden
+
+## 2026-06-17 — P0 auth hardening source fix accepted
+
+### Append id
+
+- MODULE_MAP_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
+
+### Current module-state note
+
+- `app/auth/` now includes login brute-force protection in `authenticate_user(...)`.
+- `app/core/` now defaults session cookies secure in production-like environments while preserving an explicit env override for local/dev.
+- `app/auth/routes.py` continues to use `settings.session_cookie_secure` when setting the login session cookie.
+- `tests/test_auth_flow.py` now covers the non-enumerating login error path, the login rate limit, the successful-login reset path, and the secure-cookie default/override behavior.
+- The login limiter is process-local in memory and is not the final shared-store design.
+
+### Security follow-up
+
+- `password_secret` encryption remains open and should be handled as a separate design/proof run with a DB/state backup gate.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.

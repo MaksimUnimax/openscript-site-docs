@@ -20,14 +20,15 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `isolated_course_editor_version_manager_repair_restored`
+  - Current site/docs active block: `SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: The isolated course editor version manager is repaired and restored. The live editor state now records the recovered version list, the isolated restore scope, and the pending safe delete proof boundary. Next safe step is safe delete proof with a temporary managed version only.
-  - Next safe step: `course_editor_safe_delete_proof_with_temporary_version`
+  - Current stop-point: The P0 auth hardening source fix is complete and recorded. The login limiter is process-local in memory, secure session defaults are hardened, and the next safe step is password-secret encryption design proof with a DB/state backup gate.
+  - Next safe step: `password_secret_encryption_design_proof_with_db_backup_plan`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
 - Reported app/source facts tied to the current memory update:
+  - `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — Harden login and session defaults
   - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
   - `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets

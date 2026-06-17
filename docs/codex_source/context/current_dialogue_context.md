@@ -506,3 +506,59 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Do not resume Kilo/design or production work automatically.
 - Do not test delete on real versions.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR -->
+
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED source=codex_sync -->
+## 2026-06-17 — P0 auth hardening source fix accepted
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- Public app repo: https://github.com/MaksimUnimax/ai-starter-community
+
+### Accepted app source fix
+
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b`
+- Commit title: `Harden login and session defaults`
+- Changed files:
+  - `source/app/auth/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/test_auth_flow.py`
+
+### Recorded result
+
+- Login brute-force protection is now present.
+- The failure policy is 5 failed attempts per 15 minutes.
+- The attempt bucket is keyed by normalized email/login and stabilizes to `user:{id}` after lookup.
+- Successful login clears the bucket.
+- Session cookies now default secure in production/prod/staging while still allowing an explicit local/dev override via `SESSION_COOKIE_SECURE`.
+- The Codex test run reported `uv run pytest tests/test_auth_flow.py -q` passed.
+- The app backup used for rollback safety was local-only:
+  - `backup/pre-p0-auth-security-fix-20260617-055351`
+  - `/opt/ai-starter-community/.codex_backups/pre-p0-auth-security-fix-20260617-055351`
+
+### Current limitation
+
+- The login limiter is process-local in memory.
+- That is a valid immediate P0 source hardening step, but it is not the final shared/distributed limiter design for multi-worker or restart-resistant deployments.
+
+### Remaining security priorities
+
+- P1: `password_secret` encryption design/proof with DB/state backup gate.
+- P1: CSRF tokens for state-changing forms.
+- P1/P2: `change_password()` session revocation behavior.
+- P2: SQLite WAL / busy_timeout.
+- P2: admin N+1 owner lookup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+
+### Current stop-point
+
+- P0 auth hardening source fix accepted.
+- Next safe step: `password_secret_encryption_design_proof_with_db_backup_plan`.
+- No production deployment was performed.
+- No runtime state was mutated.
+- No secrets were read or printed.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED -->

@@ -138,6 +138,30 @@ Tables proven from source:
 - `password_secret` is still stored as a service-isolated text field in the current implementation.
 - Encryption or a different secret-storage policy has not been proven as implemented.
 
+## 2026-06-17 — P0 auth hardening source fix accepted
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Latest accepted app commit: `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — `Harden login and session defaults`
+- Changed files:
+  - `source/app/auth/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/test_auth_flow.py`
+- Auth service now enforces login brute-force protection with 5 failed attempts per 15 minutes.
+- Login attempt buckets are keyed by normalized email/login and stabilize to `user:{id}` after lookup.
+- Login errors remain non-enumerating at the route layer.
+- Session cookies now default to secure in production/prod/staging.
+- `SESSION_COOKIE_SECURE` still allows an explicit local/dev override.
+- The login limiter is process-local in-memory and is not yet a shared/distributed limiter.
+- No production deployment, runtime mutation, or secret reads occurred in this run.
+- P1/P2 security follow-ups remain open:
+  - `password_secret` encryption design/proof with DB/state backup gate
+  - CSRF tokens for state-changing forms
+  - `change_password()` session revocation behavior
+  - SQLite WAL / busy_timeout
+  - admin N+1 owner lookup
+  - duplicated account-block presentation/selection logic
+  - admin users pagination
+
 ## 2026-06-14 — Course lesson 4/5 and admin ZIP export accepted
 
 - Admin course export route: `/admin/course-export`

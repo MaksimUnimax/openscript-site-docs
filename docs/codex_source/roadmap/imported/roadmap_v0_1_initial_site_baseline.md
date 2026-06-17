@@ -336,3 +336,49 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - The isolated editor version manager repair/restore is complete.
 - Next safe step is `course_editor_safe_delete_proof_with_temporary_version`.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR -->
+
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-17 — P0 auth hardening source fix accepted
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the accepted P0 auth hardening source fix.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commit: `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — `Harden login and session defaults`
+- Changed files:
+  - `source/app/auth/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/test_auth_flow.py`
+- Login brute-force protection now exists in the app source.
+- Failure policy: 5 failed attempts per 15 minutes.
+- The limiter is keyed by normalized email/login and stabilizes to `user:{id}` once the user is known.
+- Successful login clears the failure bucket.
+- Session cookies now default secure in production/prod/staging.
+- `SESSION_COOKIE_SECURE` still allows an intentional local/dev override.
+
+### Current completion state
+
+- Login brute-force protection hardening: completed technically and accepted
+- Production-safe secure-cookie default: completed technically and accepted
+- Targeted auth tests: passed (`uv run pytest tests/test_auth_flow.py -q`)
+- Production deployment: not performed
+- Runtime state: not mutated
+
+### Open follow-ups
+
+- P1: `password_secret` encryption design/proof with DB/state backup gate
+- P1: CSRF tokens for state-changing forms
+- P1/P2: `change_password()` session revocation behavior
+- P2: SQLite WAL / busy_timeout
+- P2: admin N+1 owner lookup
+- P2: duplicated account-block presentation/selection logic
+- P2: admin users pagination
+- Limiter design follow-up: process-local in-memory rate limiting is acceptable for the immediate P0 fix but not the final multi-worker/shared-store design
+
+### Current stop-point
+
+- The P0 auth hardening source fix is accepted.
+- Next safe step is `password_secret_encryption_design_proof_with_db_backup_plan`.
+- Do not start production deployment, runtime mutation, Agent Lab work, or broad app refactor automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED -->

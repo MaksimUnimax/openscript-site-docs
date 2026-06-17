@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
-last_append_title: "Isolated course editor version manager repaired and restored"
-last_updated_utc: 2026-06-16T00:00:00Z
+last_append_id: CTX_SITE_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
+last_append_title: "P0 auth hardening source fix accepted"
+last_updated_utc: 2026-06-17T00:00:00Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks

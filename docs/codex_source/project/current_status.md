@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-16
-CURRENT_STATUS_ID: CURRENT_STATUS_20260616_ISOLATED_COURSE_EDITOR_VERSION_MANAGER_REPAIR
+UPDATED: 2026-06-17
+CURRENT_STATUS_ID: CURRENT_STATUS_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
 
 ## Repository separation
 
@@ -408,3 +408,56 @@ Course has 9 numbered lessons plus a visible final section:
 
 The current app live state now includes the server-backed cabinet account blocks, moderator assignment, activation email wiring, paid-options cabinet block, no-jump account action handling, and bounded account card width.
 Next safe step is manual browser verification of the live cabinet/account-blocks/paid-options behavior, unless the user explicitly confirms acceptance.
+
+## CURRENT_STATUS_20260617_P0_AUTH_HARDENING_SOURCE_FIX_ACCEPTED
+
+### Current active block
+
+Docs repo memory update for the accepted P0 auth hardening source fix on the main app repo.
+
+### Accepted app source fix
+
+- App repo: `/opt/ai-starter-community`
+- Branch: `fix/carousel-arrow-button-visuals`
+- Commit: `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — `Harden login and session defaults`
+- Changed files:
+  - `source/app/auth/service.py`
+  - `source/app/core/config.py`
+  - `source/tests/test_auth_flow.py`
+
+### What changed
+
+- Login brute-force protection is now enforced at the app-service layer.
+- Failure policy: 5 failed attempts per 15 minutes.
+- The attempt bucket is keyed by normalized email/login and stabilizes to `user:{id}` once the user is known.
+- Successful login clears the failure bucket for that identifier.
+- Login errors remain non-enumerating at the route layer.
+- Session cookies now default to secure in production-like environments.
+- `production`, `prod`, and `staging` default to `secure=True`.
+- `SESSION_COOKIE_SECURE` still allows an explicit local/dev override.
+
+### Proof
+
+- Targeted auth tests passed: `uv run pytest tests/test_auth_flow.py -q`
+- App commit was verified locally and on public GitHub.
+- No production deployment or runtime mutation was performed.
+- The local rollback backup existed only inside `/opt/ai-starter-community/.codex_backups/pre-p0-auth-security-fix-20260617-055351`.
+
+### Important limitation
+
+- The login rate limiter is process-local in memory.
+- This is acceptable as immediate P0 hardening, but it is not final distributed protection for multi-worker or restart-resistant deployments.
+
+### Remaining security priorities
+
+- P1: `password_secret` encryption design/proof with DB/state backup gate.
+- P1: CSRF tokens for state-changing forms.
+- P1/P2: `change_password()` should revoke active sessions or document the accepted behavior.
+- P2: SQLite WAL / busy_timeout hardening.
+- P2: admin N+1 owner lookup cleanup.
+- P2: duplicated account-block presentation/selection logic.
+- P2: admin users pagination.
+
+### Current stop-point
+
+The P0 auth hardening source fix is complete and recorded. The next safe step is `password_secret_encryption_design_proof_with_db_backup_plan`. Do not start production deployment, Agent Lab work, or broader app fixes automatically.
