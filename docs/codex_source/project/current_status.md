@@ -50,6 +50,14 @@ Docs repo memory update for the completed remaining security/performance backlog
 - Next safe step is `final_security_performance_review_or_next_product_step`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
+## 2026-06-18 — Historical uploaded 2026-05-31 staging/design input reconciled
+
+- The user-provided `PROJECT_DOCS_UPDATE_INPUT_FOR_CHATGPT_UPDATED_2026_05_31` was imported as historical staging/design context only.
+- Its old branch reference `design/product-story-03` and historical next step `site-design-workflow-preflight-20260531` do not override the current `fix/carousel-arrow-button-visuals` / `SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED` state.
+- The later source-tree hygiene commit `beda5a28c0a57242730217e682122b6c5406f5ba` tracked intended tests/assets and local ignore rules, reduced untracked noise from 673 to 5, and left runtime, docs, and DB untouched.
+- The remaining 5 untracked files are raw image-export cleanup candidates and require separate user-approved cleanup.
+- Agent Lab remains a separate no-touch boundary.
+
 ## CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED
 
 ### Current active block

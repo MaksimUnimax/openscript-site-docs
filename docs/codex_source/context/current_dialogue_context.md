@@ -839,3 +839,41 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step is `final_security_performance_review_or_next_product_step`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260618_HISTORICAL_UPLOADED_20260531_INPUT_RECONCILIATION source=codex_sync -->
+## 2026-06-18 — Uploaded 2026-05-31 staging/design input reconciled as historical context
+
+The user uploaded `PROJECT_DOCS_UPDATE_INPUT_FOR_CHATGPT_UPDATED_2026_05_31`. It is useful provenance, but it is historical and superseded by the current 2026-06-18 site state.
+
+### What this historical input still proves
+
+- Docs repo: `/opt/openscript-site-docs`
+- App repo: `/opt/ai-starter-community`
+- Public docs repo: `https://github.com/MaksimUnimax/openscript-site-docs`
+- Public app repo: `https://github.com/MaksimUnimax/ai-starter-community`
+- Agent Lab is a separate no-touch boundary: `/opt/openscript-agent-lab` and `/opt/openscript-agent-lab-docs`
+- Staging is localhost-only on `/opt/ai-starter-community/staging/`, bound to `127.0.0.1:8090`
+- Staging uses `staging/start.sh`, `staging/env.staging.example`, `staging/data/`, and `staging/runtime/`
+- Staging health proof remains historical proof of the isolated test contour, not a request to reopen staging work automatically
+- Source/runtime boundaries remain strict: source lives in `source/**`, runtime/state/backups stay out of the docs source of truth
+
+### Conflict resolution
+
+- The uploaded file named the old branch `design/product-story-03`; the current app branch is `fix/carousel-arrow-button-visuals`
+- The uploaded file’s historical next step `site-design-workflow-preflight-20260531` is archived unless the user explicitly reopens design/Kilo workflow
+- The current active block stays `SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED`
+- The current next safe step stays `final_security_performance_review_or_next_product_step`
+
+### Later app hygiene fact
+
+- App commit `beda5a28c0a57242730217e682122b6c5406f5ba` recorded local-only hygiene:
+  - `.gitignore` now hides local backup/generated dirs
+  - intended tests/assets were tracked
+  - untracked count dropped from 673 to 5
+  - runtime, docs, DB, and Agent Lab were untouched
+  - remaining raw image exports are separate cleanup candidates
+
+### Why this block exists
+
+- Future ChatGPT/Codex prompts should not confuse the 2026-05-31 staging/design input with the current 2026-06-18 security/performance-completed state.
+- The older staging/design input remains valuable historical context, not current active state.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260618_HISTORICAL_UPLOADED_20260531_INPUT_RECONCILIATION -->

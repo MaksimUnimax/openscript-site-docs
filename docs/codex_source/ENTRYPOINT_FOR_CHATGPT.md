@@ -21,12 +21,15 @@ Current canonical project:
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
   - Current site/docs active block: `SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED`
+  - The uploaded `PROJECT_DOCS_UPDATE_INPUT_FOR_CHATGPT_UPDATED_2026_05_31` is archived historical staging/design context only; it must not override the current 2026-06-18 active block.
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
   - Current stop-point: the tracked security/performance backlog is complete and applied in preview runtime. The next safe step is `final_security_performance_review_or_next_product_step`.
   - Next safe step: `final_security_performance_review_or_next_product_step`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
+  - Later source-tree hygiene commit `beda5a28c0a57242730217e682122b6c5406f5ba` tracked intended tests/assets and local ignore rules; runtime, docs, and DB were not touched in that app run.
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
+- The 2026-05-31 staging/design workflow input is historical/superseded unless the user explicitly reopens design/Kilo workflow on the staging/test contour.
 - Reported app/source facts tied to the current memory update:
   - `80b8d44d28c21bf5e22cf1674e04c6f5bedcf95b` — Harden login and session defaults
   - `c0b4edf58bab56c2669229b873ab2348cea00c2b` — Add CSRF protection for browser forms

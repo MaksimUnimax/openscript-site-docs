@@ -1,8 +1,8 @@
 context_file: docs/codex_source/context/current_dialogue_context.md
 append_only: true
-last_append_id: CTX_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED
-last_append_title: "Security/performance backlog completed and preview runtime applied"
-last_updated_utc: 2026-06-18T03:18:19Z
+last_append_id: CTX_SITE_20260618_HISTORICAL_UPLOADED_20260531_INPUT_RECONCILIATION
+last_append_title: "Uploaded 2026-05-31 staging/design input reconciled as historical context"
+last_updated_utc: 2026-06-18T04:10:33Z
 read_policy:
   codex_append: read manifest + tail only
   chatgpt_start: read entrypoint + manifests + latest append blocks
