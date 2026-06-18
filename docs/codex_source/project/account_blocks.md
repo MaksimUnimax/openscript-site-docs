@@ -150,3 +150,13 @@ Proven `account_blocks` columns:
 - No raw password hash is stored in the client-visible session or cookie.
 - Existing CSRF, login rate-limit, and password-secret behavior was left intact.
 - The app-source run had an honest process deviation: the strict pre-edit backup gate was violated, but no rollback was performed and the source fix remains accepted because the scope was narrow, the public commit exists, tests passed, and no DB/runtime/docs/secrets/Agent Lab work was touched.
+
+## 2026-06-18 — Account-block admin lookup and presentation cleanup completed
+
+- Admin owner lookup N+1 cleanup was accepted in app commit `49c9ef228ee7a5f37ac1dc8da581291856cfa044`; the admin list now uses the bulk owner lookup and bulk copy-data helper.
+- The missing-owner admin mail-block edge was accepted in app commit `44d7893428beb55f50b1cd538e842660d59d194a`; missing owner rows no longer trigger per-row fallback lookups during admin list rendering.
+- Shared account-block presentation/selection logic was accepted in app commit `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b`; admin and cabinet routes now use the shared helpers.
+- The preview runtime restarted after the account-block consolidation run and remained active.
+- The final admin users pagination runtime apply remained active and recorded a 32-URL smoke with `TOTAL_5XX: 0`.
+- `password_secret` storage and encryption boundaries were not changed in this batch.
+- Current remaining tracked security/performance backlog: none.

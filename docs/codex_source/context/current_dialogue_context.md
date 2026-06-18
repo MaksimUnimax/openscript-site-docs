@@ -798,3 +798,44 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The next
 - Next safe step is `admin_n_plus_one_owner_lookup_source_fix_with_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- CONTEXT_APPEND_END id=CTX_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->
+<!-- CONTEXT_APPEND_BEGIN id=CTX_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED source=codex_sync -->
+## 2026-06-18 — Security/performance backlog completed and preview runtime applied
+
+### Current project
+
+- OpenScript / AI Starter Community
+- Docs repo: /opt/openscript-site-docs
+- App repo: /opt/ai-starter-community
+- App branch: fix/carousel-arrow-button-visuals
+
+### Accepted app commits
+
+- `49c9ef228ee7a5f37ac1dc8da581291856cfa044` — `Avoid admin owner lookup N+1`
+- `44d7893428beb55f50b1cd538e842660d59d194a` — `Cover missing-owner admin account block lookup edge`
+- `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b` — `Consolidate account block presentation logic`
+- `9caf6f08579ccbd01ba1cf730347fe36e552d519` — `Add pagination to admin users`
+
+### Current live state summary
+
+- Admin account-block owner lookup N+1 cleanup is complete; preview runtime uses the bulk owner lookup and bulk copy-data helper.
+- Missing-owner mail-block edge is fixed; the admin list no longer falls back to per-row owner lookup after a bulk miss.
+- Account-block presentation/selection logic is consolidated in shared helpers used by admin and cabinet routes.
+- Admin users pagination is live with bounded `COUNT(*)`/`LIMIT`/`OFFSET` queries and preserved filters.
+- The preview runtime restart after `7f05455...` also applied the earlier account-block source fixes and reported a 30-URL smoke with `TOTAL_5XX: 0`.
+- The final runtime restart after `9caf6f...` tested 32 GET URLs and reported `TOTAL_5XX: 0`.
+- Service `ai-starter-community-preview.service` is active.
+- Latest runtime MainPID: `3157141`.
+- No new traceback or `database is locked` errors were observed after the final restart.
+
+### Current completion state
+
+- Tracked security/performance backlog: completed and accepted.
+- Current remaining security/performance backlog: none.
+- Production/public handoff remains separate and requires explicit approval.
+
+### Current stop-point
+
+- The remaining tracked security/performance backlog is complete and recorded.
+- Next safe step is `final_security_performance_review_or_next_product_step`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- CONTEXT_APPEND_END id=CTX_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED -->

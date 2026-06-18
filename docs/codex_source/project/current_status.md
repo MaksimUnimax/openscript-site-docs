@@ -2,8 +2,8 @@
 
 STATUS: CURRENT
 PROJECT: OpenScript / AI Starter Community
-UPDATED: 2026-06-17
-CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED
+UPDATED: 2026-06-18
+CURRENT_STATUS_ID: CURRENT_STATUS_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED
 
 ## Repository separation
 
@@ -13,6 +13,42 @@ CURRENT_STATUS_ID: CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLI
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
 - App branch: fix/carousel-arrow-button-visuals
 - Production site: https://openscript.ru
+
+## CURRENT_STATUS_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED
+
+### Current active block
+
+Docs repo memory update for the completed remaining security/performance backlog fixes on the main app repo and their preview runtime application.
+
+### Current live state summary
+
+- App branch: fix/carousel-arrow-button-visuals
+- Latest accepted app commits:
+  - `49c9ef228ee7a5f37ac1dc8da581291856cfa044` — `Avoid admin owner lookup N+1`
+  - `44d7893428beb55f50b1cd538e842660d59d194a` — `Cover missing-owner admin account block lookup edge`
+  - `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b` — `Consolidate account block presentation logic`
+  - `9caf6f08579ccbd01ba1cf730347fe36e552d519` — `Add pagination to admin users`
+- Admin account-block owner lookup N+1 cleanup is complete; bulk owner lookup and copy-data helper are active in preview.
+- Missing-owner mail-block edge is fixed; admin list no longer falls back to per-row owner lookup when the bulk lookup misses.
+- Account-block presentation/selection logic is consolidated in shared helpers used by admin and cabinet routes.
+- Admin users pagination is live with bounded `COUNT(*)`/`LIMIT`/`OFFSET` queries and preserved filters.
+- Preview runtime restarts were applied after the `7f05455...` and `9caf6f0...` source runs.
+- Service `ai-starter-community-preview.service` is active.
+- Latest runtime MainPID: `3157141`.
+- Runtime smoke after the final restart tested 32 GET URLs and reported `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were found after the final restart.
+
+### Current completion state
+
+- Tracked security/performance backlog: completed and accepted.
+- Current remaining security/performance backlog: none.
+- Production/public handoff remains separate and requires explicit approval.
+
+### Current stop-point
+
+- The remaining tracked security/performance backlog is complete and recorded.
+- Next safe step is `final_security_performance_review_or_next_product_step`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 
 ## CURRENT_STATUS_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED
 

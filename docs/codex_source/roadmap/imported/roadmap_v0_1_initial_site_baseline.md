@@ -681,3 +681,33 @@ Course lesson 4/5 wording and the admin course ZIP export are accepted. The expo
 - Next safe step is `admin_n_plus_one_owner_lookup_source_fix_with_backup`.
 - Do not start production deployment, Agent Lab work, or broader app fixes automatically.
 <!-- ROADMAP_APPEND_END id=RM_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->
+<!-- ROADMAP_APPEND_BEGIN id=RM_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED_ACCEPTED source=codex_sync accepted_by_user=yes -->
+
+## 2026-06-18 — Security/performance backlog completed and preview runtime applied
+
+### Current source / live state
+
+- OpenScript / AI Starter Community docs repo is currentized for the completed remaining security/performance backlog fixes on the main app repo.
+- App repo branch remains `fix/carousel-arrow-button-visuals`.
+- Latest accepted app commits:
+  - `49c9ef228ee7a5f37ac1dc8da581291856cfa044` — `Avoid admin owner lookup N+1`
+  - `44d7893428beb55f50b1cd538e842660d59d194a` — `Cover missing-owner admin account block lookup edge`
+  - `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b` — `Consolidate account block presentation logic`
+  - `9caf6f08579ccbd01ba1cf730347fe36e552d519` — `Add pagination to admin users`
+- The tracked security/performance backlog is now complete:
+  - admin N+1 owner lookup
+  - missing-owner edge fix
+  - account-block presentation/selection consolidation
+  - admin users pagination
+- The preview runtime restart after `7f05455...` also applied the earlier account-block source fixes and reported a 30-URL smoke with `TOTAL_5XX: 0`.
+- The final preview runtime restart after `9caf6f...` reported a 32-URL smoke with `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were observed after the final restart.
+- Current remaining tracked security/performance backlog: none.
+- Production/public handoff remains separate and requires explicit approval.
+
+### Current stop-point
+
+- The tracked security/performance backlog is complete and recorded.
+- Next safe step is `final_security_performance_review_or_next_product_step`.
+- Do not start production deployment, Agent Lab work, or broader app fixes automatically.
+<!-- ROADMAP_APPEND_END id=RM_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED_ACCEPTED -->

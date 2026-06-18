@@ -420,3 +420,27 @@ See docs/codex_source/module_map/imported/current_module_map_snapshot.md for the
 - this docs update does not modify the app repo.
 
 <!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED -->
+<!-- MODULE_MAP_APPEND_BEGIN id=MODULE_MAP_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED_ACCEPTED source=codex_sync -->
+## 2026-06-18 — Security/performance backlog completed and preview runtime applied
+
+### Current module-state note
+
+- `app/account_blocks/` now includes bulk owner lookup for admin lists, explicit missing-owner handling, and shared presentation/selection helpers.
+- `app/admin/` now uses the shared account-block presentation layer and the bounded admin users list.
+- `app/auth/` now provides the paginated admin users helper with `COUNT(*)`/`LIMIT`/`OFFSET` metadata.
+- `source/app/admin/templates/users.html` renders compact pagination controls for admin users.
+- `source/tests/test_account_blocks_admin_ui.py`, `source/tests/test_account_blocks_service.py`, and `source/tests/test_admin_user_filters.py` cover the completed security/performance backlog fixes.
+- `ai-starter-community-preview.service` restarted after the `7f05455...` and `9caf6f...` runs and remained active.
+- Final smoke after the pagination run reported `TOTAL_5XX: 0`.
+- Tracked security/performance backlog: none.
+
+### Boundaries
+
+- no production runtime changes in this docs update;
+- no runtime modification in this docs update;
+- no app repo modification;
+- no Agent Lab changes;
+- no app runtime/state changes recorded in this docs update;
+- this docs update does not modify the app repo.
+
+<!-- MODULE_MAP_APPEND_END id=MODULE_MAP_SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED_ACCEPTED -->

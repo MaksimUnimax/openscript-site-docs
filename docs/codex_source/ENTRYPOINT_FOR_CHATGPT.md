@@ -20,10 +20,10 @@ Current canonical project:
 - App repo (separate): /opt/ai-starter-community
 - Public app repo: https://github.com/MaksimUnimax/ai-starter-community
   - App branch for current site work: `fix/carousel-arrow-button-visuals`
-  - Current site/docs active block: `SITE_20260617_SQLITE_WAL_BUSY_TIMEOUT_RUNTIME_APPLIED_ACCEPTED`
+  - Current site/docs active block: `SITE_20260618_SECURITY_PERFORMANCE_BACKLOG_COMPLETED_RUNTIME_APPLIED`
   - Previous accepted public site state: `public_tariff_access_ui_iteration_accepted`
-  - Current stop-point: SQLite WAL / busy_timeout is now safely applied in the preview runtime with DB/state backup. The next safe step is the admin N+1 owner lookup source fix with backup.
-  - Next safe step: `admin_n_plus_one_owner_lookup_source_fix_with_backup`
+  - Current stop-point: the tracked security/performance backlog is complete and applied in preview runtime. The next safe step is `final_security_performance_review_or_next_product_step`.
+  - Next safe step: `final_security_performance_review_or_next_product_step`
   - The previous `course_practice_carousels_and_vpn_account_block_iteration` block is historical unless the user returns to VPN work
 - Isolated course editor work stays under `/opt/ai-starter-community/staging/course-editor/current/` and must not be confused with production app source
 - Separate collapsible VPN block after Accounts is requested but not yet proven
@@ -35,6 +35,10 @@ Current canonical project:
   - `e29d591039c46fc4651f49281937f0dd564b8750` — Register CSRF helper for materials templates
   - `b9e928b77ccc1dedf92ea28e85d3e1f96dedf928` — Add gated public preview for selected materials drafts
   - `3ffd6c9ec2af4b585d94479259c7770c21ce6778` — Configure SQLite WAL and busy timeout
+  - `49c9ef228ee7a5f37ac1dc8da581291856cfa044` — Avoid admin owner lookup N+1
+  - `44d7893428beb55f50b1cd538e842660d59d194a` — Cover missing-owner admin account block lookup edge
+  - `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b` — Consolidate account block presentation logic
+  - `9caf6f08579ccbd01ba1cf730347fe36e552d519` — Add pagination to admin users
   - `8a905300739c833ee46ad06383a76d6e65e1c489` — Add tariff typography controls
   - `eb22b091a2a732966c62e24a93c1799babc3440f` — Keep tariff edit page and scale card typography
   - `2ab492d03a472f26a95d836799c132ca35b5e1c1` — Serve Git carousel screenshots from static assets

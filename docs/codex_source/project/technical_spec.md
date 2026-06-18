@@ -328,3 +328,20 @@ Tables proven from source:
 - admin N+1 owner lookup cleanup
 - duplicated account-block presentation/selection logic
 - admin users pagination
+
+## 2026-06-18 — Security/performance backlog completed and preview runtime applied
+
+- App branch: `fix/carousel-arrow-button-visuals`
+- Latest accepted app commits:
+  - `49c9ef228ee7a5f37ac1dc8da581291856cfa044` — `Avoid admin owner lookup N+1`
+  - `44d7893428beb55f50b1cd538e842660d59d194a` — `Cover missing-owner admin account block lookup edge`
+  - `7f054551aad5a6b4e7c2c6f58dfd5f9ad48eb17b` — `Consolidate account block presentation logic`
+  - `9caf6f08579ccbd01ba1cf730347fe36e552d519` — `Add pagination to admin users`
+- `app/account_blocks/` owner lookup and shared presentation/selection logic are now consolidated; the admin list no longer performs per-row owner fetches.
+- `app/admin/` now uses bounded admin users pagination with `COUNT(*)`/`LIMIT`/`OFFSET` and preserved query filters.
+- The preview runtime restarted after the `7f05455...` account-block consolidation run and after the `9caf6f...` admin users pagination run.
+- The earlier account-block runtime apply smoke tested 30 GET URLs and reported `TOTAL_5XX: 0`.
+- The final pagination runtime apply smoke tested 32 GET URLs and reported `TOTAL_5XX: 0`.
+- No new traceback or `database is locked` errors were observed after the final restart.
+- Remaining follow-ups from the tracked security/performance backlog: none.
+- Production/public handoff remains separate and requires explicit approval.
